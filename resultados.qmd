@@ -2,13 +2,14 @@
 title: "Resultados"
 format: html
 ---
-<<<<<<< HEAD
-=======
+
+
+
+
+```{r}
 #| echo: false
 #| message: false
 #| warning: false
-
-```{r}
 # 1. Carregar bibliotecas
 library(tidyverse)
 library(here)
@@ -17,19 +18,23 @@ library(gt)
 library(janitor)
 
 # 2. Importação de dados
-dados <- read_csv(here("dados", "respira.csv")) %>% 
+dados <- read_csv(here("respira.csv")) %>% 
   clean_names() %>% 
   mutate(
     sexo = factor(sexo, labels = c("Feminino", "Masculino")),
     grupo = factor(grupo, labels = c("Controlo", "App RespiRA"))
   )
 
+# Cálculo de Rigor: Variação Individual (Delta)
+# Essencial para ver quanto cada doente melhorou desde o início
+dados <- dados %>%
+  mutate(delta_act = act_semana12 - act_baseline)
 
-#| echo: false
-#| results: 'hide'
 ```
 
 ```{r}
+#| echo: false
+#| results: 'hide'
 # 3. Inspeção de integridade dos dados
   
   # Faz um resumo rápido de todas as colunas
@@ -94,9 +99,15 @@ shapiro.test(dados$exacerbacoes_12sem)
 ```
 
 
-#| echo: false
-```{r}
+1. Caraterização Basal da Amostra
 
+Em conformidade com o protocolo do ensaio clínico RespiRA, a análise de resultados inicia-se com a caraterização da amostra recrutada. Foram incluídos 30 adultos com diagnóstico de asma moderada persistente, distribuídos aleatoriamente numa proporção de 1:1 entre o grupo de intervenção (App RespiRA) e o grupo de controlo.
+
+A Tabela 1 apresenta o perfil demográfico e clínico basal dos participantes. Esta etapa é fundamental para avaliar o sucesso da aleatorização e garantir que não existem diferenças sistemáticas entre os grupos no momento inicial, assegurando que as melhorias observadas no final do estudo possam ser atribuídas à intervenção digital.
+
+
+```{r}
+#| echo: false
 # 4.Tabela de características basais
 
 tabela1 <- dados %>%
@@ -133,5 +144,97 @@ tabela1
 
 ```
 
----
->>>>>>> ec9b54774b9e77bbf130d5dc0b302711238bcb18
+2. Outcome Primário: Evolução do Controlo da Asma (ACT)
+
+O desfecho primário definido para este ensaio clínico foi a melhoria do controlo clínico da asma, quantificada através da variação na pontuação do Asthma Control Test (ACT) após 12 semanas de intervenção. O ACT é um instrumento validado que avalia cinco domínios críticos — sintomas, limitação de atividades, despertares noturnos, uso de medicação de alívio e perceção de controlo — resultando num score que varia entre 5 (controlo nulo) e 25 pontos (controlo total).
+
+A Figura 1 ilustra a distribuição comparativa dos resultados obtidos no final do período de acompanhamento. Através da análise de diagramas de caixa (boxplots), é possível observar não apenas a tendência central da pontuação final em cada braço do estudo, mas também a dispersão e variabilidade dos scores nos participantes que completaram o protocolo.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Figura 1. Comparação do controlo da asma (ACT) entre o grupo Controlo e o grupo App RespiRA após 12 semanas."
+# 5. Criação do Gráfico do Outcome Primário
+# Utilizamos um Boxplot para mostrar a distribuição e a mediana
+ggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +
+  geom_boxplot() + 
+  labs(
+    title = "Controlo da Asma às 12 semanas",
+    subtitle = "Análise realizada em n=27 doentes com seguimento completo",
+    x = "Grupo de Estudo",
+    y = "Score ACT Final"
+  ) +
+  theme_classic()
+```
+
+
+3. Análise de Eficácia e Outcomes Secundários
+
+Para além do desfecho primário, a avaliação da eficácia da intervenção RespiRA contemplou uma análise multidimensional de outcomes secundários, fundamentais para caracterizar o impacto clínico global da solução digital. Conforme estabelecido no protocolo, foram monitorizados indicadores de qualidade de vida relacionada com a saúde (através do questionário validado AQLQ), a função respiratória (medida pelo débito expiratório máximo — peak flow), a adesão à terapêutica de controlo e a segurança clínica, avaliada pela taxa de exacerbações durante o período de 12 semanas.
+
+A Tabela 2 sintetiza estes resultados comparativos entre o grupo de intervenção e o grupo de controlo. Complementarmente, apresenta-se a variação individual do score ACT, um indicador de rigor metodológico que permite quantificar a magnitude real da melhoria clínica observada em cada participante desde o momento basal até ao final do estudo, mitigando o efeito de eventuais assimetrias iniciais e permitindo uma interpretação mais robusta da eficácia da aplicação.
+
+```{r}
+#| echo: false
+
+# 6. Tabela de Resultados de Eficácia (Outcomes Primários e Secundários)
+tabela_final <- dados %>%
+  select(grupo, act_semana12, delta_act, aqlq_semana12, peak_flow_semana12, adesao, exacerbacoes_12sem) %>%
+  tbl_summary(
+    by = grupo,
+    type = list(
+      exacerbacoes_12sem ~ "continuous",
+      delta_act ~ "continuous"
+    ),
+    statistic = list(
+      act_semana12 ~ "{mean} ({sd})",
+      aqlq_semana12 ~ "{mean} ({sd})",
+      peak_flow_semana12 ~ "{mean} ({sd})",
+      adesao ~ "{mean} ({sd})",
+      delta_act ~ "{median} ({p25}, {p75})",
+      exacerbacoes_12sem ~ "{median} ({p25}, {p75})"
+    ),
+    label = list(
+      act_semana12 ~ "Score ACT Final",
+      delta_act ~ "Variação do Score ACT",
+      aqlq_semana12 ~ "Score AQLQ (Qualidade de Vida)",
+      peak_flow_semana12 ~ "Peak Flow Final (L/min)",
+      adesao ~ "Adesão à Terapêutica (%)",
+      exacerbacoes_12sem ~ "Nº de Exacerbações (12 sem)"
+    ),
+    missing_text = "(Dados em falta)" 
+  ) %>%
+  add_p(
+    test = list(
+      all_of(c("exacerbacoes_12sem", "delta_act")) ~ "wilcox.test", 
+      all_continuous() ~ "t.test"          
+    ),
+    pvalue_fun = ~style_pvalue(.x, digits = 3)
+  ) %>%
+  bold_labels() %>%
+  modify_caption("**Tabela 2. Comparação de Outcomes Clínicos após 12 semanas.**")
+
+tabela_final
+```
+
+
+
+::: 
+Interpretação Clínica dos Resultados
+
+A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Conforme estabelecido no racional do estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da doença.
+
+Eficácia nos Desfechos Secundários: A superioridade da intervenção é estatisticamente significativa nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes resultados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, reduzindo o fardo clínico da asma moderada persistente.
+
+Qualidade de Vida e Tendências: Observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), sugerindo que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
+
+Rigor Metodológico: A análise da variação individual do score ACT reforça a consistência da melhoria clínica observada, demonstrando que o envolvimento direto do doente através de ferramentas de mHealth é um complemento eficaz e seguro à prática clínica standard nos cuidados de saúde primários.
+:::
+
+
+
+
+
+
+
