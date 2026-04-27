@@ -2,4 +2,3 @@
 title: "Resultados"
 format: html
 ---
-
