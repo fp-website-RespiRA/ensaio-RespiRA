@@ -2,3 +2,136 @@
 title: "Resultados"
 format: html
 ---
+<<<<<<< HEAD
+=======
+#| echo: false
+#| message: false
+#| warning: false
+
+```{r}
+# 1. Carregar bibliotecas
+library(tidyverse)
+library(here)
+library(gtsummary)
+library(gt)
+library(janitor)
+
+# 2. Importação de dados
+dados <- read_csv(here("dados", "respira.csv")) %>% 
+  clean_names() %>% 
+  mutate(
+    sexo = factor(sexo, labels = c("Feminino", "Masculino")),
+    grupo = factor(grupo, labels = c("Controlo", "App RespiRA"))
+  )
+
+
+#| echo: false
+#| results: 'hide'
+```
+
+```{r}
+# 3. Inspeção de integridade dos dados
+  
+  # Faz um resumo rápido de todas as colunas
+summary(dados) # Limites e NAs
+
+  # Verificação da normalidade para as variaveis que vão ser usadas na tabela de características basais
+    # Verificação para a IDADE 
+hist(dados$idade, main="Histograma: Idade", col="lightblue")
+qqnorm(dados$idade); qqline(dados$idade, col="red")
+shapiro.test(dados$idade)
+# Nota: p < 0.05 no Shapiro-Wilk da idade (p-value=0.01016) -> usar Mediana porque idade não é Normal
+
+  
+   # Verificação para o ACT Baseline
+hist(dados$act_baseline, main="Histograma: ACT Inicial", col="lightblue")
+qqnorm(dados$act_baseline); qqline(dados$act_baseline, col="red")
+shapiro.test(dados$act_baseline)  
+# Nota: p > 0.05 no Shapiro-Wilk da ACT baseline (p-value=0.8414) -> usar Média porque ACT é Normal
+
+
+   # Verificação para o ACT semana 12
+hist(dados$act_semana12, main="Histograma: ACT semana 12", col="lightblue")
+qqnorm(dados$act_semana12); qqline(dados$act_semana12, col="red")
+shapiro.test(dados$act_semana12)  
+# Nota: p > 0.05 no Shapiro-Wilk da ACT semana 12 (p-value=0.1581) -> usar Média porque ACT é Normal
+
+
+   # Verificação para o AQLQ semana 12
+hist(dados$aqlq_semana12, main="Histograma: AQLQ semana 12", col="lightblue")
+qqnorm(dados$aqlq_semana12); qqline(dados$aqlq_semana12, col="red")
+shapiro.test(dados$aqlq_semana12)  
+# Nota: p > 0.05 no Shapiro-Wilk do AQLQ semana 12 (p-value=0.5635) -> usar Média porque AQLQ é Normal
+
+
+   # Verificação para adesão
+hist(dados$adesao, main="Histograma: Adesão", col="lightblue")
+qqnorm(dados$adesao); qqline(dados$adesao, col="red")
+shapiro.test(dados$adesao)  
+# Nota: p > 0.05 no Shapiro-Wilk da adesão (p-value=0.2955) -> usar Média porque adesão é Normal
+
+
+   # Verificação para peak flow baseline
+hist(dados$peak_flow_baseline, main="Histograma: peak flow baseline", col="lightblue")
+qqnorm(dados$peak_flow_baseline); qqline(dados$peak_flow_baseline, col="red")
+shapiro.test(dados$peak_flow_baseline)  
+# Nota: p > 0.05 no Shapiro-Wilk do peak flow baseline (p-value=0.8805) -> usar Média porque peak flow Baseline é Normal
+
+
+   # Verificação para peak flow semana 12
+hist(dados$peak_flow_semana12, main="Histograma: peak flow semana 12", col="lightblue")
+qqnorm(dados$peak_flow_semana12); qqline(dados$peak_flow_semana12, col="red")
+shapiro.test(dados$peak_flow_semana12)  
+# Nota: p > 0.05 no Shapiro-Wilk do peak flow semana 12 (p-value=0.201) -> usar Média porque peak flow semana 12 é Normal
+
+
+   # Verificação para exacerbações semana 12
+hist(dados$exacerbacoes_12sem, main="Histograma: exacerbações semana 12", col="lightblue")
+qqnorm(dados$exacerbacoes_12sem); qqline(dados$exacerbacoes_12sem, col="red")
+shapiro.test(dados$exacerbacoes_12sem)  
+# Nota: p < 0.05 no Shapiro-Wilk das exacerbações semana 12 (p-value=7.195e-05) -> usar Mediana porque exacerbações não é Normal
+
+```
+
+
+#| echo: false
+```{r}
+
+# 4.Tabela de características basais
+
+tabela1 <- dados %>%
+  select(grupo, idade, sexo, act_baseline, peak_flow_baseline) %>%
+  tbl_summary(
+    by = grupo,   #Diz ao R para criar duas colunas separadas: uma para o "Controlo" e outra para a "App RespiRA", permitindo a comparação direta.
+    statistic = list(
+      idade ~ "{median} ({p25}, {p75})",        # p < 0.05: Não-Normal
+      act_baseline ~ "{mean} ({sd})",           # p > 0.05: Normal
+      peak_flow_baseline ~ "{mean} ({sd})",     # p > 0.05: Normal
+      all_categorical() ~ "{n} ({p}%)" #Seleciona automaticamente todas as variáveis que são "categorias" (Feminino/Masculino, Sim/Não).
+    ),
+    label = list(
+      idade ~ "Idade (Anos)",  #O R substitui o nome da coluna idade por um título mais formal que já inclui a unidade de medida entre parênteses, e o mesmo para as outras variáveis.
+      sexo ~ "Sexo",
+      act_baseline ~ "Score ACT Inicial",
+      peak_flow_baseline ~ "Peak Flow Inicial (L/min)"
+    )
+  ) %>%
+  add_overall(col_label = "**Amostra Total** (N=30)") %>%  #Cria uma coluna com a média/frequência de todos os 30 doentes juntos.
+  add_p(  #Calcula se a diferença entre os grupos é significativa.
+    test = list(
+      idade ~ "wilcox.test",      # Teste para Idade (Não-Normal)
+      all_continuous() ~ "t.test"  # Teste para ACT e Peak Flow (Normais)
+    ),
+    pvalue_fun = ~style_pvalue(.x, digits = 3) #Esta parte controla a aparência do valor de p.
+  ) %>%
+  bold_labels() %>%  #Coloca todos os nomes das variáveis em negrito
+  modify_caption("**Tabela 1. Caraterísticas demográficas e clínicas basais da amostra.**")
+
+# Exibir a Tabela
+tabela1
+#O valor de p na Tabela 1 indica se existe uma diferença estatística entre os grupos no ponto de partida: se for maior que 0,05, confirma que os grupos são equilibrados e que o processo de aleatorização foi eficaz, garantindo a validade estatística do estudo.
+
+```
+
+---
+>>>>>>> ec9b54774b9e77bbf130d5dc0b302711238bcb18
