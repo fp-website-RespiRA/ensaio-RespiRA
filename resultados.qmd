@@ -1,10 +1,7 @@
 ---
 title: "Resultados"
-format: html
+format:  html
 ---
-
-
-
 
 ```{r}
 #| echo: false
@@ -31,6 +28,12 @@ dados <- dados %>%
   mutate(delta_act = act_semana12 - act_baseline)
 
 ```
+
+1. Análise de Resultados
+
+A presente secção detalha os resultados obtidos no ensaio clínico RespiRA, focado na eficácia de uma intervenção digital no controlo da asma moderada persistente. Em conformidade com as boas práticas de investigação, a análise foi conduzida seguindo o princípio da intenção de tratar (intention-to-treat), garantindo que as conclusões refletem a realidade clínica do acompanhamento de 12 semanas.
+
+Previamente à apresentação das tabelas comparativas, foi realizada uma inspeção rigorosa da integridade dos dados e dos pressupostos estatísticos. A normalidade das variáveis foi avaliada através do teste de Shapiro-Wilk e de métodos visuais (histogramas e Q-Q plots), fundamentando a escolha entre testes paramétricos ou não-paramétricos para cada indicador avaliado.
 
 ```{r}
 #| echo: false
@@ -98,13 +101,11 @@ shapiro.test(dados$exacerbacoes_12sem)
 
 ```
 
-
-1. Caraterização Basal da Amostra
+2. Caraterização Basal da Amostra
 
 Em conformidade com o protocolo do ensaio clínico RespiRA, a análise de resultados inicia-se com a caraterização da amostra recrutada. Foram incluídos 30 adultos com diagnóstico de asma moderada persistente, distribuídos aleatoriamente numa proporção de 1:1 entre o grupo de intervenção (App RespiRA) e o grupo de controlo.
 
 A Tabela 1 apresenta o perfil demográfico e clínico basal dos participantes. Esta etapa é fundamental para avaliar o sucesso da aleatorização e garantir que não existem diferenças sistemáticas entre os grupos no momento inicial, assegurando que as melhorias observadas no final do estudo possam ser atribuídas à intervenção digital.
-
 
 ```{r}
 #| echo: false
@@ -144,7 +145,7 @@ tabela1
 
 ```
 
-2. Outcome Primário: Evolução do Controlo da Asma (ACT)
+3. Outcome Primário: Evolução do Controlo da Asma (ACT)
 
 O desfecho primário definido para este ensaio clínico foi a melhoria do controlo clínico da asma, quantificada através da variação na pontuação do Asthma Control Test (ACT) após 12 semanas de intervenção. O ACT é um instrumento validado que avalia cinco domínios críticos — sintomas, limitação de atividades, despertares noturnos, uso de medicação de alívio e perceção de controlo — resultando num score que varia entre 5 (controlo nulo) e 25 pontos (controlo total).
 
@@ -168,8 +169,7 @@ ggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +
   theme_classic()
 ```
 
-
-3. Análise de Eficácia e Outcomes Secundários
+4. Análise de Eficácia e Outcomes Secundários
 
 Para além do desfecho primário, a avaliação da eficácia da intervenção RespiRA contemplou uma análise multidimensional de outcomes secundários, fundamentais para caracterizar o impacto clínico global da solução digital. Conforme estabelecido no protocolo, foram monitorizados indicadores de qualidade de vida relacionada com a saúde (através do questionário validado AQLQ), a função respiratória (medida pelo débito expiratório máximo — peak flow), a adesão à terapêutica de controlo e a segurança clínica, avaliada pela taxa de exacerbações durante o período de 12 semanas.
 
@@ -218,10 +218,8 @@ tabela_final <- dados %>%
 tabela_final
 ```
 
-
-
 ::: 
-Interpretação Clínica dos Resultados
+5. Interpretação Clínica dos Resultados
 
 A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Conforme estabelecido no racional do estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da doença.
 
@@ -229,12 +227,5 @@ Eficácia nos Desfechos Secundários: A superioridade da intervenção é estati
 
 Qualidade de Vida e Tendências: Observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), sugerindo que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
 
-Rigor Metodológico: A análise da variação individual do score ACT reforça a consistência da melhoria clínica observada, demonstrando que o envolvimento direto do doente através de ferramentas de mHealth é um complemento eficaz e seguro à prática clínica standard nos cuidados de saúde primários.
+Rigor Metodológico: A análise da variação individual do score ACT reforça a consistência da melhoria clínica observada, demonstrando que o envolvimento direto do doente através de ferramentas de mHealth é um complemento eficaz e seguro à prática clínica standard nos cuidados de saúde primários. 
 :::
-
-
-
-
-
-
-
