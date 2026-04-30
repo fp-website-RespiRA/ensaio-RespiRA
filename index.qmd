@@ -1,11 +1,54 @@
 ---
-title: "Projeto_RespiRA"
+title: "Início"
+format: html
 ---
 
-This is a Quarto website.
+## Resumo do Projeto
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel **RespiRA**. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma aplicação móvel dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de *mHealth* consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações.
 
-```{r}
-1 + 1
-```
+## Cenário Clínico
+
+A asma afeta cerca de **700.000 adultos em Portugal**. Apesar dos tratamentos existentes, mais de 50% dos doentes não têm a doença controlada.
+
+O modelo tradicional de consultas esporádicas falha na monitorização diária. A aplicação **RespiRA** surge para preencher esta lacuna, integrando:
+
+-   **Questionário ACT** (Asthma Control Test).
+
+-   **Registo de Peak Flow** (Débito Expiratório Máximo).
+
+-   **Planos de Ação Automáticos** baseados em algoritmos clínicos.
+
+## Objetivos do Estudo
+
+### Objetivo Primário
+
+Avaliar se a aplicação RespiRA melhora o controlo da asma (medido pelo score ACT) ao fim de **12 semanas**, comparativamente ao tratamento padrão.
+
+### Objetivos Secundários
+
+-   Avaliar o impacto da aplicação nos valores de débito expiratório máximo (*peak flow*).
+
+-   Determinar se a intervenção digital está associada a uma redução no número de exacerbações de asma.
+
+-   Avaliar o efeito da aplicação na adesão à medicação de controlo prescrita.
+
+-   Analisar as alterações na qualidade de vida relacionada com a asma através do questionário AQLQ.
+
+-   Avaliar a diferença entre grupos no número de episódios de recurso ao serviço de urgência e na satisfação dos participantes.
+
+## Metodologia em Resumo
+
+O estudo é um **Ensaio Clínico Controlado e Aleatorizado (RCT)** de fase piloto/pré-teste.
+
+-   **População:** Adultos (18-65 anos) com asma moderada.
+
+-   **Duração:** 12 semanas de intervenção.
+
+-   **Grupos:**
+
+    1\. **Grupo Intervenção:** Acesso à App RespiRA + Cuidado habitual.
+
+    [2.]{.underline} **Grupo Controlo:** Cuidado habitual isolado.
+
+**Estado do Projeto:** Início previsto para 1 de setembro de 2026.\
