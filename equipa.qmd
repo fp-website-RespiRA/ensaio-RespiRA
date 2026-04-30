@@ -3,3 +3,9 @@ title: "Equipa"
 format: html
 ---
 
+| Autoras                                  | E-mail             |
+|------------------------------------------|--------------------|
+| Beatriz da Silva Resende Correia Martins | up202508337\@up.pt |
+| Clara Marcão Figueiras                   | up202504460\@up.pt |
+| Matilde Mendes de Ascensão               | up202505167\@up.pt |
+| Rita Santos Torres                       | up202508173\@up.pt |

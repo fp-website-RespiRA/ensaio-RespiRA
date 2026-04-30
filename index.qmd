@@ -47,8 +47,8 @@ O estudo é um **Ensaio Clínico Controlado e Aleatorizado (RCT)** de fase pilot
 
 -   **Grupos:**
 
-    1\. **Grupo Intervenção:** Acesso à App RespiRA + Cuidado habitual.
+    1.  **Grupo Intervenção:** Acesso à App RespiRA + Cuidado habitual.
 
-    [2.]{.underline} **Grupo Controlo:** Cuidado habitual isolado.
+    2.  **Grupo Controlo:** Cuidado habitual isolado.
 
 **Estado do Projeto:** Início previsto para 1 de setembro de 2026.\
