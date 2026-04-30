@@ -31,68 +31,119 @@ dados <- dados %>%
 
 # 1. Análise de Resultados
 
-A presente secção detalha os resultados obtidos no ensaio clínico RespiRA, focado na eficácia de uma intervenção digital no controlo da asma moderada persistente. Em conformidade com as boas práticas de investigação, a análise foi conduzida seguindo o princípio da intenção de tratar (intention-to-treat), garantindo que as conclusões refletem a realidade clínica do acompanhamento de 12 semanas.
+A presente secção detalha os resultados obtidos no ensaio clínico RespiRA. Antes da apresentação das tabelas comparativas, realizou-se um diagnóstico de normalidade para garantir a validade dos testes estatísticos aplicados.
 
-Previamente à apresentação das tabelas comparativas, foi realizada uma inspeção rigorosa da integridade dos dados e dos pressupostos estatísticos. A normalidade das variáveis foi avaliada através do teste de Shapiro-Wilk e de métodos visuais (histogramas e Q-Q plots), fundamentando a escolha entre testes paramétricos ou não-paramétricos para cada indicador avaliado.
+A normalidade das variáveis foi avaliada através do teste de Shapiro-Wilk e de métodos visuais (histogramas e Q-Q plots), fundamentando a escolha entre testes paramétricos ou não-paramétricos para cada indicador avaliado.
+
+## Idade
+
+A análise da distribuição da idade revela um desvio da normalidade, caracterizado por uma marcada assimetria positiva no histograma e um desvio sistemático dos quantis na diagonal do gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,010), cujo valor inferior a 0,05 impõe a rejeição da hipótese nula. Perante esta evidência de não-normalidade, a caraterização etária da amostra será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre grupos realizadas mediante o teste não-paramétrico de Wilcoxon (Mann-Whitney), dada a sua robustez perante assimetrias e valores extremos.
 
 ```{r}
 #| echo: false
 #| results: 'hide'
 # 3. Inspeção de integridade dos dados
   
-  # Faz um resumo rápido de todas as colunas
+  
 summary(dados) # Limites e NAs
 
-  # Verificação da normalidade para as variaveis que vão ser usadas na tabela de características basais
-    # Verificação para a IDADE 
 hist(dados$idade, main="Histograma: Idade", col="lightblue")
 qqnorm(dados$idade); qqline(dados$idade, col="red")
 shapiro.test(dados$idade)
 # Nota: p < 0.05 no Shapiro-Wilk da idade (p-value=0.01016) -> usar Mediana porque idade não é Normal
+```
 
-  
+## Score ACT baseline
+
+A análise da distribuição do score ACT inicial revela uma forte aderência à normalidade. O histograma apresenta uma configuração visualmente simétrica, assemelhando-se à curva de Gauss, enquanto no gráfico Q-Q Plot os pontos alinham-se de forma consistente com a diagonal teórica de referência. Esta evidência visual é corroborada pelo teste de Shapiro-Wilk, que apresenta um valor de p = 0,841, claramente superior ao nível de significância de 0,05. Perante a validação deste pressuposto estatístico, a caraterização do nível de controlo da asma no momento inicial será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o teste paramétrico t de Student.
+
+```{r}
+#| echo: false
+#| results: 'hide'
    # Verificação para o ACT Baseline
-hist(dados$act_baseline, main="Histograma: ACT Inicial", col="lightblue")
+hist(dados$act_baseline, main="Histograma: ACT Baseline", col="lightblue")
 qqnorm(dados$act_baseline); qqline(dados$act_baseline, col="red")
 shapiro.test(dados$act_baseline)  
 # Nota: p > 0.05 no Shapiro-Wilk da ACT baseline (p-value=0.8414) -> usar Média porque ACT é Normal
+```
 
+## Score ACT semana 12
 
+A análise da distribuição do score ACT final (semana 12) demonstra uma clara aderência à normalidade, evidenciada pela configuração visualmente simétrica do histograma e pelo alinhamento consistente dos quantis com a diagonal no gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,158), cujo valor superior ao limiar de significância de 0,05 permite a validação do pressuposto estatístico de normalidade. Perante esta evidência, a caraterização do nível de controlo da asma no final do seguimento será descrita através da média e do desvio padrão (SD), sendo as comparações de eficácia entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.
+
+```{r}
+#| echo: false
+#| results: 'hide'
    # Verificação para o ACT semana 12
 hist(dados$act_semana12, main="Histograma: ACT semana 12", col="lightblue")
 qqnorm(dados$act_semana12); qqline(dados$act_semana12, col="red")
 shapiro.test(dados$act_semana12)  
 # Nota: p > 0.05 no Shapiro-Wilk da ACT semana 12 (p-value=0.1581) -> usar Média porque ACT é Normal
+```
 
+## AQLQ semana 12
 
+A análise da distribuição da qualidade de vida (AQLQ) no final da intervenção revela uma forte aderência à normalidade. O histograma apresenta uma configuração unimodal e simétrica, com os valores concentrados em torno da média, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados com a diagonal de referência. Esta interpretação visual é sustentada pelo teste de Shapiro-Wilk (p = 0,564), cujo valor significativamente superior a 0,05 impossibilita a rejeição da hipótese nula de normalidade. Consequentemente, a caraterização da qualidade de vida será apresentada através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.
+
+```{r}
+#| echo: false
+#| results: 'hide'
    # Verificação para o AQLQ semana 12
 hist(dados$aqlq_semana12, main="Histograma: AQLQ semana 12", col="lightblue")
 qqnorm(dados$aqlq_semana12); qqline(dados$aqlq_semana12, col="red")
 shapiro.test(dados$aqlq_semana12)  
 # Nota: p > 0.05 no Shapiro-Wilk do AQLQ semana 12 (p-value=0.5635) -> usar Média porque AQLQ é Normal
+```
 
+## Adesão
 
+A análise da distribuição da adesão terapêutica no final da intervenção revela uma aderência satisfatória à normalidade. O histograma apresenta uma configuração unimodal com uma distribuição concentrada nos valores superiores da escala, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados de forma consistente com a diagonal de referência, sem evidência de desvios sistemáticos significativos. Esta interpretação visual é validada pelo teste de Shapiro-Wilk (p = 0,296), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula de normalidade. Perante esta evidência, a caraterização da adesão será descrita através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.
+
+```{r}
+#| echo: false
+#| results: 'hide'
    # Verificação para adesão
 hist(dados$adesao, main="Histograma: Adesão", col="lightblue")
 qqnorm(dados$adesao); qqline(dados$adesao, col="red")
 shapiro.test(dados$adesao)  
 # Nota: p > 0.05 no Shapiro-Wilk da adesão (p-value=0.2955) -> usar Média porque adesão é Normal
+```
 
+## Peak Flow Baseline
 
-   # Verificação para peak flow baseline
+A análise da distribuição da função respiratória basal (Peak Flow) revela uma forte aderência à normalidade, caracterizada por um histograma unimodal e simétrico, com os dados distribuídos de forma equilibrada em torno da média. No gráfico Q-Q Plot, observa-se que os pontos da amostra acompanham rigorosamente a diagonal teórica de referência, sem desvios significativos. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,881), cujo valor superior ao limiar de 0,05 valida o pressuposto de normalidade. Perante esta evidência, a caraterização do Peak Flow inicial será descrita através da média e do desvio padrão, aplicando-se o teste paramétrico t de Student para as comparações estatísticas entre os grupos.
+
+```{r}
+#| echo: false
+#| results: 'hide'
+ #Verificação para peak flow baseline
 hist(dados$peak_flow_baseline, main="Histograma: peak flow baseline", col="lightblue")
 qqnorm(dados$peak_flow_baseline); qqline(dados$peak_flow_baseline, col="red")
 shapiro.test(dados$peak_flow_baseline)  
 # Nota: p > 0.05 no Shapiro-Wilk do peak flow baseline (p-value=0.8805) -> usar Média porque peak flow Baseline é Normal
+```
 
+## Peak Flow semana 12
 
+A análise da distribuição do peak flow à semana 12 revela uma aderência satisfatória à normalidade, evidenciada pela configuração unimodal do histograma e pelo alinhamento dos pontos com a diagonal de referência no gráfico Q-Q Plot. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,201), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula. Perante a validação deste pressuposto, a caraterização da função respiratória no final do seguimento será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.
+
+```{r}
+#| echo: false
+#| results: 'hide'
    # Verificação para peak flow semana 12
 hist(dados$peak_flow_semana12, main="Histograma: peak flow semana 12", col="lightblue")
 qqnorm(dados$peak_flow_semana12); qqline(dados$peak_flow_semana12, col="red")
 shapiro.test(dados$peak_flow_semana12)  
 # Nota: p > 0.05 no Shapiro-Wilk do peak flow semana 12 (p-value=0.201) -> usar Média porque peak flow semana 12 é Normal
+```
 
+## Exacerbações semana 12
 
+A análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p < 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados.
+
+```{r}
+#| echo: false
+#| results: 'hide'
    # Verificação para exacerbações semana 12
 hist(dados$exacerbacoes_12sem, main="Histograma: exacerbações semana 12", col="lightblue")
 qqnorm(dados$exacerbacoes_12sem); qqline(dados$exacerbacoes_12sem, col="red")
@@ -220,13 +271,9 @@ tabela_final
 
 # 5. Interpretação Clínica dos Resultados
 
-A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Conforme estabelecido no racional do estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da doença.
+A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Em conformidade com o racional estabelecido para este estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da patologia, traduzindo-se em resultados de eficácia estatisticamente significativos nos desfechos secundários.
 
-Eficácia nos Desfechos Secundários: A superioridade da intervenção é estatisticamente significativa nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes resultados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, reduzindo o fardo clínico da asma moderada persistente.
+Neste âmbito, destaca-se a superioridade da intervenção nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes achados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, contribuindo diretamente para a redução do fardo clínico da asma moderada persistente. Complementarmente, observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), o que sugere que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
 
-Qualidade de Vida e Tendências: Observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), sugerindo que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
-
-Rigor Metodológico: A análise da variação individual do score ACT reforça a consistência da melhoria clínica observada, demonstrando que o envolvimento direto do doente através de ferramentas de mHealth é um complemento eficaz e seguro à prática clínica standard nos cuidados de saúde primários.
-
- 
+Por fim, a análise da variação individual do score ACT reforça a consistência da melhoria clínica observada ao longo do tempo. Estes resultados demonstram que o envolvimento direto do doente através de ferramentas de mHealth constitui um complemento eficaz e seguro à prática clínica standard no contexto dos cuidados de saúde primários.
 
