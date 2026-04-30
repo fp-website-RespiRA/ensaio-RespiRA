@@ -37,9 +37,7 @@ A normalidade das variáveis foi avaliada através do teste de Shapiro-Wilk e de
 
 ## Idade
 
-Ao analisarmos a distribuição da idade na nossa amostra, observamos que o histograma apresenta uma assimetria à direita. Complementarmente, no gráfico Q-Q Plot, os pontos desviam-se da linha teórica, especialmente nas extremidades.
-
-Estas observações visuais, aliadas ao valor de p = 0,010 no teste de Shapiro-Wilk, confirmam que a idade não segue uma distribuição normal nesta amostra. Por este motivo, utilizaremos a Mediana e o teste não-paramétrico de Wilcoxon para esta variável.
+A análise da distribuição da idade revela um desvio da normalidade, caracterizado por uma marcada assimetria positiva no histograma e um desvio sistemático dos quantis na diagonal do gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,010), cujo valor inferior a 0,05 impõe a rejeição da hipótese nula. Perante esta evidência de não-normalidade, a caraterização etária da amostra será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre grupos realizadas mediante o teste não-paramétrico de Wilcoxon (Mann-Whitney), dada a sua robustez perante assimetrias e valores extremos.
 
 ```{r}
 #| echo: false
@@ -57,9 +55,7 @@ shapiro.test(dados$idade)
 
 ## Score ACT baseline
 
-O Score ACT baseline apresenta uma distribuição visualmente mais simétrica e próxima da curva de Gauss. Os pontos no Q-Q Plot alinham-se de forma consistente com a diagonal, o que é corroborado por um teste de Shapiro-Wilk com p \> 0,05.
-
-Esta evidência de normalidade permite-nos utilizar com segurança a Média e o Teste-t de Student para as comparações relativas ao controlo da asma.
+A análise da distribuição do score ACT inicial revela uma forte aderência à normalidade. O histograma apresenta uma configuração visualmente simétrica, assemelhando-se à curva de Gauss, enquanto no gráfico Q-Q Plot os pontos alinham-se de forma consistente com a diagonal teórica de referência. Esta evidência visual é corroborada pelo teste de Shapiro-Wilk, que apresenta um valor de p = 0,841, claramente superior ao nível de significância de 0,05. Perante a validação deste pressuposto estatístico, a caraterização do nível de controlo da asma no momento inicial será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o teste paramétrico t de Student.
 
 ```{r}
 #| echo: false
@@ -73,7 +69,7 @@ shapiro.test(dados$act_baseline)
 
 ## Score ACT semana 12
 
-O Score ACT avaliado no final da intervenção (Semana 12) apresenta, tal como no momento inicial, uma distribuição visualmente simétrica e próxima da curva de Gauss. Os pontos no Q-Q Plot alinham-se de forma consistente com a diagonal, o que é corroborado por um teste de Shapiro-Wilk com p = 0,158. Esta evidência de normalidade permite-nos utilizar com segurança a Média e o Teste-t de Student para comparar a eficácia entre os dois grupos.
+A análise da distribuição do score ACT final (semana 12) demonstra uma clara aderência à normalidade, evidenciada pela configuração visualmente simétrica do histograma e pelo alinhamento consistente dos quantis com a diagonal no gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,158), cujo valor superior ao limiar de significância de 0,05 permite a validação do pressuposto estatístico de normalidade. Perante esta evidência, a caraterização do nível de controlo da asma no final do seguimento será descrita através da média e do desvio padrão (SD), sendo as comparações de eficácia entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.
 
 ```{r}
 #| echo: false
@@ -87,7 +83,7 @@ shapiro.test(dados$act_semana12)
 
 ## AQLQ semana 12
 
-A avaliação da Qualidade de Vida (AQLQ) às 12 semanas revela uma distribuição que se aproxima da normalidade. O histograma mostra uma concentração central dos dados e os pontos no Q-Q Plot seguem a tendência da linha diagonal. O teste de Shapiro-Wilk apresenta um valor de p = 0,245 (superior a 0,05), o que nos permite utilizar com rigor a Média e o Teste-t de Student para as análises comparativas de eficácia.
+A análise da distribuição da qualidade de vida (AQLQ) no final da intervenção revela uma forte aderência à normalidade. O histograma apresenta uma configuração unimodal e simétrica, com os valores concentrados em torno da média, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados com a diagonal de referência. Esta interpretação visual é sustentada pelo teste de Shapiro-Wilk (p = 0,564), cujo valor significativamente superior a 0,05 impossibilita a rejeição da hipótese nula de normalidade. Consequentemente, a caraterização da qualidade de vida será apresentada através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.
 
 ```{r}
 #| echo: false
@@ -101,7 +97,7 @@ shapiro.test(dados$aqlq_semana12)
 
 ## Adesão
 
-A análise da adesão terapêutica às 12 semanas demonstra igualmente uma distribuição com tendência para a normalidade. O histograma revela uma concentração central dos valores e o Q-Q Plot exibe os pontos alinhados com a referência diagonal. Com um valor de p = 0,082 no teste de Shapiro-Wilk, confirma-se a adequação da utilização da Média e do Teste-t de Student para a comparação estatística desta variável entre os grupos.
+A análise da distribuição da adesão terapêutica no final da intervenção revela uma aderência satisfatória à normalidade. O histograma apresenta uma configuração unimodal com uma distribuição concentrada nos valores superiores da escala, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados de forma consistente com a diagonal de referência, sem evidência de desvios sistemáticos significativos. Esta interpretação visual é validada pelo teste de Shapiro-Wilk (p = 0,296), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula de normalidade. Perante esta evidência, a caraterização da adesão será descrita através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.
 
 ```{r}
 #| echo: false
@@ -113,9 +109,9 @@ shapiro.test(dados$adesao)
 # Nota: p > 0.05 no Shapiro-Wilk da adesão (p-value=0.2955) -> usar Média porque adesão é Normal
 ```
 
-## Pek Flow Baseline
+## Peak Flow Baseline
 
-A função respiratória basal (Peak Flow) também demonstra aderência à distribuição normal. A análise visual revela que os dados se concentram em torno da média e os quantis da amostra seguem a linha de referência no Q-Q Plot (p = 0,880). Assim, mantém-se a opção por testes paramétricos.
+A análise da distribuição da função respiratória basal (Peak Flow) revela uma forte aderência à normalidade, caracterizada por um histograma unimodal e simétrico, com os dados distribuídos de forma equilibrada em torno da média. No gráfico Q-Q Plot, observa-se que os pontos da amostra acompanham rigorosamente a diagonal teórica de referência, sem desvios significativos. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,881), cujo valor superior ao limiar de 0,05 valida o pressuposto de normalidade. Perante esta evidência, a caraterização do Peak Flow inicial será descrita através da média e do desvio padrão, aplicando-se o teste paramétrico t de Student para as comparações estatísticas entre os grupos.
 
 ```{r}
 #| echo: false
@@ -129,7 +125,7 @@ shapiro.test(dados$peak_flow_baseline)
 
 ## Peak Flow semana 12
 
-A função respiratória avaliada no final do estudo (Peak Flow às 12 semanas) mantém a aderência à distribuição normal observada no baseline. O histograma apresenta uma distribuição em forma de sino e os pontos no Q-Q Plot acompanham de perto a linha de referência. Com um valor de p = 0,722 no teste de Shapiro-Wilk, confirma-se a adequação da utilização da Média e do Teste-t de Student para avaliar o impacto da intervenção na função pulmonar.
+A análise da distribuição do peak flow à semana 12 revela uma aderência satisfatória à normalidade, evidenciada pela configuração unimodal do histograma e pelo alinhamento dos pontos com a diagonal de referência no gráfico Q-Q Plot. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,201), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula. Perante a validação deste pressuposto, a caraterização da função respiratória no final do seguimento será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.
 
 ```{r}
 #| echo: false
@@ -143,7 +139,7 @@ shapiro.test(dados$peak_flow_semana12)
 
 ## Exacerbações semana 12
 
-As exacerbações, sendo uma variável de contagem de eventos raros, apresentam uma distribuição fortemente enviesada e não-normal. Como esperado para este tipo de dado, o histograma mostra uma concentração acentuada no valor zero (ausência de eventos) e o Q-Q Plot revela um desvio significativo da diagonal. Nestes casos, o rigor estatístico impõe a utilização da Mediana e do teste não-paramétrico de Wilcoxon para a comparação entre os grupos.
+A análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p < 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados.
 
 ```{r}
 #| echo: false
