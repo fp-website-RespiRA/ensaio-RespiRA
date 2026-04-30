@@ -13,9 +13,12 @@ website:
         text: Materiais
       - href: resultados.qmd
         text: Resultados
+      - href: IA.qmd
+        text: Declaração de uso de IA
       - href: equipa.qmd
         text: Equipa
-
+      
+        
 format:
   html:
     theme:

@@ -1,0 +1,62 @@
+---
+title: "IA"
+format: html
+---
+
+# Site
+A utilização de IA generativa foi limitada ao suporte técnico na configuração da estrutura do site (Quarto) e no apoio à lógica de branching para o protótipo no Figma. Todo o conteúdo textual do protocolo (E1) foi transcrito e validado manualmente para garantir conformidade com as revisões dos docentes.
+
+## Prompt:
+"Explica-me a lógica de organização do ficheiro _quarto.yml para um site que deve priorizar a página 'Protocolo' no menu e listar outras secções de suporte. Quais são os parâmetros necessários para garantir que o menu de navegação funcione corretamente e como ativo um índice lateral para facilitar a leitura de documentos longos?"
+
+## Resposta da IA:
+"1. Organização da Hierarquia (Onde as coisas aparecem)
+A lógica começa no campo website. Para priorizares o 'Protocolo', deves defini-lo na navbar (a barra superior), que serve para a navegação global. Se tiveres muitas secções secundárias, podes usar a sidebar (barra lateral), mas para um site mais limpo, o ideal é manter o foco na barra superior e agrupar o resto.
+
+2. Sintaxe e Mapeamento (Como ligar as páginas)
+Para o menu funcionar, tens de "apontar" para os ficheiros corretamente. Utilizas a chave href (ou file) seguida do nome exato do ficheiro (ex: protocolo.qmd). Se quiseres listar as tais "secções de suporte" sem encher o menu principal, utilizas a função menu. Isto cria um item clicável que abre uma lista pendente com as outras páginas.
+
+3. Usabilidade e Navegação Longa (O Índice)
+Como um protocolo costuma ser um documento extenso, ler tudo de seguida é cansativo. Para resolver isto, ativas o parâmetro toc: true (Table of Contents) dentro das configurações de format: html:. O Quarto é inteligente: ele lê os teus títulos (os que começas com # ou ## no Markdown) e cria automaticamente um índice lateral à direita que permite saltar entre secções.
+
+4. Validação (Para não haver erros)
+Um erro comum é esqueceres-te de criar os ficheiros. O Quarto só consegue gerar o site se todos os ficheiros que listaste no _quarto.yml existirem fisicamente na tua pasta. Se referenciares um materiais.qmd que ainda não criaste, o programa vai dar erro ao tentar construir o site. Por isso, cria primeiro os ficheiros (mesmo que vazios) e depois configura o menu."
+
+## Como o output foi tratado:
+Foram seguidas as indicações do Gemini, de forma a criar a estrutura correta do site.
+
+# Protocolo de Ensaio Clínico
+Nesta secção não foi utilizada inteligência artificial, uma vez que apenas se trancreveu o protocolo da entrega 1. 
+
+# Materiais
+
+# Resultados
+
+# Protótipo
+## Prompt: 
+"Estou a desenhar um formulário no Figma. Como posso explicar a lógica de um pop-up de erro que aparece apenas se a data de nascimento inserida resultar numa idade inferior a 18 ou superior a 65 anos? E como estruturo a lógica condicional para que a 'Carga Tabágica' só apareça se a opção 'Fumador' for selecionada?"
+
+## Resposta da IA: 
+"Para criares a lógica de triagem no teu protótipo do Figma, tens dois caminhos principais, dependendo da complexidade que queres atingir:
+
+1. Lógica Condicional Avançada (Variables e IF/ELSE)
+Se estiveres a usar uma conta educativa ou profissional, podes usar Variables. A ideia é criares uma variável para a idade e outra para o estado tabágico.
+
+Para o erro de idade: No botão de "Seguinte", adicionas uma interação com um IF: "Se a idade for <18 OU >65, abrir o pop-up de erro; ELSE, avançar para a página seguinte".
+
+Para o branching do tabaco: Podes definir que, se o valor do campo for "Fumador", a visibilidade da secção "Carga Tabágica" passa de oculta para visível.
+
+2. Simulação com Frames Alternativos (On Click)
+Se preferires algo mais simples e visual, podes usar o método de frames alternativos.
+
+Em vez de lógica de programação, crias dois ecrãs quase iguais.
+
+No ecrã da "História Clínica", se o utilizador clicar na opção "Fumador", a interação On Click leva-o para um frame novo onde o campo "Carga Tabágica" já aparece desenhado.
+
+Para o erro de idade, o clique no botão "Confirmar" leva a um ecrã onde o pop-up de erro está sobreposto como um Overlay.
+
+Esta segunda opção é muitas vezes mais rápida de montar e funciona perfeitamente para simular o comportamento de uma aplicação real sem precisares de configurar variáveis complexas."
+
+## Como o output foi tratado:
+Foi usada a lógica condicional avançada com Variables, pois permite uma simulação mais realista e flexível. Foram criadas as variáveis "idade" e "EstadoTabagico" no Figma, e configuradas as interações conforme descrito para garantir que o protótipo se comporta de acordo com as regras estabelecidas.
+
