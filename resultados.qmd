@@ -174,7 +174,7 @@ A análise da distribuição da função respiratória basal (Peak Flow) revela 
 par(mfrow=c(1,2))
 hist(dados$peak_flow_baseline, 
      main="Histograma: Peak Flow Inicial", 
-     xlab="Peak Flow (L/min)", 
+     xlab="Peak Flow baseline (L/min)", 
      ylab="Frequência", 
      col="lightblue")
 
@@ -199,7 +199,7 @@ A análise da distribuição do peak flow à semana 12 revela uma aderência sat
 par(mfrow=c(1,2))
 hist(dados$peak_flow_semana12, 
      main="Histograma: Peak Flow Final", 
-     xlab="Peak Flow (L/min)", 
+     xlab="Peak Flow semana 12 (L/min)", 
      ylab="Frequência", 
      col="lightblue")
 
@@ -251,29 +251,29 @@ A Tabela 1 apresenta o perfil demográfico e clínico basal dos participantes. E
 tabela1 <- dados %>%
   select(grupo, idade, sexo, act_baseline, peak_flow_baseline) %>%
   tbl_summary(
-    by = grupo,   #Diz ao R para criar duas colunas separadas: uma para o "Controlo" e outra para a "App RespiRA", permitindo a comparação direta.
+    by = grupo,   
     statistic = list(
       idade ~ "{median} ({p25}, {p75})",        # p < 0.05: Não-Normal
       act_baseline ~ "{mean} ({sd})",           # p > 0.05: Normal
       peak_flow_baseline ~ "{mean} ({sd})",     # p > 0.05: Normal
-      all_categorical() ~ "{n} ({p}%)" #Seleciona automaticamente todas as variáveis que são "categorias" (Feminino/Masculino, Sim/Não).
+      all_categorical() ~ "{n} ({p}%)" 
     ),
     label = list(
-      idade ~ "Idade (Anos)",  #O R substitui o nome da coluna idade por um título mais formal que já inclui a unidade de medida entre parênteses, e o mesmo para as outras variáveis.
+      idade ~ "Idade (Anos)",  
       sexo ~ "Sexo",
       act_baseline ~ "Score ACT Inicial",
       peak_flow_baseline ~ "Peak Flow Inicial (L/min)"
     )
   ) %>%
-  add_overall(col_label = "**Amostra Total** (N=30)") %>%  #Cria uma coluna com a média/frequência de todos os 30 doentes juntos.
-  add_p(  #Calcula se a diferença entre os grupos é significativa.
+  add_overall(col_label = "**Amostra Total** (N=30)") %>%  
+  add_p(  
     test = list(
-      idade ~ "wilcox.test",      # Teste para Idade (Não-Normal)
-      all_continuous() ~ "t.test"  # Teste para ACT e Peak Flow (Normais)
+      idade ~ "wilcox.test",      
+      all_continuous() ~ "t.test" 
     ),
-    pvalue_fun = ~style_pvalue(.x, digits = 3) #Esta parte controla a aparência do valor de p.
+    pvalue_fun = ~style_pvalue(.x, digits = 3) 
   ) %>%
-  bold_labels() %>%  #Coloca todos os nomes das variáveis em negrito
+  bold_labels() %>%  
   modify_caption("**Tabela 1. Caraterísticas demográficas e clínicas basais da amostra.**")
 
 # Exibir a Tabela
@@ -294,7 +294,6 @@ A Figura 1 ilustra a distribuição comparativa dos resultados obtidos no final 
 #| message: false
 #| fig-cap: "Figura 1. Comparação do controlo da asma (ACT) entre o grupo Controlo e o grupo App RespiRA após 12 semanas."
 # 5. Criação do Gráfico do Outcome Primário
-# Utilizamos um Boxplot para mostrar a distribuição e a mediana
 ggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +
   geom_boxplot() + 
   labs(
