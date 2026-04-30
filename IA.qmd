@@ -1,0 +1,15 @@
+---
+title: "IA"
+format: html
+---
+
+# Protocolo de Ensaio Clínico
+
+Declaro que utilizei o Gemini para revisão gramatical do protocolo.
+
+# Materiais
+
+# Resultados
+
+# Geral
+Declaro que utilizei o Gemini para estruturar o ficheiro \_quarto.yml
