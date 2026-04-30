@@ -220,13 +220,10 @@ tabela_final
 
 # 5. Interpretação Clínica dos Resultados
 
-A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Conforme estabelecido no racional do estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da doença.
+A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Em conformidade com o racional estabelecido para este estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da patologia, traduzindo-se em resultados de eficácia estatisticamente significativos nos desfechos secundários.
 
-Eficácia nos Desfechos Secundários: A superioridade da intervenção é estatisticamente significativa nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes resultados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, reduzindo o fardo clínico da asma moderada persistente.
+Neste âmbito, destaca-se a superioridade da intervenção nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes achados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, contribuindo diretamente para a redução do fardo clínico da asma moderada persistente. Complementarmente, observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), o que sugere que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
 
-Qualidade de Vida e Tendências: Observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), sugerindo que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
-
-Rigor Metodológico: A análise da variação individual do score ACT reforça a consistência da melhoria clínica observada, demonstrando que o envolvimento direto do doente através de ferramentas de mHealth é um complemento eficaz e seguro à prática clínica standard nos cuidados de saúde primários.
-
+Por fim, a análise da variação individual do score ACT reforça a consistência da melhoria clínica observada ao longo do tempo. Estes resultados demonstram que o envolvimento direto do doente através de ferramentas de mHealth constitui um complemento eficaz e seguro à prática clínica standard no contexto dos cuidados de saúde primários.
  
 
