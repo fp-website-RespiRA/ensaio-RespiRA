@@ -64,7 +64,6 @@ Esta evidência de normalidade permite-nos utilizar com segurança a Média e o 
 ```{r}
 #| echo: false
 #| results: 'hide'
-# 3.1 Inspeção de integridade dos dados
    # Verificação para o ACT Baseline
 hist(dados$act_baseline, main="Histograma: ACT Baseline", col="lightblue")
 qqnorm(dados$act_baseline); qqline(dados$act_baseline, col="red")
@@ -79,7 +78,6 @@ O Score ACT avaliado no final da intervenção (Semana 12) apresenta, tal como n
 ```{r}
 #| echo: false
 #| results: 'hide'
-# 3.2 Inspeção de integridade dos dados
    # Verificação para o ACT semana 12
 hist(dados$act_semana12, main="Histograma: ACT semana 12", col="lightblue")
 qqnorm(dados$act_semana12); qqline(dados$act_semana12, col="red")
@@ -120,9 +118,9 @@ shapiro.test(dados$adesao)
 A função respiratória basal (Peak Flow) também demonstra aderência à distribuição normal. A análise visual revela que os dados se concentram em torno da média e os quantis da amostra seguem a linha de referência no Q-Q Plot (p = 0,880). Assim, mantém-se a opção por testes paramétricos.
 
 ```{r}
-   # Verificação para peak flow baseline
 #| echo: false
 #| results: 'hide'
+ #Verificação para peak flow baseline
 hist(dados$peak_flow_baseline, main="Histograma: peak flow baseline", col="lightblue")
 qqnorm(dados$peak_flow_baseline); qqline(dados$peak_flow_baseline, col="red")
 shapiro.test(dados$peak_flow_baseline)  
@@ -282,3 +280,4 @@ A análise integrada dos dados demonstra que a intervenção digital através da
 Neste âmbito, destaca-se a superioridade da intervenção nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes achados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, contribuindo diretamente para a redução do fardo clínico da asma moderada persistente. Complementarmente, observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), o que sugere que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
 
 Por fim, a análise da variação individual do score ACT reforça a consistência da melhoria clínica observada ao longo do tempo. Estes resultados demonstram que o envolvimento direto do doente através de ferramentas de mHealth constitui um complemento eficaz e seguro à prática clínica standard no contexto dos cuidados de saúde primários.
+
