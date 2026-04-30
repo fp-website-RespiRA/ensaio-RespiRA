@@ -29,10 +29,6 @@ dados <- dados %>%
 
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 038a2065f2a55e412f42d09095ac4ee549c5e1f2
 # 1. Análise de Resultados
 
 A presente secção detalha os resultados obtidos no ensaio clínico RespiRA, focado na eficácia de uma intervenção digital no controlo da asma moderada persistente. Em conformidade com as boas práticas de investigação, a análise foi conduzida seguindo o princípio da intenção de tratar (intention-to-treat), garantindo que as conclusões refletem a realidade clínica do acompanhamento de 12 semanas.
@@ -105,10 +101,6 @@ shapiro.test(dados$exacerbacoes_12sem)
 
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 038a2065f2a55e412f42d09095ac4ee549c5e1f2
 # 2. Caraterização Basal da Amostra
 
 Em conformidade com o protocolo do ensaio clínico RespiRA, a análise de resultados inicia-se com a caraterização da amostra recrutada. Foram incluídos 30 adultos com diagnóstico de asma moderada persistente, distribuídos aleatoriamente numa proporção de 1:1 entre o grupo de intervenção (App RespiRA) e o grupo de controlo.
@@ -153,10 +145,6 @@ tabela1
 
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 038a2065f2a55e412f42d09095ac4ee549c5e1f2
 # 3. Outcome Primário: Evolução do Controlo da Asma (ACT)
 
 O desfecho primário definido para este ensaio clínico foi a melhoria do controlo clínico da asma, quantificada através da variação na pontuação do Asthma Control Test (ACT) após 12 semanas de intervenção. O ACT é um instrumento validado que avalia cinco domínios críticos — sintomas, limitação de atividades, despertares noturnos, uso de medicação de alívio e perceção de controlo — resultando num score que varia entre 5 (controlo nulo) e 25 pontos (controlo total).
@@ -181,10 +169,6 @@ ggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +
   theme_classic()
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 038a2065f2a55e412f42d09095ac4ee549c5e1f2
 # 4. Análise de Eficácia e Outcomes Secundários
 
 Para além do desfecho primário, a avaliação da eficácia da intervenção RespiRA contemplou uma análise multidimensional de outcomes secundários, fundamentais para caracterizar o impacto clínico global da solução digital. Conforme estabelecido no protocolo, foram monitorizados indicadores de qualidade de vida relacionada com a saúde (através do questionário validado AQLQ), a função respiratória (medida pelo débito expiratório máximo — peak flow), a adesão à terapêutica de controlo e a segurança clínica, avaliada pela taxa de exacerbações durante o período de 12 semanas.
@@ -234,10 +218,6 @@ tabela_final <- dados %>%
 tabela_final
 ```
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 038a2065f2a55e412f42d09095ac4ee549c5e1f2
 # 5. Interpretação Clínica dos Resultados
 
 A análise integrada dos dados demonstra que a intervenção digital através da aplicação RespiRA apresenta benefícios clínicos mensuráveis e superiores ao cuidado habitual isolado. Conforme estabelecido no racional do estudo, a transição para um modelo de autogestão ativa permitiu uma melhoria sustentada no controlo clínico da doença.
