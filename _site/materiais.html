@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -109,6 +138,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resultados</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./IA.html"> 
+<span class="menu-text">Declaração de uso de IA</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./equipa.html"> 
 <span class="menu-text">Equipa</span></a>
   </li>  
@@ -123,8 +156,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introdução-aos-materiais" id="toc-introdução-aos-materiais" class="nav-link active" data-scroll-target="#introdução-aos-materiais">Introdução aos materiais</a></li>
+  <li><a href="#tratamento-de-monitorização-ecrf" id="toc-tratamento-de-monitorização-ecrf" class="nav-link" data-scroll-target="#tratamento-de-monitorização-ecrf">1. Tratamento de monitorização (eCRF)</a>
+  <ul class="collapse">
+  <li><a href="#a.-informação-geral-e-triagem" id="toc-a.-informação-geral-e-triagem" class="nav-link" data-scroll-target="#a.-informação-geral-e-triagem">A. Informação geral e triagem</a></li>
+  <li><a href="#b.-dados-demográficos-e-elegibilidade" id="toc-b.-dados-demográficos-e-elegibilidade" class="nav-link" data-scroll-target="#b.-dados-demográficos-e-elegibilidade">B. Dados demográficos e elegibilidade</a></li>
+  <li><a href="#d.-monitorização-clínica-respira" id="toc-d.-monitorização-clínica-respira" class="nav-link" data-scroll-target="#d.-monitorização-clínica-respira">D. Monitorização clínica RespiRA</a></li>
+  </ul></li>
+  <li><a href="#fórmulas-de-suporte-técnico" id="toc-fórmulas-de-suporte-técnico" class="nav-link" data-scroll-target="#fórmulas-de-suporte-técnico">2. Fórmulas de suporte técnico</a></li>
+  <li><a href="#dicionário-de-dados-e-segurança" id="toc-dicionário-de-dados-e-segurança" class="nav-link" data-scroll-target="#dicionário-de-dados-e-segurança">3.Dicionário de dados e segurança</a>
+  <ul class="collapse">
+  <li><a href="#resumo-da-estrutura-de-dados" id="toc-resumo-da-estrutura-de-dados" class="nav-link" data-scroll-target="#resumo-da-estrutura-de-dados">Resumo da estrutura de dados</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -148,8 +198,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introdução-aos-materiais" class="level2">
+<h2 class="anchored" data-anchor-id="introdução-aos-materiais">Introdução aos materiais</h2>
+<p>O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma.</p>
+</section>
+<section id="tratamento-de-monitorização-ecrf" class="level2">
+<h2 class="anchored" data-anchor-id="tratamento-de-monitorização-ecrf">1. Tratamento de monitorização (eCRF)</h2>
+<p>A recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.</p>
+<section id="a.-informação-geral-e-triagem" class="level3">
+<h3 class="anchored" data-anchor-id="a.-informação-geral-e-triagem">A. Informação geral e triagem</h3>
+<p>É o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.</p>
+</section>
+<section id="b.-dados-demográficos-e-elegibilidade" class="level3">
+<h3 class="anchored" data-anchor-id="b.-dados-demográficos-e-elegibilidade">B. Dados demográficos e elegibilidade</h3>
+<p>Recolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.</p>
+</section>
+<section id="d.-monitorização-clínica-respira" class="level3">
+<h3 class="anchored" data-anchor-id="d.-monitorização-clínica-respira">D. Monitorização clínica RespiRA</h3>
+<p>Este formulário é preenchido periodicamente e inclui indicadores de saúde: <em>É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). </em>Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada.</p>
+<hr>
+</section>
+</section>
+<section id="fórmulas-de-suporte-técnico" class="level2">
+<h2 class="anchored" data-anchor-id="fórmulas-de-suporte-técnico">2. Fórmulas de suporte técnico</h2>
+<p>Para garantir a precisão clínica, o sistema baseia-se nas seguintes equações matemáticas:</p>
+<p><strong>Cálculo do IMC: </strong> <span class="math display">\[IMC=\frac{Peso}{Altura^2}\]</span></p>
+<p><strong>Predição do débito expiratório máximo (PEF previsto):</strong> <span class="math display">\[PEF_{previsto}=(Altura\times 5.48) - (Idade\times 0.03)-1.58\]</span></p>
+<p><strong>Avaliação de progresso(Variação do ACT):</strong> <span class="math display">\[\Delta ACT = ACT_{t12}-ACT_{t0}\]</span></p>
+<hr>
+</section>
+<section id="dicionário-de-dados-e-segurança" class="level2">
+<h2 class="anchored" data-anchor-id="dicionário-de-dados-e-segurança">3.Dicionário de dados e segurança</h2>
+<p>Todas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.</p>
+<section id="resumo-da-estrutura-de-dados" class="level3">
+<h3 class="anchored" data-anchor-id="resumo-da-estrutura-de-dados">Resumo da estrutura de dados</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variável</th>
+<th style="text-align: left;">Descrição</th>
+<th style="text-align: left;">Regras de Validação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">‘weight’</td>
+<td style="text-align: left;">Peso (kg)</td>
+<td style="text-align: left;">Entre 30 e 250</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">‘pef_value’</td>
+<td style="text-align: left;">Pico de fluxo expiratório</td>
+<td style="text-align: left;">Entre 50 e 900 L/min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">‘act_score’</td>
+<td style="text-align: left;">Pontuação do teste ACT</td>
+<td style="text-align: left;">Inteiro entre 5 e 25</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">‘smoking_status’</td>
+<td style="text-align: left;">Estado tabágico</td>
+<td style="text-align: left;">Escolha múltipla</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">‘pack_year’</td>
+<td style="text-align: left;">Carga tabágica</td>
+<td style="text-align: left;">Visível se fumador/ex-fumador</td>
+</tr>
+</tbody>
+</table>
+<hr>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
