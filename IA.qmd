@@ -1,8 +1,8 @@
 ---
-title: " Declaração de Utilização de IA"
+title: " Declaração de Uso de IA"
 format: html
 ---
-#Introdução
+# Introdução
 Em conformidade com as normas de integridade académica, declara-se que este trabalho contou com o apoio de ferramentas de IA Generativa, enquadrando-se no Nível 2 (Arquiteto Conceptual) da GAI Use Scale. A IA atuou estritamente como parceiro de pensamento (thought partner), auxiliando no brainstorming estrutural e na otimização técnica da sintaxe em R para o processamento estatístico e formatação de tabelas.
 
 Toda a autoria intelectual, redação integral e interpretação clínica dos dados foram da exclusiva responsabilidade das autoras. Os conteúdos gerados foram validados criticamente face à literatura de referência, garantindo que as conclusões do estudo RespiRA refletem o juízo crítico e a responsabilidade ética das autoras.
@@ -11,7 +11,7 @@ Apresenta-se, em seguida, o reporte detalhado da utilização de IA, discriminan
 
 
 
-## Site
+## 1. Site
 
 A utilização de IA generativa foi limitada ao suporte técnico na configuração da estrutura do site (Quarto) e no apoio à lógica de branching para o protótipo no Figma. Todo o conteúdo textual do protocolo (E1) foi transcrito e validado manualmente para garantir conformidade com as revisões dos docentes.
 
@@ -36,7 +36,7 @@ Foram seguidas as indicações do Gemini, de forma a criar a estrutura correta d
 
 
 
-## Protocolo de Ensaio Clínico
+## 2. Protocolo de Ensaio Clínico
 
 Nesta secção não foi utilizada inteligência artificial, uma vez que apenas se trancreveu o protocolo da entrega 1.
 
@@ -44,19 +44,19 @@ Nesta secção não foi utilizada inteligência artificial, uma vez que apenas s
 
 
 
-## Materiais
+## 3. Materiais
 
 
 
 
 
-## Resultados
+## 4. Resultados
 
 
 
 
 
-## Protótipo
+## 5. Protótipo
 
 ### Prompt:
 
