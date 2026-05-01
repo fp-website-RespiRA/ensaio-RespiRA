@@ -39,6 +39,27 @@ Nesta secção não foi utilizada inteligência artificial, uma vez que apenas s
 
 ## 3. Materiais
 
+A utilização de IA nesta secção foi breve, servindo apenas como uma ajuda para o código a implementar em R de modo a que as fórmulas fossem bem conseguidas em Latex e na parte estética, ajudando a corrigir erros que impediam a distinção entre titulos, subtítulos e o corpo do texto. Para além disso, foi utilizada IA para organizar os dados que melhor se adequavam para construir a tabela resumo e para formatar a tabela.
+
+Não foi necessária a utilização de inteligência artifical no resto da parte da secção dos materiais, uma vez que foi apenas necessário ir ao redCap ver os formulários previamente entregues e fazer um resumo da utilização e funcionalidade de cada questão e categoria dos mesmos.
+
+### Prompt:
+
+1-"Como faço para escrever as fórmulas matemáticas do IMC e do PEF previsto em sintaxe LaTex para que apareçam corretamente em R e como faço para haver distinção entre títulos, subtítulos e corpo do texto?"
+
+2-"Tendo em conta o nosso dicionário de dados, que coloquei em anexo, podes me ajudar a escolher os melhores dados para construir uma tabela resumo e ajudar-me na formatação da tabela em R?"
+
+### Resposta da IA:
+
+1-"Para as fórmulas no site, utiliza a sintaxe LaTeX: `$$IMC = \frac{Peso}{Altura^2}$$` e `$$PEF_{previsto} = (Altura \times 5.48) - (Idade \times 0.03) - 1.58$$`. No R Markdown, usa \# para Títulos e \## para Subtítulos para criar a hierarquia."
+
+2-" Para a tabela do dicionário de dados, recomendo focar nas variáveis: 'weight', 'pef_value', 'act_score' e 'smoking_status'. Deves estruturar a tabela em Markdown da seguinte forma, com estas colunas: \| Variável \| Descrição \| Regras de Validação \|.  Não te esqueças de alinhamento (:---): Garante que o texto da tabela fica alinhado à esquerda. Destaque de Variáveis (backticks): Colocar as variáveis entre `(ex:`weight\`) faz com que elas apareçam com um aspeto de "código", o que é uma boa prática em dicionários de dados. Lógica de Branching: Inclui a regra da carga tabágica na última coluna, para que fique claro que existe uma dependência entre as perguntas."
+
+### Como o output foi tratado:
+
+O código das fórmulas e a estrutura da tabela foram integrados no ficheiro .qmd, garantindo a correta visualização no site. Foi aceite também a proposta das categorias escolhidas para colocar no dicionário de dados e o modo como deveria estruturar a tabela.
+
+
 ## 4. Resultados
 
 ## 5. Protótipo
