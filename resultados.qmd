@@ -15,7 +15,7 @@ library(gt)
 library(janitor)
 
 # 2. Importação de dados
-dados <- read_csv(here("respira.csv")) %>% 
+dados <- read_csv(here("data", "raw", "respira.csv")) %>% 
   clean_names() %>% 
   mutate(
     sexo = factor(sexo, labels = c("Feminino", "Masculino")),
@@ -214,7 +214,7 @@ shapiro.test(dados$peak_flow_semana12)
 
 ## Exacerbações semana 12
 
-A análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p < 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados.
+A análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p \< 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados.
 
 ```{r}
 #| echo: false
@@ -361,4 +361,3 @@ A análise integrada dos dados demonstra que a intervenção digital através da
 Neste âmbito, destaca-se a superioridade da intervenção nos domínios da adesão terapêutica (p = 0,035) e na redução da taxa de exacerbações (p = 0,039). Estes achados são particularmente relevantes, pois validam a capacidade da aplicação em promover mudanças comportamentais e prevenir eventos agudos, contribuindo diretamente para a redução do fardo clínico da asma moderada persistente. Complementarmente, observou-se uma tendência positiva na qualidade de vida relacionada com a saúde (AQLQ, p = 0,051), o que sugere que a monitorização em tempo real e o acesso a planos de ação personalizados podem mitigar o impacto psicossocial da doença.
 
 Por fim, a análise da variação individual do score ACT reforça a consistência da melhoria clínica observada ao longo do tempo. Estes resultados demonstram que o envolvimento direto do doente através de ferramentas de mHealth constitui um complemento eficaz e seguro à prática clínica standard no contexto dos cuidados de saúde primários.
-
