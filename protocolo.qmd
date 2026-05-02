@@ -83,6 +83,7 @@ Este é um ensaio clínico randomizado, controlado, de grupos paralelos, destina
 | Follow-up | 12 semanas | Avaliações de outcomes às 4, 8 e 12 semanas |
 
 ### Diagrama CONSORT
+
 ```{mermaid}
 graph TD
     %% Nós principais
@@ -122,6 +123,7 @@ graph TD
 ```
 
 ### Diagrama de Atividades - Percurso do Paciente
+
 ```{mermaid}
 graph TD
     A[Identificacao do Paciente] --> B[Avaliacao de Elegibilidade]
@@ -203,6 +205,7 @@ Será contínuo, com resolução de falhas, monitorização da utilização e as
 Os participantes manterão o cuidado habitual, incluindo consultas, medicação e acompanhamento clínico.
 
 ### Diagrama de Atividades: Percurso na App RespiRA
+
 ```{mermaid}
 graph TD
     A[Abertura da App] --> B[Login ou Registo]
@@ -224,6 +227,7 @@ graph TD
 ```
 
 #### 2.3.1.1 Fluxo de Funcionamento da App (Diagrama de Sequência)
+
 ```{mermaid}
 sequenceDiagram
     autonumber
@@ -322,12 +326,6 @@ A análise estatística será conduzida segundo o princípio da intenção de tr
 ## 5. Ética e Disseminação
 
 O estudo será conduzido em conformidade com a Declaração de Helsínquia e as normas de Boa Prática Clínica. O protocolo será previamente submetido e aprovado por uma Comissão de Ética para a Investigação em Saúde antes do início do recrutamento. Todos os participantes fornecerão consentimento informado por escrito após esclarecimento adequado sobre os objetivos, procedimentos, riscos e benefícios. Será garantido o direito de desistência a qualquer momento, sem prejuízo dos cuidados de saúde habituais. A proteção de dados será assegurada em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD). Os dados clínicos e digitais serão pseudonimizados e armazenados em sistemas seguros, com acesso restrito à equipa de investigação. Serão implementadas medidas técnicas e organizativas para prevenir acessos não autorizados ou perda de informação. Atendendo à natureza digital da intervenção, será garantida a segurança dos dados gerados pela aplicação, incluindo autenticação e encriptação. Eventos adversos serão monitorizados e reportados conforme os procedimentos definidos. Os resultados serão disseminados independentemente dos achados, através de publicações científicas e apresentações em congressos. Será promovida a partilha com participantes e instituições, contribuindo para a transparência científica e potencial integração futura da intervenção na prática clínica.
-
-------------------------------------------------------------------------
-
-## 6. Declaração de Uso de IA
-
-Declaro que utilizei o Gemini para estruturar o ficheiro \_quarto.yml e para revisão gramatical do protocolo.
 
 ------------------------------------------------------------------------
 
