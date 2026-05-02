@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ensaio RespiRA"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Início
+      - href: protocolo.qmd
+        text: Protocolo
+      - href: materiais.qmd
+        text: Materiais
+      - href: questionario_eCRF.qmd
+        text: Questionário eCRF
+      - href: resultados.qmd
+        text: Resultados
+      - href: IA.qmd
+        text: Declaração de uso de IA
+      - href: equipa.qmd
+        text: Equipa
+      - href: prototipo.qmd
+        text: Prototipo
+      
+        
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+
