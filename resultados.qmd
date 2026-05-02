@@ -276,7 +276,7 @@ tabela1
 
 # 3. Outcome Primário: Evolução do Controlo da Asma (ACT)
 
-O desfecho primário definido para este ensaio clínico foi a melhoria do controlo clínico da asma, quantificada através da variação na pontuação do Asthma Control Test (ACT) após 12 semanas de intervenção. O ACT é um instrumento validado que avalia cinco domínios críticos - sintomas, limitação de atividades, despertares noturnos, uso de medicação de alívio e perceção de controlo — resultando num score que varia entre 5 (controlo nulo) e 25 pontos (controlo total).
+O desfecho primário definido para este ensaio clínico foi a melhoria do controlo clínico da asma, quantificada através da variação na pontuação do Asthma Control Test (ACT) após 12 semanas de intervenção. O ACT é um instrumento validado que avalia cinco domínios críticos - sintomas, limitação de atividades, despertares noturnos, uso de medicação de alívio e perceção de controlo - resultando num score que varia entre 5 (controlo nulo) e 25 pontos (controlo total).
 
 A Figura 1 ilustra a distribuição comparativa dos resultados obtidos no final do período de acompanhamento. Através da análise de diagramas de caixa (boxplots), é possível observar não apenas a tendência central da pontuação final em cada braço do estudo, mas também a dispersão e variabilidade dos scores nos participantes que completaram o protocolo.
 
