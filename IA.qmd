@@ -120,31 +120,25 @@ Esta secção foi redigida sem o auxílio de ferramentas generativas.
 
 ### Prompt 1:
 
-"Estou a desenhar um formulário no Figma. Como posso explicar a lógica de um pop-up de erro que aparece apenas se a data de nascimento inserida resultar numa idade inferior a 18 ou superior a 65 anos? E como estruturo a lógica condicional para que a 'Carga Tabágica' só apareça se a opção 'Fumador' for selecionada?"
+"Estou a desenhar um formulário no Figma. Como posso simular manualmente um pop-up de erro para idades fora do intervalo (18-65 anos) e criar o efeito de que a “Carga Tabágica” só aparece se a opção “Fumador” for selecionada, sem usar variáveis complexas?"
 
 ### Resposta da IA:
 
-"Para criares a lógica de triagem no teu protótipo do Figma, tens dois caminhos principais, dependendo da complexidade que queres atingir:
+"Para criares essa interatividade de forma totalmente manual e visual no Figma, deves utilizar o método de Frames Alternativos e Overlays. Aqui está o passo a passo:
 
-1.  Lógica Condicional Avançada (Variables e IF/ELSE) Se estiveres a usar uma conta educativa ou profissional, podes usar Variables. A ideia é criares uma variável para a idade e outra para o estado tabágico.
+ 1. Simulação do Pop-up de Erro (Idade):
+- Cria um frame pequeno e independente (o pop-up) com a mensagem de erro.
+- No teu frame principal, seleciona o botão 'Confirmar'. Nas configurações de prototipagem, cria uma interação On Click -> Open Overlay e seleciona o frame do pop-up.
+- Define a posição como 'Centered' para que o erro apareça por cima do formulário, simulando a validação da idade.
 
-Para o erro de idade: No botão de "Seguinte", adicionas uma interação com um IF: "Se a idade for \<18 OU \>65, abrir o pop-up de erro; ELSE, avançar para a página seguinte".
-
-Para o branching do tabaco: Podes definir que, se o valor do campo for "Fumador", a visibilidade da secção "Carga Tabágica" passa de oculta para visível.
-
-2.  Simulação com Frames Alternativos (On Click) Se preferires algo mais simples e visual, podes usar o método de frames alternativos.
-
-Em vez de lógica de programação, crias dois ecrãs quase iguais.
-
-No ecrã da "História Clínica", se o utilizador clicar na opção "Fumador", a interação On Click leva-o para um frame novo onde o campo "Carga Tabágica" já aparece desenhado.
-
-Para o erro de idade, o clique no botão "Confirmar" leva a um ecrã onde o pop-up de erro está sobreposto como um Overlay.
-
-Esta segunda opção é muitas vezes mais rápida de montar e funciona perfeitamente para simular o comportamento de uma aplicação real sem precisares de configurar variáveis complexas."
+ 2. Lógica de Branching (Tabaco):
+- Cria dois frames para a página de História Clínica: o Frame A (estado inicial, sem carga tabágica) e o Frame B(com o campo 'Carga Tabágica' visível).
+- No Frame A, seleciona a opção 'Fumador' e cria uma ligação On Click -> Navigate To -> Frame B.
+- Para que a transição pareça natural, usa a animação 'Instant' ou 'Smart Animate'. Isto simula que o campo apareceu dinamicamente em resposta à escolha do utilizador."
 
 ### Como o output foi tratado:
 
-Foi usada a lógica condicional avançada com Variables, pois permite uma simulação mais realista e flexível. Foram criadas as variáveis "idade" e "EstadoTabagico" no Figma, e configuradas as interações conforme descrito para garantir que o protótipo se comporta de acordo com as regras estabelecidas.
+Foi utilizada a técnica de prototipagem manual por estados (Frames). Desenhei individualmente cada ecrã necessário para cobrir os diferentes cenários: um frame específico para o estado de erro e frames distintos para o fluxo de "Fumador" vs "Não Fumador". As interações foram configuradas manualmente através de Overlays e navegação entre frames, garantindo o comportamento lógico pretendido sem recorrer a funções automatizadas de programação.
 
 #### **Nível da GAI Use Scale**: 2. 
 
