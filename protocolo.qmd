@@ -180,7 +180,7 @@ Os participantes randomizados para o grupo de intervenção receberão:
 
 ### Diagrama de Casos de Uso: Funcionalidades da App RespiRA
 
-![Diagrama de Casos de Uso da App RespiRA](diagrama_caso_de_uso.png)
+![Diagrama de Casos de Uso da App RespiRA](diagramas/diagrama_caso_de_uso.png) 
 
 Funcionalidades principais: 1. Monitorização integrada (ACT e Peak Flow) O que faz: A aplicação combina a autoavaliação semanal pelo Asthma Control Test (ACT) com o registo diário do peak flow, permitindo monitorização contínua do controlo da asma. Os dados são processados e apresentados em gráficos evolutivos. Como o participante interage: O participante responde ao ACT e insere valores de peak flow, recebendo interpretação imediata do controlo. Frequência de uso esperada:: Semanal (ACT) e diária ou conforme orientação clínica (peak flow). Para que a aplicação RespiRa forneça um feedback imediato ao utilizador, o valor do débito expiratório máximo (PEF) registado é comparado com o valor previsto para a sua idade e ealtura (PEF previsto), utilizando a seguinte equação:
 
