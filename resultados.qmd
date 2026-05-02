@@ -19,13 +19,9 @@ dados <- read_csv(here("data", "raw", "respira.csv")) %>%
   clean_names() %>% 
   mutate(
     sexo = factor(sexo, labels = c("Feminino", "Masculino")),
-    grupo = factor(grupo, labels = c("Controlo", "App RespiRA"))
+    grupo = factor(grupo, labels = c("Controlo", "App RespiRA")),
+    delta_act = act_semana12 - act_baseline
   )
-
-# Cálculo de Rigor: Variação Individual (Delta)
-# Essencial para ver quanto cada doente melhorou desde o início
-dados <- dados %>%
-  mutate(delta_act = act_semana12 - act_baseline)
 
 ```
 
@@ -252,33 +248,29 @@ tabela1 <- dados %>%
   select(grupo, idade, sexo, act_baseline, peak_flow_baseline) %>%
   tbl_summary(
     by = grupo,   
-    statistic = list(
-      idade ~ "{median} ({p25}, {p75})",        # p < 0.05: Não-Normal
-      act_baseline ~ "{mean} ({sd})",           # p > 0.05: Normal
-      peak_flow_baseline ~ "{mean} ({sd})",     # p > 0.05: Normal
-      all_categorical() ~ "{n} ({p}%)" 
-    ),
     label = list(
-      idade ~ "Idade (Anos)",  
+      idade ~ "Idade (anos)",
       sexo ~ "Sexo",
       act_baseline ~ "Score ACT Inicial",
       peak_flow_baseline ~ "Peak Flow Inicial (L/min)"
-    )
-  ) %>%
-  add_overall(col_label = "**Amostra Total** (N=30)") %>%  
-  add_p(  
-    test = list(
-      idade ~ "wilcox.test",      
-      all_continuous() ~ "t.test" 
     ),
-    pvalue_fun = ~style_pvalue(.x, digits = 3) 
+    statistic = list(
+      idade ~ "{median} ({p25}, {p75})",
+      all_continuous() & !idade ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} ({p}%)"
+    ),
+    digits = all_continuous() ~ 1,
+    missing = "no"
   ) %>%
-  bold_labels() %>%  
-  modify_caption("**Tabela 1. Caraterísticas demográficas e clínicas basais da amostra.**")
+  add_overall(col_label = "**Amostra Total** (N=30)") %>%
+  add_p(
+    test = list(idade ~ "wilcox.test", all_continuous() ~ "t.test"),
+    pvalue_fun = ~style_pvalue(.x, digits = 3)
+  ) %>%
+  modify_header(label ~ "**Variável**") %>%
+  bold_labels()
 
-# Exibir a Tabela
 tabela1
-#O valor de p na Tabela 1 indica se existe uma diferença estatística entre os grupos no ponto de partida: se for maior que 0,05, confirma que os grupos são equilibrados e que o processo de aleatorização foi eficaz, garantindo a validade estatística do estudo.
 
 ```
 
@@ -294,15 +286,25 @@ A Figura 1 ilustra a distribuição comparativa dos resultados obtidos no final 
 #| message: false
 #| fig-cap: "Figura 1. Comparação do controlo da asma (ACT) entre o grupo Controlo e o grupo App RespiRA após 12 semanas."
 # 5. Criação do Gráfico do Outcome Primário
-ggplot(dados, aes(x = grupo, y = act_semana12, fill = grupo)) +
-  geom_boxplot() + 
-  labs(
-    title = "Controlo da Asma às 12 semanas",
-    subtitle = "Análise realizada em n=27 doentes com seguimento completo",
-    x = "Grupo de Estudo",
-    y = "Score ACT Final"
+fig_outcome <- ggplot(
+  dados %>% filter(!is.na(act_semana12)), 
+  aes(x = grupo, y = act_semana12, colour = grupo)) +
+  # outlier.shape = NA para não duplicar os pontos do jitter
+  geom_boxplot(outlier.shape = NA, width = 0.4, linewidth = 0.7) +
+  geom_jitter(width = 0.12, alpha = 0.7, size = 2.5) +
+  scale_colour_manual(
+    values = c("App RespiRA" = "#2C3E50", "Controlo" = "#7A9B9E")
   ) +
-  theme_classic()
+  labs(
+    x = "Grupo de Estudo",
+    y = "Score ACT às 12 semanas",
+    title = "RespiRA: Controlo da Asma às 12 semanas"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none")
+
+fig_outcome
+
 ```
 
 # 4. Análise de Eficácia e Outcomes Secundários
@@ -316,42 +318,39 @@ A Tabela 2 sintetiza estes resultados comparativos entre o grupo de intervençã
 
 # 6. Tabela de Resultados de Eficácia (Outcomes Primários e Secundários)
 tabela_final <- dados %>%
-  select(grupo, act_semana12, delta_act, aqlq_semana12, peak_flow_semana12, adesao, exacerbacoes_12sem) %>%
+  select(grupo, act_semana12, delta_act, aqlq_semana12, adesao, exacerbacoes_12sem) %>%
   tbl_summary(
     by = grupo,
+    
     type = list(
-      exacerbacoes_12sem ~ "continuous",
+      exacerbacoes_12sem ~ "continuous", 
       delta_act ~ "continuous"
     ),
     statistic = list(
-      act_semana12 ~ "{mean} ({sd})",
-      aqlq_semana12 ~ "{mean} ({sd})",
-      peak_flow_semana12 ~ "{mean} ({sd})",
-      adesao ~ "{mean} ({sd})",
-      delta_act ~ "{median} ({p25}, {p75})",
-      exacerbacoes_12sem ~ "{median} ({p25}, {p75})"
+      all_of(c("act_semana12", "aqlq_semana12", "adesao")) ~ "{mean} ({sd})",
+      all_of(c("exacerbacoes_12sem", "delta_act")) ~ "{median} ({p25}, {p75})"
     ),
     label = list(
       act_semana12 ~ "Score ACT Final",
-      delta_act ~ "Variação do Score ACT",
+      delta_act ~ "Variação do Score (Delta ACT)",
       aqlq_semana12 ~ "Score AQLQ (Qualidade de Vida)",
-      peak_flow_semana12 ~ "Peak Flow Final (L/min)",
-      adesao ~ "Adesão à Terapêutica (%)",
-      exacerbacoes_12sem ~ "Nº de Exacerbações (12 sem)"
+      adesao ~ "Adesão (%)",
+      exacerbacoes_12sem ~ "Nº de Exacerbações"
     ),
-    missing_text = "(Dados em falta)" 
+    digits = all_continuous() ~ 1
   ) %>%
   add_p(
     test = list(
       all_of(c("exacerbacoes_12sem", "delta_act")) ~ "wilcox.test", 
-      all_continuous() ~ "t.test"          
+      all_continuous() ~ "t.test"
     ),
     pvalue_fun = ~style_pvalue(.x, digits = 3)
   ) %>%
-  bold_labels() %>%
-  modify_caption("**Tabela 2. Comparação de Outcomes Clínicos após 12 semanas.**")
+  modify_header(label ~ "**Variável**") %>%
+  bold_labels()
 
 tabela_final
+
 ```
 
 # 5. Interpretação Clínica dos Resultados
