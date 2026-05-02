@@ -61,6 +61,21 @@ O código das fórmulas e a estrutura da tabela foram integrados no ficheiro .qm
 
 
 ## 4. Resultados
+### Nível: 2 - Arquiteto Conceptual (Parceiro de Pensamento)
+### Prompt:
+Para um relatório clínico de asma, qual é a melhor forma de apresentar a comparação de múltiplos outcomes secundários (adesão, exacerbações, função pulmonar) entre dois grupos num projeto Quarto, garantindo o rigor na escolha dos testes estatísticos
+
+### Resposta da IA:
+
+A estratégia mais rigorosa é a criação de uma Tabela de Síntese de Eficácia (Tabela 2) que utilize o pacote gtsummary. A IA recomendou:
+- Diferenciação de Tipos: Forçar o tratamento de variáveis de contagem (exacerbações) como contínuas para permitir o cálculo de medianas.
+- Seleção de Testes: Utilizar o Teste-t para variáveis normais (ACT, Peak Flow) e o teste de Wilcoxon para variáveis enviesadas ou de contagem.
+- Métrica de Evolução: Criar uma variável de 'Delta' para quantificar a magnitude da melhoria individual de cada doente, permitindo uma análise mais profunda do que apenas o valor final.
+
+### Como o output foi tratado:
+A IA atuou como parceiro de pensamento na arquitetura da Tabela 2. Embora tenha fornecido algumas sintaxes técnicas necessárias, a responsabilidade de executar os diagnósticos de normalidade (Shapiro-Wilk) e a decisão crítica de incluir o "Delta ACT" para medir o progresso real foram nossas. 
+
+
 
 ## 5. Protótipo
 
@@ -91,3 +106,21 @@ Esta segunda opção é muitas vezes mais rápida de montar e funciona perfeitam
 ### Como o output foi tratado:
 
 Foi usada a lógica condicional avançada com Variables, pois permite uma simulação mais realista e flexível. Foram criadas as variáveis "idade" e "EstadoTabagico" no Figma, e configuradas as interações conforme descrito para garantir que o protótipo se comporta de acordo com as regras estabelecidas.
+
+
+### Nível: 2 - Arquiteto Conceptual (Parceiro de Pensamento)
+### Prompt:
+
+"Como estruturar uma página inicial (dashboard) de uma aplicação móvel para monitorização de asma que seja clinicamente rigorosa mas que não cause ansiedade ao doente? O foco deve ser o questionário ACT e o Peak Flow."
+
+### Resposta da IA:
+Para conciliar o rigor clínico com o bem-estar do utilizador, a estrutura deve focar-se em quatro pilares:
+- Hierarquia de Controlo: Implementar um "semáforo" visual baseado no último score ACT (Verde para controlado, Amarelo para parcial, Vermelho para descontrolado).
+- Registo Diário Simples: Colocar o campo de inserção do Peak Flow no topo, permitindo um registo rápido sem navegação complexa.
+- Segurança Permanente: Incluir um botão SOS de emergência sempre fixo e visível para reduzir a sensação de isolamento do doente.
+- Calm Design: Priorizar o uso de espaços em branco e uma paleta de cores suaves (azuis e verdes acinzentados) para evitar a sobrecarga cognitiva e a ansiedade.
+
+### Reflexão:
+A sugestão da IA foi fundamental para estruturar a hierarquia de informação. No entanto, como autora, decidi remover o "semáforo" de cores berrantes e substituí-lo por uma mensagem de texto simples e cores suaves, para garantir que o design seguia o princípio de calm technology.
+
+
