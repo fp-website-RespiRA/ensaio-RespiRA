@@ -15,7 +15,7 @@ format:
 
 ### Título do Estudo
 
-Eficácia da Intervenção Digital com a Aplicação Móvel RespiRA — Integrando Monitorização de Sintomas (ACT), Registo de Peak Flow e Plano de Ação Personalizado — Comparada com o Cuidado Habitual Isolado no Controlo Clínico da Asma Moderada Persistente em Adultos entre os 18 e 65 Anos: Um Ensaio Clínico Controlado e Aleatorizado de 12 Semanas em Cuidados de Saúde Primários para Avaliação do Score ACT, Taxa de Exacerbações e Qualidade de Vida.
+Eficácia da Intervenção Digital com a Aplicação Móvel RespiRA - Integrando Monitorização de Sintomas (ACT), Registo de Peak Flow e Plano de Ação Personalizado - Comparada com o Cuidado Habitual Isolado no Controlo Clínico da Asma Moderada Persistente em Adultos entre os 18 e 65 Anos: Um Ensaio Clínico Controlado e Aleatorizado de 12 Semanas em Cuidados de Saúde Primários para Avaliação do Score ACT, Taxa de Exacerbações e Qualidade de Vida.
 
 ### Título Abreviado
 
