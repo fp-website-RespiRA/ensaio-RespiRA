@@ -121,9 +121,9 @@
   {
     "objectID": "questionario_eCRF.html",
     "href": "questionario_eCRF.html",
-    "title": "questionario_eCRF",
+    "title": "Questionario_eCRF",
     "section": "",
-    "text": "A recolha de dados clínicos e a monitorização dos participantes do projeto RespiRA foram centralizadas através da plataforma REDcap . Esta ferramenta foi selecionada como Electronic Case Report Form (eCRF) pela sua robustez na garantia da integridade dos dados, segurança da informação e conformidade com as normas internacionais de bioética e proteção de dados em saúde.Para uma consulta detalhada da estrutura de recolha de dados e do fluxo de perguntas apresentado aos participantes, os formulários podem ser acedidos através do link para o servidor REDcap disponibilizado em seguida:\nhttps://redcap.med.up.pt/redcap/surveys/?s=FJF4NP8F7CMTEP3R"
+    "text": "A recolha de dados clínicos e a monitorização dos participantes do projeto RespiRA foram centralizadas através da plataforma REDcap . Esta ferramenta foi selecionada como Electronic Case Report Form (eCRF) pela sua robustez na garantia da integridade dos dados, segurança da informação e conformidade com as normas internacionais de bioética e proteção de dados em saúde.Para uma consulta detalhada da estrutura de recolha de dados e do fluxo de perguntas apresentado aos participantes, os formulários podem ser acedidos através do link para o servidor REDcap disponibilizado em seguida:\nClique aqui para aceder ao Servidor REDCap."
   },
   {
     "objectID": "equipa.html",
