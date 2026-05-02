@@ -5,7 +5,7 @@ format: html
 
 ## Resumo do Projeto
 
-Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel **RespiRA**. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma aplicação móvel dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de *mHealth* consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações.
+Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel **RespiRA**. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma ferramenta digital dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de *mHealth* consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações.
 
 ## Cenário Clínico
 
@@ -27,15 +27,15 @@ Avaliar se a aplicação RespiRA melhora o controlo da asma (medido pelo score A
 
 ### Objetivos Secundários
 
--   Avaliar o impacto da aplicação nos valores de débito expiratório máximo (*peak flow*).
+-   Analisar o impacto da aplicação nos valores de débito expiratório máximo (*peak flow*).
 
 -   Determinar se a intervenção digital está associada a uma redução no número de exacerbações de asma.
 
--   Avaliar o efeito da aplicação na adesão à medicação de controlo prescrita.
+-   Avaliar o efeito da RespiRA na adesão à medicação de controlo prescrita.
 
 -   Analisar as alterações na qualidade de vida relacionada com a asma através do questionário AQLQ.
 
--   Avaliar a diferença entre grupos no número de episódios de recurso ao serviço de urgência e na satisfação dos participantes.
+-   Perceber a diferença entre grupos no número de episódios de recurso ao serviço de urgência e na satisfação dos participantes.
 
 ## Metodologia em Resumo
 

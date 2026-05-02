@@ -2,14 +2,14 @@
 title: " Declaração de Uso de IA"
 format: html
 ---
+
 # Introdução
-Em conformidade com as normas de integridade académica, declara-se que este trabalho contou com o apoio de ferramentas de IA Generativa, enquadrando-se no Nível 2 (Arquiteto Conceptual) da GAI Use Scale. A IA atuou estritamente como parceiro de pensamento (thought partner), auxiliando no brainstorming estrutural e na otimização técnica da sintaxe em R para o processamento estatístico e formatação de tabelas.
+
+Em conformidade com as normas de integridade académica, declara-se que este trabalho contou com o apoio de ferramentas de IA Generativa, mais precisamente do Gemini, enquadrando-se no Nível 2 (Arquiteto Conceptual) da GAI Use Scale. A IA atuou estritamente como parceiro de pensamento (thought partner), auxiliando no brainstorming estrutural e na otimização técnica da sintaxe em R para o processamento estatístico e formatação de tabelas.
 
 Toda a autoria intelectual, redação integral e interpretação clínica dos dados foram da exclusiva responsabilidade das autoras. Os conteúdos gerados foram validados criticamente face à literatura de referência, garantindo que as conclusões do estudo RespiRA refletem o juízo crítico e a responsabilidade ética das autoras.
 
 Apresenta-se, em seguida, o reporte detalhado da utilização de IA, discriminando as interações e comandos realizados ao longo do desenvolvimento do trabalho.
-
-
 
 ## 1. Site
 
@@ -33,32 +33,92 @@ A utilização de IA generativa foi limitada ao suporte técnico na configuraç�
 
 Foram seguidas as indicações do Gemini, de forma a criar a estrutura correta do site.
 
+#### **Nível da GAI Use Scale**: 2
 
+## 2. Início
 
+### Prompt:
 
-## 2. Protocolo de Ensaio Clínico
+"Escrevi o resumo, que está anexado, para o meu site. Podes verificar se existem incongruências e sugerir sinónimos para as palavras que repetem muito?"
+
+### Resposta da IA:
+
+"O texto está bem estruturado e **não apresenta incongruências** lógicas ou metodológicas. A progressão do problema (falta de controlo) para a solução (App) é coerente.
+
+Aqui estão sugestões para reduzir a repetição das palavras "Aplicação", "Avaliar" e "Asma":
+
+### Sinónimos Sugeridos
+
+|  |  |
+|------------------------------------|------------------------------------|
+| **Palavra Repetida** | **Alternativas de Substituição** |
+| **Aplicação / App** | Ferramenta digital, plataforma móvel, solução tecnológica, ecossistema *RespiRA*. |
+| **Avaliar / Determinar** | Analisar, mensurar, aferir, examinar, escrutinar, validar. |
+| **Asma** | Patologia, condição respiratória, doença crónica, quadro clínico. |
+
+### Pequenos Ajustes de Fluidez
+
+-   **No "Cenário Clínico":** Em vez de "não têm a doença controlada", pode usar "não apresentam controlo sintomático".
+
+-   **Nos "Objetivos":** Pode variar o início das frases. Exemplo: "Mensurar o impacto..." ou "Verificar a associação entre a intervenção e a redução de exacerbações"."
+
+### Como o output foi tratado:
+
+Optamos por diversificar o vocabulário nos Objetivos e no Resumo, utilizando sinónimos como "analisar" e "ferramenta digital" para evitar repetições e tornar a leitura mais fluida. Contudo, mantivemos o Cenário Clínico inalterado para preservar a integridade e o rigor terminológico do protocolo original.
+
+#### **Nível da GAI Use Scale**: 2
+
+## 3. Protocolo de Ensaio Clínico
 
 Nesta secção não foi utilizada inteligência artificial, uma vez que apenas se trancreveu o protocolo da entrega 1.
 
+## 4. Materiais
 
+A utilização de IA nesta secção foi breve, servindo apenas como uma ajuda para o código a implementar em R de modo a que as fórmulas fossem bem conseguidas em Latex e na parte estética, ajudando a corrigir erros que impediam a distinção entre titulos, subtítulos e o corpo do texto. Para além disso, foi utilizada IA para organizar os dados que melhor se adequavam para construir a tabela resumo e para formatar a tabela.
 
-
-
-## 3. Materiais
-
-
-
-
-
-## 4. Resultados
-
-
-
-
-
-## 5. Protótipo
+Não foi necessária a utilização de inteligência artifical no resto da parte da secção dos materiais, uma vez que foi apenas necessário ir ao redCap ver os formulários previamente entregues e fazer um resumo da utilização e funcionalidade de cada questão e categoria dos mesmos.
 
 ### Prompt:
+
+"1-"Como faço para escrever as fórmulas matemáticas do IMC e do PEF previsto em sintaxe LaTex para que apareçam corretamente em R e como faço para haver distinção entre títulos, subtítulos e corpo do texto?"
+
+2-"Tendo em conta o nosso dicionário de dados, que coloquei em anexo, podes me ajudar a escolher os melhores dados para construir uma tabela resumo e ajudar-me na formatação da tabela em R?""
+
+### Resposta da IA:
+
+"1-"Para as fórmulas no site, utiliza a sintaxe LaTeX: `$$IMC = \frac{Peso}{Altura^2}$$` e `$$PEF_{previsto} = (Altura \times 5.48) - (Idade \times 0.03) - 1.58$$`. No R Markdown, usa \# para Títulos e \## para Subtítulos para criar a hierarquia."
+
+2-" Para a tabela do dicionário de dados, recomendo focar nas variáveis: 'weight', 'pef_value', 'act_score' e 'smoking_status'. Deves estruturar a tabela em Markdown da seguinte forma, com estas colunas: \| Variável \| Descrição \| Regras de Validação \|.  Não te esqueças de alinhamento (:---): Garante que o texto da tabela fica alinhado à esquerda. Destaque de Variáveis (backticks): Colocar as variáveis entre `(ex:`weight\`) faz com que elas apareçam com um aspeto de "código", o que é uma boa prática em dicionários de dados. Lógica de Branching: Inclui a regra da carga tabágica na última coluna, para que fique claro que existe uma dependência entre as perguntas.""
+
+### Como o output foi tratado:
+
+O código das fórmulas e a estrutura da tabela foram integrados no ficheiro .qmd, garantindo a correta visualização no site. Foi aceite também a proposta das categorias escolhidas para colocar no dicionário de dados e o modo como deveria estruturar a tabela.
+
+#### **Nível da GAI Use Scale**: 2
+
+## 5. Resultados
+
+### Prompt:
+
+"Para um relatório clínico de asma, qual é a melhor forma de apresentar a comparação de múltiplos outcomes secundários (adesão, exacerbações, função pulmonar) entre dois grupos num projeto Quarto, garantindo o rigor na escolha dos testes estatísticos."
+
+### Resposta da IA:
+
+"A estratégia mais rigorosa é a criação de uma Tabela de Síntese de Eficácia (Tabela 2) que utilize o pacote gtsummary. A IA recomendou: - Diferenciação de Tipos: Forçar o tratamento de variáveis de contagem (exacerbações) como contínuas para permitir o cálculo de medianas. - Seleção de Testes: Utilizar o Teste-t para variáveis normais (ACT, Peak Flow) e o teste de Wilcoxon para variáveis enviesadas ou de contagem. - Métrica de Evolução: Criar uma variável de 'Delta' para quantificar a magnitude da melhoria individual de cada doente, permitindo uma análise mais profunda do que apenas o valor final."
+
+### Como o output foi tratado:
+
+A IA atuou como parceiro de pensamento na arquitetura da Tabela 2. Embora tenha fornecido algumas sintaxes técnicas necessárias, a responsabilidade de executar os diagnósticos de normalidade (Shapiro-Wilk) e a decisão crítica de incluir o "Delta ACT" para medir o progresso real foram nossas.
+
+#### **Nível da GAI Use Scale**: 2
+
+## 6. Equipa
+
+Esta secção foi redigida sem o auxílio de ferramentas generativas.
+
+## 7. Protótipo
+
+### Prompt 1:
 
 "Estou a desenhar um formulário no Figma. Como posso explicar a lógica de um pop-up de erro que aparece apenas se a data de nascimento inserida resultar numa idade inferior a 18 ou superior a 65 anos? E como estruturo a lógica condicional para que a 'Carga Tabágica' só apareça se a opção 'Fumador' for selecionada?"
 
@@ -85,3 +145,23 @@ Esta segunda opção é muitas vezes mais rápida de montar e funciona perfeitam
 ### Como o output foi tratado:
 
 Foi usada a lógica condicional avançada com Variables, pois permite uma simulação mais realista e flexível. Foram criadas as variáveis "idade" e "EstadoTabagico" no Figma, e configuradas as interações conforme descrito para garantir que o protótipo se comporta de acordo com as regras estabelecidas.
+
+#### **Nível da GAI Use Scale**: 2. 
+
+\
+
+### Prompt 2:
+
+"Escreve uma frase curta de incentivo que destaque a importância da utilização diária da app para um melhor controlo da asma."
+
+### Resposta da IA:
+
+"Aqui tens uma frase curta para incentivar o uso diário, focada em criar um hábito positivo:  
+
+"Cada registo é um sopro de confiança. Vamos controlar a asma juntos!""
+
+### Como o output foi tratado:
+
+A frase de incentivo sugerida pelo Gemini foi revista e aceite pelo grupo.
+
+#### **Nível da GAI Use Scale**: 2
