@@ -44,7 +44,7 @@ Todas as variáveis críticas relativas à saúde, como sintomas e medicação, 
 ### Resumo da estrutura de dados
 
 | Variável         | Descrição                 | Regras de Validação           |
-|:-----------------|:--------------------------|:------------------------------|
+|:-----------------|:------------------------|:----------------------------|
 | 'weight'         | Peso (kg)                 | Entre 30 e 250                |
 | 'pef_value'      | Pico de fluxo expiratório | Entre 50 e 900 L/min          |
 | 'act_score'      | Pontuação do teste ACT    | Inteiro entre 5 e 25          |
