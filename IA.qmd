@@ -3,6 +3,159 @@ title: " Declaração de Uso de IA"
 format: html
 ---
 
+# Entrega 1
+# Introdução
+Em conformidade com as normas de integridade académica, declara-se que a elaboração do protocolo clínico "RespiRA" contou com o apoio pontual do Gemini (Nível 2 da GAI Use Scale). A IA foi utilizada para validar a conformidade do protocolo com normas internacionais de reporte (SPIRIT) e para auxiliar na redação técnica de cláusulas éticas e de segurança de dados. Toda a interpretação clínica, desenho do estudo e decisões sobre a segurança dos participantes foram realizados integralmente pelo grupo, utilizando a IA apenas para verificação de omissões e refinamento de texto.
+
+### Prompt 1:
+"Com base no protocolo "RespiRA" que anexei, atua como um revisor científico, analisa se a descrição da nossa intervenção digital (secção 2.3) cumpre todos os requisitos da norma SPIRIT. Indica se falta algum detalhe sobre a frequência de uso, suporte técnico ou procedimentos de instalação que um comité de ética exigiria."
+
+### Resposta da IA:
+"A IA validou que a secção 2.3 cumpre a norma SPIRIT ao detalhar a frequência de monitorização (semanal e diária) e o suporte técnico contínuo. O procedimento de instalação presencial foi considerado adequado para garantir a formação do doente e a segurança no onboarding. A sincronização pseudonimizada assegura a conformidade ética e a proteção de dados exigida pelo RGPD."
+
+### Como o output foi tratado:
+Decidimos manter a redação original, pois a análise confirmou que os mecanismos de suporte e as funcionalidades da App já garantem o rigor científico necessário.
+
+### Prompt 3:
+"Dá-me exemplos de critérios de exclusão para um estudo de asma que ajudem a garantir que os resultados não são confundidos por outras doenças respiratórias ou hábitos tabágicos pesados."
+
+### Resposta da IA:
+" Para isolar o efeito da intervenção na asma, recomendo os seguintes critérios de exclusão:
+
+1.  Condições médicas incompatíveis: Doenças pulmonares crónicas relevantes ou outras condições que interfiram na avaliação do controlo da asma.
+2.  Exacerbação recente: Hospitalização ou tratamento sistémico intensivo nas últimas 4 semanas.
+3.  Tratamentos concomitantes: Participação em outro ensaio clínico intervencional.
+
+### Como o output foi tratado:
+As respostas de IA foram aceites.
+
+# Entrega 2
+# Introdução
+
+Em conformidade com as normas de integridade académica, declara-se que as fases de configuração e validação do eCRF no REDCap contaram com o apoio do Gemini, enquadrando-se nos níveis de utilização 1 e 2 da GAI Use Scale, conforme detalhado abaixo.
+
+### Prompt 1:
+"Estou a planear a segurança de dados do projeto RespiRA no REDCap. Quais são as diferentes abordagens lógicas para impedir que um utilizador avance para os formulários clínicos se o consentimento for negativo?"
+
+### Resposta da IA:
+Para garantir a segurança e a conformidade ética no REDCap, existem três abordagens principais:
+
+Form Display Logic (Lógica ao nível do Instrumento): O REDCap avalia a resposta e "tranca" ou esconde todos os instrumentos seguintes. Ideal para estudos longitudinais realizados por investigadores.
+
+Stop Actions (Lógica ao nível do Fluxo de Inquérito): Utilizada quando o doente preenche o consentimento via link. A opção "Não" dispara uma interrupção imediata da sessão.
+
+Branching Logic de Campo (Lógica de Ramificação): Abordagem granular dentro de cada formulário, ocultando campos ou secções específicas.
+
+### Como o output foi tratado:
+Decidimos aplicar a Branching Logic para esconder campos e a funcionalidade de Stop Actions para interromper o fluxo do inquérito. No relatório, isto justifica-se como um mecanismo de conformidade com o RGPD, assegurando a proteção dos direitos do participante.
+
+Nível da GAI Use Scale: 2
+
+
+
+### Prompt 2:
+"Para a elaboração de um questionário no RedCap de um estudo sobre a asma, defini os seguintes intervalos fisiológicos para adultos: Peso (30-250 kg), Altura (100-250 cm) e ACT (5-25). Avalie se esses limites são adequados para evitar erros de digitação sem excluir casos clínicos reais."
+
+### Resposta da IA:
+Os limites estão muito bem definidos. Eles cobrem desde casos de desnutrição ou baixa estatura severa até obesidade mórbida, garantindo que não se percam dados raros enquanto bloqueia erros óbvios. O intervalo do ACT (5-25) está perfeito, pois respeita a pontuação da escala original.
+
+### Como o output foi tratado:
+A IA considerou os intervalos adequados. Como medida complementar, verificamos a visibilidade das unidades de medida (kg/cm) no formulário para assegurar a precisão dos dados.
+
+Nível da GAI Use Scale: 2
+
+
+### Prompt 3:
+"Como posso utilizar a Branching Logic no REDCap para aumentar a eficiência de um formulário clínico, evitando que perguntas sobre gravidez ou detalhes de urgências apareçam a todos os doentes?"
+
+### Resposta da IA:
+Filtragem por Relevância Biológica: O campo de gravidez só aparece se o campo sexo for igual a "Feminino".
+
+Técnica de "Cascata" para Detalhes: Criar uma pergunta de triagem ("O doente recorreu às urgências?"). Se "Sim", ramificam-se os campos detalhados.
+
+Hierarquia de Respostas (Checkboxes): Ativar campos de texto livre apenas para opções como "Outros".
+
+### Como o output foi tratado:
+Aplicamos esta lógica como medida de controlo de qualidade, para impedir dados incongruentes na base de dados final e reduzir a fadiga de preenchimento.
+
+Nível da GAI Use Scale: 2
+
+
+### Prompt 4:
+"Qual é o objetivo científico de usar Field Notes num projeto de investigação e se os dados de Peso, Altura e ACT Score devem ser marcados como 'Identifier'?"
+
+### Resposta da IA:
+Field Notes: Servem para a Padronização da Recolha (especificar unidades como "kg"), Minimização do Erro (formatos de data) e Validação de Escalas (relembrar períodos de tempo).
+
+Identifiers: Embora sejam dados sensíveis, isoladamente (peso/altura) não identificam diretamente uma pessoa. Recomendou-se marcar como "No".
+
+### Como o output foi tratado:
+Personalizamos as Field Notes para elevar o rigor do formulário. Concordámos também em não marcar peso e altura como identificadores diretos.
+
+Nível da GAI Use Scale: 1
+
+
+### Prompt 5:
+"Qual é a fórmula que tenho de utilizar para calcular o IMC?"
+
+### Resposta da IA:
+A fórmula matemática padrão é:
+
+IMC= 
+Altura(m) 
+2
+ 
+Peso(kg)
+​	
+ 
+### Como o output foi tratado:
+Ao analisar a resposta, percebemos que a fórmula ignorava que a nossa altura é recolhida em centímetros. Corrigimos autonomamente para a sintaxe do REDCap: [peso] / (([altura]/100)^2).
+
+Nível da GAI Use Scale: 1
+
+
+### Prompt 6:
+"É possível usar código HTML dentro do REDCap para destacar alertas?"
+
+### Resposta da IA:
+A IA forneceu o código `<b style="color:red;">` e explicou como inseri-lo no Field Label, recomendando moderação para não distrair o utilizador.
+
+### Como o output foi tratado:
+Decidimos aplicar o vermelho apenas no alerta de "Asma Não Controlada" para manter o impacto de urgência, seguindo a recomendação de moderação da IA.
+
+Nível da GAI Use Scale: 2
+
+
+### Prompt 7:
+"Qual é a diferença teórica entre um projeto 'Classic' e 'Longitudinal' no REDCap?"
+
+### Resposta da IA:
+O modelo Classic é ideal para estudos transversais. O modelo Longitudinal permite definir Eventos, preenchido repetidamente em cada visita, facilitando análises de medidas repetidas.
+
+### Como o output foi tratado:
+Com base nesta distinção, decidimos converter o projeto RespiRA para Longitudinal, definindo os eventos (Semanas 4, 8 e 12) e fixando os dados demográficos apenas no primeiro momento.
+
+Nível da GAI Use Scale: 2
+
+
+### Prompt 8:
+"Analisa este dicionário de dados do REDCap e faz uma lista dos erros que causam falhas no preenchimento."
+
+### Resposta da IA:
+Campo dob (Data de Nascimento): Erro na tag @MINDATE='2026-04-16'.
+
+Campo sex: Inconsistência de idioma (inglês).
+
+Campo app_satisfaction: Falta de legendas no slider.
+
+### Como o output foi tratado:
+A sugestão sobre a data de nascimento foi rejeitada, pois a IA não leu corretamente a tag de intervalo de idade. Aceitámos a tradução do sexo e a inclusão de legendas no slider, acrescentando manualmente a opção "Neutro".
+
+Nível da GAI Use Scale: 2
+
+
+
+#Entrega 3
 # Introdução
 
 Em conformidade com as normas de integridade académica, declara-se que este trabalho contou com o apoio de ferramentas de IA Generativa, mais precisamente do Gemini, enquadrando-se no Nível 2 (Arquiteto Conceptual) da GAI Use Scale. A IA atuou estritamente como parceiro de pensamento (thought partner), auxiliando no brainstorming estrutural e na otimização técnica da sintaxe em R para o processamento estatístico e formatação de tabelas.
@@ -10,6 +163,8 @@ Em conformidade com as normas de integridade académica, declara-se que este tra
 Toda a autoria intelectual, redação integral e interpretação clínica dos dados foram da exclusiva responsabilidade das autoras. Os conteúdos gerados foram validados criticamente face à literatura de referência, garantindo que as conclusões do estudo RespiRA refletem o juízo crítico e a responsabilidade ética das autoras.
 
 Apresenta-se, em seguida, o reporte detalhado da utilização de IA, discriminando as interações e comandos realizados ao longo do desenvolvimento do trabalho.
+
+
 
 ## 1. Site
 
@@ -126,21 +281,23 @@ Esta secção foi redigida sem o auxílio de ferramentas generativas.
 
 "Para criares essa interatividade de forma totalmente manual e visual no Figma, deves utilizar o método de Frames Alternativos e Overlays. Aqui está o passo a passo:
 
- 1. Simulação do Pop-up de Erro (Idade):
-- Cria um frame pequeno e independente (o pop-up) com a mensagem de erro.
-- No teu frame principal, seleciona o botão 'Confirmar'. Nas configurações de prototipagem, cria uma interação On Click -> Open Overlay e seleciona o frame do pop-up.
-- Define a posição como 'Centered' para que o erro apareça por cima do formulário, simulando a validação da idade.
+1.  Simulação do Pop-up de Erro (Idade):
 
- 2. Lógica de Branching (Tabaco):
-- Cria dois frames para a página de História Clínica: o Frame A (estado inicial, sem carga tabágica) e o Frame B(com o campo 'Carga Tabágica' visível).
-- No Frame A, seleciona a opção 'Fumador' e cria uma ligação On Click -> Navigate To -> Frame B.
-- Para que a transição pareça natural, usa a animação 'Instant' ou 'Smart Animate'. Isto simula que o campo apareceu dinamicamente em resposta à escolha do utilizador."
+-   Cria um frame pequeno e independente (o pop-up) com a mensagem de erro.
+-   No teu frame principal, seleciona o botão 'Confirmar'. Nas configurações de prototipagem, cria uma interação On Click -\> Open Overlay e seleciona o frame do pop-up.
+-   Define a posição como 'Centered' para que o erro apareça por cima do formulário, simulando a validação da idade.
+
+2.  Lógica de Branching (Tabaco):
+
+-   Cria dois frames para a página de História Clínica: o Frame A (estado inicial, sem carga tabágica) e o Frame B(com o campo 'Carga Tabágica' visível).
+-   No Frame A, seleciona a opção 'Fumador' e cria uma ligação On Click -\> Navigate To -\> Frame B.
+-   Para que a transição pareça natural, usa a animação 'Instant' ou 'Smart Animate'. Isto simula que o campo apareceu dinamicamente em resposta à escolha do utilizador."
 
 ### Como o output foi tratado:
 
 Foi utilizada a técnica de prototipagem manual por estados (Frames). Desenhei individualmente cada ecrã necessário para cobrir os diferentes cenários: um frame específico para o estado de erro e frames distintos para o fluxo de "Fumador" vs "Não Fumador". As interações foram configuradas manualmente através de Overlays e navegação entre frames, garantindo o comportamento lógico pretendido sem recorrer a funções automatizadas de programação.
 
-#### **Nível da GAI Use Scale**: 2. 
+#### **Nível da GAI Use Scale**: 2.
 
 \
 
