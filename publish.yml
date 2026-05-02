@@ -18,6 +18,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      
+
+      - name: Install R packages
+        run: |
+          Rscript -e 'install.packages("kableExtra")'
+
+
 
       - name: Check style rules (no U+2014)
         run: |
@@ -44,7 +51,7 @@ jobs:
             any::janitor
             any::knitr
             any::rmarkdown
-            any::kableExtra
+           
 
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
