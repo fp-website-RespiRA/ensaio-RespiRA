@@ -327,43 +327,6 @@ A análise estatística será conduzida segundo o princípio da intenção de tr
 
 O estudo será conduzido em conformidade com a Declaração de Helsínquia e as normas de Boa Prática Clínica. O protocolo será previamente submetido e aprovado por uma Comissão de Ética para a Investigação em Saúde antes do início do recrutamento. Todos os participantes fornecerão consentimento informado por escrito após esclarecimento adequado sobre os objetivos, procedimentos, riscos e benefícios. Será garantido o direito de desistência a qualquer momento, sem prejuízo dos cuidados de saúde habituais. A proteção de dados será assegurada em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD). Os dados clínicos e digitais serão pseudonimizados e armazenados em sistemas seguros, com acesso restrito à equipa de investigação. Serão implementadas medidas técnicas e organizativas para prevenir acessos não autorizados ou perda de informação. Atendendo à natureza digital da intervenção, será garantida a segurança dos dados gerados pela aplicação, incluindo autenticação e encriptação. Eventos adversos serão monitorizados e reportados conforme os procedimentos definidos. Os resultados serão disseminados independentemente dos achados, através de publicações científicas e apresentações em congressos. Será promovida a partilha com participantes e instituições, contribuindo para a transparência científica e potencial integração futura da intervenção na prática clínica.
 
-# 6 Cronograma do Estudo (Tabela SPIRIT)
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-
-library(dplyr)
-library(kableExtra)
-
-# 1. Definir os dados (Total de 6 colunas)
-spirit_data <- data.frame(
-  Atividade = c("Elegibilidade", "Consentimento", "Aleatorização", 
-                "App RespiRA", "Cuidado Habitual", 
-                "Score ACT", "Peak Flow", "AQLQ"),
-  Recrutamento = c("X", "X", "", "", "", "", "", ""),
-  Alocacao = c("", "", "X", "X", "X", "X", "X", "X"),
-  S4 = c("", "", "", "X", "X", "X", "X", ""),
-  S8 = c("", "", "", "X", "X", "X", "X", ""),
-  S12 = c("", "", "", "X", "X", "X", "X", "X")
-)
-
-# 2. Gerar a tabela (A soma no header agora é 1+1+1+3 = 6)
-spirit_data |>
-  kbl(
-    col.names = c("Atividade", "Recrutamento", "Alocação (T0)", "Semana 4", "Semana 8", "Semana 12"),
-    align = "lccccc",
-    caption = "Tabela SPIRIT: Cronograma do ensaio clínico RespiRA[cite: 1]"
-  ) |>
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive")) |>
-  # CORREÇÃO: A soma dos valores abaixo é 6 (1+1+1+3)
-  add_header_above(c(" " = 1, "Inscrição" = 1, "Alocação" = 1, "Acompanhamento" = 3)) |>
-  pack_rows("INSCRIÇÃO", 1, 3) |>
-  pack_rows("INTERVENÇÕES", 4, 5) |>
-  pack_rows("AVALIAÇÕES (OUTCOMES)", 6, 8)
-```
-
 ------------------------------------------------------------------------
 
 **Versão:** 1.0\
