@@ -172,12 +172,14 @@ window.Quarto = {
   <li><a href="#introdução-aos-materiais" id="toc-introdução-aos-materiais" class="nav-link active" data-scroll-target="#introdução-aos-materiais">Introdução aos materiais</a></li>
   <li><a href="#tratamento-de-monitorização-ecrf" id="toc-tratamento-de-monitorização-ecrf" class="nav-link" data-scroll-target="#tratamento-de-monitorização-ecrf">1. Tratamento de monitorização (eCRF)</a>
   <ul class="collapse">
-  <li><a href="#a.-informação-geral-e-triagem" id="toc-a.-informação-geral-e-triagem" class="nav-link" data-scroll-target="#a.-informação-geral-e-triagem">A. Informação geral e triagem</a></li>
-  <li><a href="#b.-dados-demográficos-e-elegibilidade" id="toc-b.-dados-demográficos-e-elegibilidade" class="nav-link" data-scroll-target="#b.-dados-demográficos-e-elegibilidade">B. Dados demográficos e elegibilidade</a></li>
+  <li><a href="#a.-informação-geral-e-consentimento" id="toc-a.-informação-geral-e-consentimento" class="nav-link" data-scroll-target="#a.-informação-geral-e-consentimento">A. Informação geral e consentimento</a></li>
+  <li><a href="#b.-dados-demográficos" id="toc-b.-dados-demográficos" class="nav-link" data-scroll-target="#b.-dados-demográficos">B. Dados demográficos</a></li>
+  <li><a href="#c.-história-clínica-e-comorbilidades" id="toc-c.-história-clínica-e-comorbilidades" class="nav-link" data-scroll-target="#c.-história-clínica-e-comorbilidades">C. História Clínica e Comorbilidades</a></li>
   <li><a href="#d.-monitorização-clínica-respira" id="toc-d.-monitorização-clínica-respira" class="nav-link" data-scroll-target="#d.-monitorização-clínica-respira">D. Monitorização clínica RespiRA</a></li>
+  <li><a href="#e.-dados-de-conclusão-do-estudo" id="toc-e.-dados-de-conclusão-do-estudo" class="nav-link" data-scroll-target="#e.-dados-de-conclusão-do-estudo">E. Dados de conclusão do estudo</a></li>
   </ul></li>
   <li><a href="#fórmulas-de-suporte-técnico" id="toc-fórmulas-de-suporte-técnico" class="nav-link" data-scroll-target="#fórmulas-de-suporte-técnico">2. Fórmulas de suporte técnico</a></li>
-  <li><a href="#dicionário-de-dados-e-segurança" id="toc-dicionário-de-dados-e-segurança" class="nav-link" data-scroll-target="#dicionário-de-dados-e-segurança">3.Dicionário de dados e segurança</a>
+  <li><a href="#dicionário-de-dados-e-segurança" id="toc-dicionário-de-dados-e-segurança" class="nav-link" data-scroll-target="#dicionário-de-dados-e-segurança">3. Dicionário de dados e segurança</a>
   <ul class="collapse">
   <li><a href="#resumo-da-estrutura-de-dados" id="toc-resumo-da-estrutura-de-dados" class="nav-link" data-scroll-target="#resumo-da-estrutura-de-dados">Resumo da estrutura de dados</a></li>
   </ul></li>
@@ -208,22 +210,30 @@ window.Quarto = {
 
 <section id="introdução-aos-materiais" class="level2">
 <h2 class="anchored" data-anchor-id="introdução-aos-materiais">Introdução aos materiais</h2>
-<p>O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma.</p>
+<p>O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma.</p>
 </section>
 <section id="tratamento-de-monitorização-ecrf" class="level2">
 <h2 class="anchored" data-anchor-id="tratamento-de-monitorização-ecrf">1. Tratamento de monitorização (eCRF)</h2>
 <p>A recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.</p>
-<section id="a.-informação-geral-e-triagem" class="level3">
-<h3 class="anchored" data-anchor-id="a.-informação-geral-e-triagem">A. Informação geral e triagem</h3>
+<section id="a.-informação-geral-e-consentimento" class="level3">
+<h3 class="anchored" data-anchor-id="a.-informação-geral-e-consentimento">A. Informação geral e consentimento</h3>
 <p>É o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.</p>
 </section>
-<section id="b.-dados-demográficos-e-elegibilidade" class="level3">
-<h3 class="anchored" data-anchor-id="b.-dados-demográficos-e-elegibilidade">B. Dados demográficos e elegibilidade</h3>
+<section id="b.-dados-demográficos" class="level3">
+<h3 class="anchored" data-anchor-id="b.-dados-demográficos">B. Dados demográficos</h3>
 <p>Recolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.</p>
+</section>
+<section id="c.-história-clínica-e-comorbilidades" class="level3">
+<h3 class="anchored" data-anchor-id="c.-história-clínica-e-comorbilidades">C. História Clínica e Comorbilidades</h3>
+<p>Avaliação da caracterização antropométrica e estilo de vida, onde só aparece a carga tabágica se no estado tabágico for selecionada a opção ex-fumador ou fumador ativo, avaliação do histórico clinico e comorbilidades onde se questiona anos de diagnóstico, terapêutica atual e patologias associadas e caso seja uma mulher, aparecem questões relativas a uma possível gravidez que se estiver grávida aparece uma questão para escrever sobre a gravidez.</p>
 </section>
 <section id="d.-monitorização-clínica-respira" class="level3">
 <h3 class="anchored" data-anchor-id="d.-monitorização-clínica-respira">D. Monitorização clínica RespiRA</h3>
-<p>Este formulário é preenchido periodicamente e inclui indicadores de saúde: <em>É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min).</em> Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada.</p>
+<p>Este formulário é preenchido periodicamente e inclui indicadores de saúde: <em>É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min).</em> Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada.Existe ainda uma pontuação do questionário de qualidade e vida que o utilizador deve introduzir o seu valor, que deve variar entre 1 e 7.</p>
+</section>
+<section id="e.-dados-de-conclusão-do-estudo" class="level3">
+<h3 class="anchored" data-anchor-id="e.-dados-de-conclusão-do-estudo">E. Dados de conclusão do estudo</h3>
+<p>Neste questionário pretende-se entender o motivo pelo qual o paciente terminou ou desistiu do estudo e se há comentários globais a serem feitos por parte do utilizador.</p>
 <hr>
 </section>
 </section>
@@ -236,15 +246,15 @@ window.Quarto = {
 <hr>
 </section>
 <section id="dicionário-de-dados-e-segurança" class="level2">
-<h2 class="anchored" data-anchor-id="dicionário-de-dados-e-segurança">3.Dicionário de dados e segurança</h2>
+<h2 class="anchored" data-anchor-id="dicionário-de-dados-e-segurança">3. Dicionário de dados e segurança</h2>
 <p>Todas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.</p>
 <section id="resumo-da-estrutura-de-dados" class="level3">
 <h3 class="anchored" data-anchor-id="resumo-da-estrutura-de-dados">Resumo da estrutura de dados</h3>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
+<col style="width: 26%">
 <col style="width: 34%">
-<col style="width: 40%">
+<col style="width: 39%">
 </colgroup>
 <thead>
 <tr class="header">

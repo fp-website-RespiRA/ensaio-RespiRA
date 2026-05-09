@@ -256,21 +256,21 @@
     "href": "materiais.html",
     "title": "Materiais",
     "section": "",
-    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
+    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
   },
   {
     "objectID": "materiais.html#introdução-aos-materiais",
     "href": "materiais.html#introdução-aos-materiais",
     "title": "Materiais",
     "section": "",
-    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
+    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
   },
   {
     "objectID": "materiais.html#tratamento-de-monitorização-ecrf",
     "href": "materiais.html#tratamento-de-monitorização-ecrf",
     "title": "Materiais",
     "section": "1. Tratamento de monitorização (eCRF)",
-    "text": "1. Tratamento de monitorização (eCRF)\nA recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.\n\nA. Informação geral e triagem\nÉ o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.\n\n\nB. Dados demográficos e elegibilidade\nRecolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.\n\n\nD. Monitorização clínica RespiRA\nEste formulário é preenchido periodicamente e inclui indicadores de saúde: É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada."
+    "text": "1. Tratamento de monitorização (eCRF)\nA recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.\n\nA. Informação geral e consentimento\nÉ o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.\n\n\nB. Dados demográficos\nRecolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.\n\n\nC. História Clínica e Comorbilidades\nAvaliação da caracterização antropométrica e estilo de vida, onde só aparece a carga tabágica se no estado tabágico for selecionada a opção ex-fumador ou fumador ativo, avaliação do histórico clinico e comorbilidades onde se questiona anos de diagnóstico, terapêutica atual e patologias associadas e caso seja uma mulher, aparecem questões relativas a uma possível gravidez que se estiver grávida aparece uma questão para escrever sobre a gravidez.\n\n\nD. Monitorização clínica RespiRA\nEste formulário é preenchido periodicamente e inclui indicadores de saúde: É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada.Existe ainda uma pontuação do questionário de qualidade e vida que o utilizador deve introduzir o seu valor, que deve variar entre 1 e 7.\n\n\nE. Dados de conclusão do estudo\nNeste questionário pretende-se entender o motivo pelo qual o paciente terminou ou desistiu do estudo e se há comentários globais a serem feitos por parte do utilizador."
   },
   {
     "objectID": "materiais.html#fórmulas-de-suporte-técnico",
@@ -283,8 +283,8 @@
     "objectID": "materiais.html#dicionário-de-dados-e-segurança",
     "href": "materiais.html#dicionário-de-dados-e-segurança",
     "title": "Materiais",
-    "section": "3.Dicionário de dados e segurança",
-    "text": "3.Dicionário de dados e segurança\nTodas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.\n\nResumo da estrutura de dados\n\n\n\n\n\n\n\n\nVariável\nDescrição\nRegras de Validação\n\n\n\n\n‘weight’\nPeso (kg)\nEntre 30 e 250\n\n\n‘pef_value’\nPico de fluxo expiratório\nEntre 50 e 900 L/min\n\n\n‘act_score’\nPontuação do teste ACT\nInteiro entre 5 e 25\n\n\n‘smoking_status’\nEstado tabágico\nEscolha múltipla\n\n\n‘pack_year’\nCarga tabágica\nVisível se fumador/ex-fumador"
+    "section": "3. Dicionário de dados e segurança",
+    "text": "3. Dicionário de dados e segurança\nTodas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.\n\nResumo da estrutura de dados\n\n\n\n\n\n\n\n\nVariável\nDescrição\nRegras de Validação\n\n\n\n\n‘weight’\nPeso (kg)\nEntre 30 e 250\n\n\n‘pef_value’\nPico de fluxo expiratório\nEntre 50 e 900 L/min\n\n\n‘act_score’\nPontuação do teste ACT\nInteiro entre 5 e 25\n\n\n‘smoking_status’\nEstado tabágico\nEscolha múltipla\n\n\n‘pack_year’\nCarga tabágica\nVisível se fumador/ex-fumador"
   },
   {
     "objectID": "resultados.html",
