@@ -84,62 +84,6 @@
     "text": "Metodologia em Resumo\nO estudo é um Ensaio Clínico Controlado e Aleatorizado (RCT) de fase piloto/pré-teste.\n\nPopulação: Adultos (18-65 anos) com asma moderada.\nDuração: 12 semanas de intervenção.\nGrupos:\n\nGrupo Intervenção: Acesso à App RespiRA + Cuidado habitual.\nGrupo Controlo: Cuidado habitual isolado.\n\n\nEstado do Projeto: Início previsto para 1 de setembro de 2026."
   },
   {
-    "objectID": "materiais.html",
-    "href": "materiais.html",
-    "title": "Materiais",
-    "section": "",
-    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
-  },
-  {
-    "objectID": "materiais.html#introdução-aos-materiais",
-    "href": "materiais.html#introdução-aos-materiais",
-    "title": "Materiais",
-    "section": "",
-    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
-  },
-  {
-    "objectID": "materiais.html#tratamento-de-monitorização-ecrf",
-    "href": "materiais.html#tratamento-de-monitorização-ecrf",
-    "title": "Materiais",
-    "section": "1. Tratamento de monitorização (eCRF)",
-    "text": "1. Tratamento de monitorização (eCRF)\nA recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.\n\nA. Informação geral e triagem\nÉ o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.\n\n\nB. Dados demográficos e elegibilidade\nRecolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.\n\n\nD. Monitorização clínica RespiRA\nEste formulário é preenchido periodicamente e inclui indicadores de saúde: É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada."
-  },
-  {
-    "objectID": "materiais.html#fórmulas-de-suporte-técnico",
-    "href": "materiais.html#fórmulas-de-suporte-técnico",
-    "title": "Materiais",
-    "section": "2. Fórmulas de suporte técnico",
-    "text": "2. Fórmulas de suporte técnico\nPara garantir a precisão clínica, o sistema baseia-se nas seguintes equações matemáticas:\nCálculo do IMC: \\[IMC=\\frac{Peso}{Altura^2}\\]\nPredição do débito expiratório máximo (PEF previsto): \\[PEF_{previsto}=(Altura\\times 5.48) - (Idade\\times 0.03)-1.58\\]\nAvaliação de progresso(Variação do ACT): \\[\\Delta ACT = ACT_{t12}-ACT_{t0}\\]"
-  },
-  {
-    "objectID": "materiais.html#dicionário-de-dados-e-segurança",
-    "href": "materiais.html#dicionário-de-dados-e-segurança",
-    "title": "Materiais",
-    "section": "3.Dicionário de dados e segurança",
-    "text": "3.Dicionário de dados e segurança\nTodas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.\n\nResumo da estrutura de dados\n\n\n\n\n\n\n\n\nVariável\nDescrição\nRegras de Validação\n\n\n\n\n‘weight’\nPeso (kg)\nEntre 30 e 250\n\n\n‘pef_value’\nPico de fluxo expiratório\nEntre 50 e 900 L/min\n\n\n‘act_score’\nPontuação do teste ACT\nInteiro entre 5 e 25\n\n\n‘smoking_status’\nEstado tabágico\nEscolha múltipla\n\n\n‘pack_year’\nCarga tabágica\nVisível se fumador/ex-fumador"
-  },
-  {
-    "objectID": "questionario_eCRF.html",
-    "href": "questionario_eCRF.html",
-    "title": "Questionario_eCRF",
-    "section": "",
-    "text": "A recolha de dados clínicos e a monitorização dos participantes do projeto RespiRA foram centralizadas através da plataforma REDcap . Esta ferramenta foi selecionada como Electronic Case Report Form (eCRF) pela sua robustez na garantia da integridade dos dados, segurança da informação e conformidade com as normas internacionais de bioética e proteção de dados em saúde.Para uma consulta detalhada da estrutura de recolha de dados e do fluxo de perguntas apresentado aos participantes, os formulários podem ser acedidos através do link para o servidor REDcap disponibilizado em seguida:\nClique aqui para aceder ao Servidor REDCap."
-  },
-  {
-    "objectID": "equipa.html",
-    "href": "equipa.html",
-    "title": "Equipa",
-    "section": "",
-    "text": "Autoras\nE-mail\n\n\n\n\nBeatriz da Silva Resende Correia Martins\nup202508337@up.pt\n\n\nClara Marcão Figueiras\nup202504460@up.pt\n\n\nMatilde Mendes de Ascensão\nup202505167@up.pt\n\n\nRita Santos Torres\nup202508173@up.pt"
-  },
-  {
-    "objectID": "prototipo.html",
-    "href": "prototipo.html",
-    "title": "Protótipo",
-    "section": "",
-    "text": "Clica aqui para abrir o protocolo no Figma"
-  },
-  {
     "objectID": "IA.html#site",
     "href": "IA.html#site",
     "title": "Declaração de Uso de IA",
@@ -189,11 +133,60 @@
     "text": "7. Protótipo\n\nPrompt 1:\n“Estou a desenhar um formulário no Figma. Como posso simular manualmente um pop-up de erro para idades fora do intervalo (18-65 anos) e criar o efeito de que a “Carga Tabágica” só aparece se a opção “Fumador” for selecionada, sem usar variáveis complexas?”\n\n\nResposta da IA:\n“Para criares essa interatividade de forma totalmente manual e visual no Figma, deves utilizar o método de Frames Alternativos e Overlays. Aqui está o passo a passo:\n\nSimulação do Pop-up de Erro (Idade):\n\n\nCria um frame pequeno e independente (o pop-up) com a mensagem de erro.\nNo teu frame principal, seleciona o botão ‘Confirmar’. Nas configurações de prototipagem, cria uma interação On Click -&gt; Open Overlay e seleciona o frame do pop-up.\nDefine a posição como ‘Centered’ para que o erro apareça por cima do formulário, simulando a validação da idade.\n\n\nLógica de Branching (Tabaco):\n\n\nCria dois frames para a página de História Clínica: o Frame A (estado inicial, sem carga tabágica) e o Frame B(com o campo ‘Carga Tabágica’ visível).\nNo Frame A, seleciona a opção ‘Fumador’ e cria uma ligação On Click -&gt; Navigate To -&gt; Frame B.\nPara que a transição pareça natural, usa a animação ‘Instant’ ou ‘Smart Animate’. Isto simula que o campo apareceu dinamicamente em resposta à escolha do utilizador.”\n\n\n\nComo o output foi tratado:\nFoi utilizada a técnica de prototipagem manual por estados (Frames). Desenhei individualmente cada ecrã necessário para cobrir os diferentes cenários: um frame específico para o estado de erro e frames distintos para o fluxo de “Fumador” vs “Não Fumador”. As interações foram configuradas manualmente através de Overlays e navegação entre frames, garantindo o comportamento lógico pretendido sem recorrer a funções automatizadas de programação.\n\nNível da GAI Use Scale: 2.\n\n\n\n\n\nPrompt 2:\n“Escreve uma frase curta de incentivo que destaque a importância da utilização diária da app para um melhor controlo da asma.”\n\n\nResposta da IA:\n“Aqui tens uma frase curta para incentivar o uso diário, focada em criar um hábito positivo:  \n“Cada registo é um sopro de confiança. Vamos controlar a asma juntos!””\n\n\nComo o output foi tratado:\nA frase de incentivo sugerida pelo Gemini foi revista e aceite pelo grupo.\n\nNível da GAI Use Scale: 2"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "prototipo.html",
+    "href": "prototipo.html",
+    "title": "Protótipo",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Clica aqui para abrir o protocolo no Figma"
+  },
+  {
+    "objectID": "equipa.html",
+    "href": "equipa.html",
+    "title": "Equipa",
+    "section": "",
+    "text": "Autoras\nE-mail\n\n\n\n\nBeatriz da Silva Resende Correia Martins\nup202508337@up.pt\n\n\nClara Marcão Figueiras\nup202504460@up.pt\n\n\nMatilde Mendes de Ascensão\nup202505167@up.pt\n\n\nRita Santos Torres\nup202508173@up.pt"
+  },
+  {
+    "objectID": "questionario_eCRF.html",
+    "href": "questionario_eCRF.html",
+    "title": "Questionario_eCRF",
+    "section": "",
+    "text": "A recolha de dados clínicos e a monitorização dos participantes do projeto RespiRA foram centralizadas através da plataforma REDcap . Esta ferramenta foi selecionada como Electronic Case Report Form (eCRF) pela sua robustez na garantia da integridade dos dados, segurança da informação e conformidade com as normas internacionais de bioética e proteção de dados em saúde.Para uma consulta detalhada da estrutura de recolha de dados e do fluxo de perguntas apresentado aos participantes, os formulários podem ser acedidos através do link para o servidor REDcap disponibilizado em seguida:\nClique aqui para aceder ao Servidor REDCap."
+  },
+  {
+    "objectID": "materiais.html",
+    "href": "materiais.html",
+    "title": "Materiais",
+    "section": "",
+    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
+  },
+  {
+    "objectID": "materiais.html#introdução-aos-materiais",
+    "href": "materiais.html#introdução-aos-materiais",
+    "title": "Materiais",
+    "section": "",
+    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garatnir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
+  },
+  {
+    "objectID": "materiais.html#tratamento-de-monitorização-ecrf",
+    "href": "materiais.html#tratamento-de-monitorização-ecrf",
+    "title": "Materiais",
+    "section": "1. Tratamento de monitorização (eCRF)",
+    "text": "1. Tratamento de monitorização (eCRF)\nA recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.\n\nA. Informação geral e triagem\nÉ o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.\n\n\nB. Dados demográficos e elegibilidade\nRecolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.\n\n\nD. Monitorização clínica RespiRA\nEste formulário é preenchido periodicamente e inclui indicadores de saúde: É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada."
+  },
+  {
+    "objectID": "materiais.html#fórmulas-de-suporte-técnico",
+    "href": "materiais.html#fórmulas-de-suporte-técnico",
+    "title": "Materiais",
+    "section": "2. Fórmulas de suporte técnico",
+    "text": "2. Fórmulas de suporte técnico\nPara garantir a precisão clínica, o sistema baseia-se nas seguintes equações matemáticas:\nCálculo do IMC: \\[IMC=\\frac{Peso}{Altura^2}\\]\nPredição do débito expiratório máximo (PEF previsto): \\[PEF_{previsto}=(Altura\\times 5.48) - (Idade\\times 0.03)-1.58\\]\nAvaliação de progresso(Variação do ACT): \\[\\Delta ACT = ACT_{t12}-ACT_{t0}\\]"
+  },
+  {
+    "objectID": "materiais.html#dicionário-de-dados-e-segurança",
+    "href": "materiais.html#dicionário-de-dados-e-segurança",
+    "title": "Materiais",
+    "section": "3.Dicionário de dados e segurança",
+    "text": "3.Dicionário de dados e segurança\nTodas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.\n\nResumo da estrutura de dados\n\n\n\n\n\n\n\n\nVariável\nDescrição\nRegras de Validação\n\n\n\n\n‘weight’\nPeso (kg)\nEntre 30 e 250\n\n\n‘pef_value’\nPico de fluxo expiratório\nEntre 50 e 900 L/min\n\n\n‘act_score’\nPontuação do teste ACT\nInteiro entre 5 e 25\n\n\n‘smoking_status’\nEstado tabágico\nEscolha múltipla\n\n\n‘pack_year’\nCarga tabágica\nVisível se fumador/ex-fumador"
   },
   {
     "objectID": "resultados.html",
