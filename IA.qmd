@@ -4,40 +4,55 @@ format: html
 ---
 
 # Entrega 1
-# Introdução
+
+## Introdução
+
 Em conformidade com as normas de integridade académica, declara-se que a elaboração do protocolo clínico "RespiRA" contou com o apoio pontual do Gemini (Nível 2 da GAI Use Scale). A IA foi utilizada para validar a conformidade do protocolo com normas internacionais de reporte (SPIRIT) e para auxiliar na redação técnica de cláusulas éticas e de segurança de dados. Toda a interpretação clínica, desenho do estudo e decisões sobre a segurança dos participantes foram realizados integralmente pelo grupo, utilizando a IA apenas para verificação de omissões e refinamento de texto.
 
-### Prompt 1:
+## Prompt 1:
+
 "Com base no protocolo "RespiRA" que anexei, atua como um revisor científico, analisa se a descrição da nossa intervenção digital (secção 2.3) cumpre todos os requisitos da norma SPIRIT. Indica se falta algum detalhe sobre a frequência de uso, suporte técnico ou procedimentos de instalação que um comité de ética exigiria."
 
-### Resposta da IA:
+**Resposta da IA:**
+
 "A IA validou que a secção 2.3 cumpre a norma SPIRIT ao detalhar a frequência de monitorização (semanal e diária) e o suporte técnico contínuo. O procedimento de instalação presencial foi considerado adequado para garantir a formação do doente e a segurança no onboarding. A sincronização pseudonimizada assegura a conformidade ética e a proteção de dados exigida pelo RGPD."
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 Decidimos manter a redação original, pois a análise confirmou que os mecanismos de suporte e as funcionalidades da App já garantem o rigor científico necessário.
 
-### Prompt 3:
+**Nível da GAI Use Scale:** 2
+
+## Prompt 2:
+
 "Dá-me exemplos de critérios de exclusão para um estudo de asma que ajudem a garantir que os resultados não são confundidos por outras doenças respiratórias ou hábitos tabágicos pesados."
 
-### Resposta da IA:
+**Resposta da IA:**
+
 " Para isolar o efeito da intervenção na asma, recomendo os seguintes critérios de exclusão:
 
 1.  Condições médicas incompatíveis: Doenças pulmonares crónicas relevantes ou outras condições que interfiram na avaliação do controlo da asma.
 2.  Exacerbação recente: Hospitalização ou tratamento sistémico intensivo nas últimas 4 semanas.
 3.  Tratamentos concomitantes: Participação em outro ensaio clínico intervencional.
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 As respostas de IA foram aceites.
 
+**Nível da GAI Use Scale:** 2
+
 # Entrega 2
-# Introdução
+
+## Introdução
 
 Em conformidade com as normas de integridade académica, declara-se que as fases de configuração e validação do eCRF no REDCap contaram com o apoio do Gemini, enquadrando-se nos níveis de utilização 1 e 2 da GAI Use Scale, conforme detalhado abaixo.
 
-### Prompt 1:
+## Prompt 1:
+
 "Estou a planear a segurança de dados do projeto RespiRA no REDCap. Quais são as diferentes abordagens lógicas para impedir que um utilizador avance para os formulários clínicos se o consentimento for negativo?"
 
-### Resposta da IA:
+**Resposta da IA:**
+
 Para garantir a segurança e a conformidade ética no REDCap, existem três abordagens principais:
 
 Form Display Logic (Lógica ao nível do Instrumento): O REDCap avalia a resposta e "tranca" ou esconde todos os instrumentos seguintes. Ideal para estudos longitudinais realizados por investigadores.
@@ -46,125 +61,133 @@ Stop Actions (Lógica ao nível do Fluxo de Inquérito): Utilizada quando o doen
 
 Branching Logic de Campo (Lógica de Ramificação): Abordagem granular dentro de cada formulário, ocultando campos ou secções específicas.
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 Decidimos aplicar a Branching Logic para esconder campos e a funcionalidade de Stop Actions para interromper o fluxo do inquérito. No relatório, isto justifica-se como um mecanismo de conformidade com o RGPD, assegurando a proteção dos direitos do participante.
 
-Nível da GAI Use Scale: 2
+**Nível da GAI Use Scale:** 2
 
+## Prompt 2:
 
-
-### Prompt 2:
 "Para a elaboração de um questionário no RedCap de um estudo sobre a asma, defini os seguintes intervalos fisiológicos para adultos: Peso (30-250 kg), Altura (100-250 cm) e ACT (5-25). Avalie se esses limites são adequados para evitar erros de digitação sem excluir casos clínicos reais."
 
-### Resposta da IA:
+**Resposta da IA:**
+
 Os limites estão muito bem definidos. Eles cobrem desde casos de desnutrição ou baixa estatura severa até obesidade mórbida, garantindo que não se percam dados raros enquanto bloqueia erros óbvios. O intervalo do ACT (5-25) está perfeito, pois respeita a pontuação da escala original.
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 A IA considerou os intervalos adequados. Como medida complementar, verificamos a visibilidade das unidades de medida (kg/cm) no formulário para assegurar a precisão dos dados.
 
-Nível da GAI Use Scale: 2
+**Nível da GAI Use Scale:** 2
 
+## Prompt 3:
 
-### Prompt 3:
 "Como posso utilizar a Branching Logic no REDCap para aumentar a eficiência de um formulário clínico, evitando que perguntas sobre gravidez ou detalhes de urgências apareçam a todos os doentes?"
 
-### Resposta da IA:
+**Resposta da IA:**
+
 Filtragem por Relevância Biológica: O campo de gravidez só aparece se o campo sexo for igual a "Feminino".
 
 Técnica de "Cascata" para Detalhes: Criar uma pergunta de triagem ("O doente recorreu às urgências?"). Se "Sim", ramificam-se os campos detalhados.
 
 Hierarquia de Respostas (Checkboxes): Ativar campos de texto livre apenas para opções como "Outros".
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 Aplicamos esta lógica como medida de controlo de qualidade, para impedir dados incongruentes na base de dados final e reduzir a fadiga de preenchimento.
 
-Nível da GAI Use Scale: 2
+**Nível da GAI Use Scale:** 2
 
+## Prompt 4:
 
-### Prompt 4:
 "Qual é o objetivo científico de usar Field Notes num projeto de investigação e se os dados de Peso, Altura e ACT Score devem ser marcados como 'Identifier'?"
 
-### Resposta da IA:
+**Resposta da IA:**
+
 Field Notes: Servem para a Padronização da Recolha (especificar unidades como "kg"), Minimização do Erro (formatos de data) e Validação de Escalas (relembrar períodos de tempo).
 
 Identifiers: Embora sejam dados sensíveis, isoladamente (peso/altura) não identificam diretamente uma pessoa. Recomendou-se marcar como "No".
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 Personalizamos as Field Notes para elevar o rigor do formulário. Concordámos também em não marcar peso e altura como identificadores diretos.
 
-Nível da GAI Use Scale: 1
+**Nível da GAI Use Scale:** 1
 
+## Prompt 5:
 
-### Prompt 5:
 "Qual é a fórmula que tenho de utilizar para calcular o IMC?"
 
-### Resposta da IA:
+**Resposta da IA:**
+
 A fórmula matemática padrão é:
 
-IMC= 
-Altura(m) 
-2
- 
-Peso(kg)
-​	
- 
-### Como o output foi tratado:
-Ao analisar a resposta, percebemos que a fórmula ignorava que a nossa altura é recolhida em centímetros. Corrigimos autonomamente para a sintaxe do REDCap: [peso] / (([altura]/100)^2).
+IMC= Altura(m) 2
 
-Nível da GAI Use Scale: 1
+Peso(kg) ​
 
+**Como o output foi tratado:**
 
-### Prompt 6:
+Ao analisar a resposta, percebemos que a fórmula ignorava que a nossa altura é recolhida em centímetros. Corrigimos autonomamente para a sintaxe do REDCap: \[peso\] / ((\[altura\]/100)\^2).
+
+**Nível da GAI Use Scale:** 1
+
+## Prompt 6:
+
 "É possível usar código HTML dentro do REDCap para destacar alertas?"
 
-### Resposta da IA:
+**Resposta da IA:**
+
 A IA forneceu o código `<b style="color:red;">` e explicou como inseri-lo no Field Label, recomendando moderação para não distrair o utilizador.
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 Decidimos aplicar o vermelho apenas no alerta de "Asma Não Controlada" para manter o impacto de urgência, seguindo a recomendação de moderação da IA.
 
-Nível da GAI Use Scale: 2
+**Nível da GAI Use Scale:** 2
 
+## Prompt 7:
 
-### Prompt 7:
 "Qual é a diferença teórica entre um projeto 'Classic' e 'Longitudinal' no REDCap?"
 
-### Resposta da IA:
+**Resposta da IA:**
+
 O modelo Classic é ideal para estudos transversais. O modelo Longitudinal permite definir Eventos, preenchido repetidamente em cada visita, facilitando análises de medidas repetidas.
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 Com base nesta distinção, decidimos converter o projeto RespiRA para Longitudinal, definindo os eventos (Semanas 4, 8 e 12) e fixando os dados demográficos apenas no primeiro momento.
 
-Nível da GAI Use Scale: 2
+**Nível da GAI Use Scale:** 2
 
+## Prompt 8:
 
-### Prompt 8:
 "Analisa este dicionário de dados do REDCap e faz uma lista dos erros que causam falhas no preenchimento."
 
-### Resposta da IA:
+**Resposta da IA:**
+
 Campo dob (Data de Nascimento): Erro na tag @MINDATE='2026-04-16'.
 
 Campo sex: Inconsistência de idioma (inglês).
 
 Campo app_satisfaction: Falta de legendas no slider.
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
+
 A sugestão sobre a data de nascimento foi rejeitada, pois a IA não leu corretamente a tag de intervalo de idade. Aceitámos a tradução do sexo e a inclusão de legendas no slider, acrescentando manualmente a opção "Neutro".
 
-Nível da GAI Use Scale: 2
+**Nível da GAI Use Scale:** 2
 
+# Entrega 3
 
-
-#Entrega 3
-# Introdução
+## Introdução
 
 Em conformidade com as normas de integridade académica, declara-se que este trabalho contou com o apoio de ferramentas de IA Generativa, mais precisamente do Gemini, enquadrando-se no Nível 2 (Arquiteto Conceptual) da GAI Use Scale. A IA atuou estritamente como parceiro de pensamento (thought partner), auxiliando no brainstorming estrutural e na otimização técnica da sintaxe em R para o processamento estatístico e formatação de tabelas.
 
 Toda a autoria intelectual, redação integral e interpretação clínica dos dados foram da exclusiva responsabilidade das autoras. Os conteúdos gerados foram validados criticamente face à literatura de referência, garantindo que as conclusões do estudo RespiRA refletem o juízo crítico e a responsabilidade ética das autoras.
 
 Apresenta-se, em seguida, o reporte detalhado da utilização de IA, discriminando as interações e comandos realizados ao longo do desenvolvimento do trabalho.
-
-
 
 ## 1. Site
 
@@ -174,7 +197,7 @@ A utilização de IA generativa foi limitada ao suporte técnico na configuraç�
 
 "Explica-me a lógica de organização do ficheiro \_quarto.yml para um site que deve priorizar a página 'Protocolo' no menu e listar outras secções de suporte. Quais são os parâmetros necessários para garantir que o menu de navegação funcione corretamente e como ativo um índice lateral para facilitar a leitura de documentos longos?"
 
-### Resposta da IA:
+**Resposta da IA:**
 
 "1. Organização da Hierarquia (Onde as coisas aparecem) A lógica começa no campo website. Para priorizares o 'Protocolo', deves defini-lo na navbar (a barra superior), que serve para a navegação global. Se tiveres muitas secções secundárias, podes usar a sidebar (barra lateral), mas para um site mais limpo, o ideal é manter o foco na barra superior e agrupar o resto.
 
@@ -184,11 +207,11 @@ A utilização de IA generativa foi limitada ao suporte técnico na configuraç�
 
 4.  Validação (Para não haver erros) Um erro comum é esqueceres-te de criar os ficheiros. O Quarto só consegue gerar o site se todos os ficheiros que listaste no \_quarto.yml existirem fisicamente na tua pasta. Se referenciares um materiais.qmd que ainda não criaste, o programa vai dar erro ao tentar construir o site. Por isso, cria primeiro os ficheiros (mesmo que vazios) e depois configura o menu."
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
 
 Foram seguidas as indicações do Gemini, de forma a criar a estrutura correta do site.
 
-#### **Nível da GAI Use Scale**: 2
+**Nível da GAI Use Scale:** 2
 
 ## 2. Início
 
@@ -196,32 +219,32 @@ Foram seguidas as indicações do Gemini, de forma a criar a estrutura correta d
 
 "Escrevi o resumo, que está anexado, para o meu site. Podes verificar se existem incongruências e sugerir sinónimos para as palavras que repetem muito?"
 
-### Resposta da IA:
+**Resposta da IA:**
 
 "O texto está bem estruturado e **não apresenta incongruências** lógicas ou metodológicas. A progressão do problema (falta de controlo) para a solução (App) é coerente.
 
 Aqui estão sugestões para reduzir a repetição das palavras "Aplicação", "Avaliar" e "Asma":
 
-### Sinónimos Sugeridos
+Sinónimos Sugeridos
 
 |  |  |
-|------------------------------------|------------------------------------|
+|----|----|
 | **Palavra Repetida** | **Alternativas de Substituição** |
 | **Aplicação / App** | Ferramenta digital, plataforma móvel, solução tecnológica, ecossistema *RespiRA*. |
 | **Avaliar / Determinar** | Analisar, mensurar, aferir, examinar, escrutinar, validar. |
 | **Asma** | Patologia, condição respiratória, doença crónica, quadro clínico. |
 
-### Pequenos Ajustes de Fluidez
+**Pequenos Ajustes de Fluidez**
 
 -   **No "Cenário Clínico":** Em vez de "não têm a doença controlada", pode usar "não apresentam controlo sintomático".
 
 -   **Nos "Objetivos":** Pode variar o início das frases. Exemplo: "Mensurar o impacto..." ou "Verificar a associação entre a intervenção e a redução de exacerbações"."
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
 
 Optamos por diversificar o vocabulário nos Objetivos e no Resumo, utilizando sinónimos como "analisar" e "ferramenta digital" para evitar repetições e tornar a leitura mais fluida. Contudo, mantivemos o Cenário Clínico inalterado para preservar a integridade e o rigor terminológico do protocolo original.
 
-#### **Nível da GAI Use Scale**: 2
+**Nível da GAI Use Scale:** 2
 
 ## 3. Protocolo de Ensaio Clínico
 
@@ -239,17 +262,17 @@ Não foi necessária a utilização de inteligência artifical no resto da parte
 
 2-"Tendo em conta o nosso dicionário de dados, que coloquei em anexo, podes me ajudar a escolher os melhores dados para construir uma tabela resumo e ajudar-me na formatação da tabela em R?""
 
-### Resposta da IA:
+**Resposta da IA:**
 
 "1-"Para as fórmulas no site, utiliza a sintaxe LaTeX: `$$IMC = \frac{Peso}{Altura^2}$$` e `$$PEF_{previsto} = (Altura \times 5.48) - (Idade \times 0.03) - 1.58$$`. No R Markdown, usa \# para Títulos e \## para Subtítulos para criar a hierarquia."
 
 2-" Para a tabela do dicionário de dados, recomendo focar nas variáveis: 'weight', 'pef_value', 'act_score' e 'smoking_status'. Deves estruturar a tabela em Markdown da seguinte forma, com estas colunas: \| Variável \| Descrição \| Regras de Validação \|.  Não te esqueças de alinhamento (:---): Garante que o texto da tabela fica alinhado à esquerda. Destaque de Variáveis (backticks): Colocar as variáveis entre `(ex:`weight\`) faz com que elas apareçam com um aspeto de "código", o que é uma boa prática em dicionários de dados. Lógica de Branching: Inclui a regra da carga tabágica na última coluna, para que fique claro que existe uma dependência entre as perguntas.""
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
 
 O código das fórmulas e a estrutura da tabela foram integrados no ficheiro .qmd, garantindo a correta visualização no site. Foi aceite também a proposta das categorias escolhidas para colocar no dicionário de dados e o modo como deveria estruturar a tabela.
 
-#### **Nível da GAI Use Scale**: 2
+**Nível da GAI Use Scale:** 2
 
 ## 5. Resultados
 
@@ -257,15 +280,15 @@ O código das fórmulas e a estrutura da tabela foram integrados no ficheiro .qm
 
 "Para um relatório clínico de asma, qual é a melhor forma de apresentar a comparação de múltiplos outcomes secundários (adesão, exacerbações, função pulmonar) entre dois grupos num projeto Quarto, garantindo o rigor na escolha dos testes estatísticos."
 
-### Resposta da IA:
+**Resposta da IA:**
 
 "A estratégia mais rigorosa é a criação de uma Tabela de Síntese de Eficácia (Tabela 2) que utilize o pacote gtsummary. A IA recomendou: - Diferenciação de Tipos: Forçar o tratamento de variáveis de contagem (exacerbações) como contínuas para permitir o cálculo de medianas. - Seleção de Testes: Utilizar o Teste-t para variáveis normais (ACT, Peak Flow) e o teste de Wilcoxon para variáveis enviesadas ou de contagem. - Métrica de Evolução: Criar uma variável de 'Delta' para quantificar a magnitude da melhoria individual de cada doente, permitindo uma análise mais profunda do que apenas o valor final."
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
 
 A IA atuou como parceiro de pensamento na arquitetura da Tabela 2. Embora tenha fornecido algumas sintaxes técnicas necessárias, a responsabilidade de executar os diagnósticos de normalidade (Shapiro-Wilk) e a decisão crítica de incluir o "Delta ACT" para medir o progresso real foram nossas.
 
-#### **Nível da GAI Use Scale**: 2
+**Nível da GAI Use Scale:** 2
 
 ## 6. Equipa
 
@@ -277,7 +300,7 @@ Esta secção foi redigida sem o auxílio de ferramentas generativas.
 
 "Estou a desenhar um formulário no Figma. Como posso simular manualmente um pop-up de erro para idades fora do intervalo (18-65 anos) e criar o efeito de que a “Carga Tabágica” só aparece se a opção “Fumador” for selecionada, sem usar variáveis complexas?"
 
-### Resposta da IA:
+**Resposta da IA:**
 
 "Para criares essa interatividade de forma totalmente manual e visual no Figma, deves utilizar o método de Frames Alternativos e Overlays. Aqui está o passo a passo:
 
@@ -293,26 +316,24 @@ Esta secção foi redigida sem o auxílio de ferramentas generativas.
 -   No Frame A, seleciona a opção 'Fumador' e cria uma ligação On Click -\> Navigate To -\> Frame B.
 -   Para que a transição pareça natural, usa a animação 'Instant' ou 'Smart Animate'. Isto simula que o campo apareceu dinamicamente em resposta à escolha do utilizador."
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
 
 Foi utilizada a técnica de prototipagem manual por estados (Frames). Desenhei individualmente cada ecrã necessário para cobrir os diferentes cenários: um frame específico para o estado de erro e frames distintos para o fluxo de "Fumador" vs "Não Fumador". As interações foram configuradas manualmente através de Overlays e navegação entre frames, garantindo o comportamento lógico pretendido sem recorrer a funções automatizadas de programação.
 
-#### **Nível da GAI Use Scale**: 2.
-
-\
+**Nível da GAI Use Scale**: 2.
 
 ### Prompt 2:
 
 "Escreve uma frase curta de incentivo que destaque a importância da utilização diária da app para um melhor controlo da asma."
 
-### Resposta da IA:
+**Resposta da IA:**
 
 "Aqui tens uma frase curta para incentivar o uso diário, focada em criar um hábito positivo:  
 
 "Cada registo é um sopro de confiança. Vamos controlar a asma juntos!""
 
-### Como o output foi tratado:
+**Como o output foi tratado:**
 
 A frase de incentivo sugerida pelo Gemini foi revista e aceite pelo grupo.
 
-#### **Nível da GAI Use Scale**: 2
+**Nível da GAI Use Scale:** 2
