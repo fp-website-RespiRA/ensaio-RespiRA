@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "dicionario_dados.csv"
 
 website:
   title: "Ensaio RespiRA"
