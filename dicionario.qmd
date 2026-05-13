@@ -3,4 +3,4 @@ title: "Dicionário de Dados"
 format: html
 ---
 
-Clique aqui para [descarregar o Dicionário de Dados (CSV)](docs/dicionario_dados.csv).
+Clique aqui para [descarregar o Dicionário de Dados (CSV)](dicionario_dados.csv).
