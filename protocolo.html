@@ -194,7 +194,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#métodos" id="toc-métodos" class="nav-link" data-scroll-target="#métodos">2. Métodos</a>
   <ul class="collapse">
-  <li><a href="#desenho-do-estudos" id="toc-desenho-do-estudos" class="nav-link" data-scroll-target="#desenho-do-estudos">2.1 Desenho do Estudos</a></li>
+  <li><a href="#desenho-do-estudo" id="toc-desenho-do-estudo" class="nav-link" data-scroll-target="#desenho-do-estudo">2.1 Desenho do Estudo</a></li>
   <li><a href="#diagrama-consort" id="toc-diagrama-consort" class="nav-link" data-scroll-target="#diagrama-consort">Diagrama CONSORT</a></li>
   <li><a href="#diagrama-de-atividades---percurso-do-paciente" id="toc-diagrama-de-atividades---percurso-do-paciente" class="nav-link" data-scroll-target="#diagrama-de-atividades---percurso-do-paciente">Diagrama de Atividades - Percurso do Paciente</a></li>
   <li><a href="#população-do-estudo" id="toc-população-do-estudo" class="nav-link" data-scroll-target="#população-do-estudo">2.2 População do Estudo</a>
@@ -314,8 +314,8 @@ window.Quarto = {
 </section>
 <section id="métodos" class="level2">
 <h2 class="anchored" data-anchor-id="métodos">2. Métodos</h2>
-<section id="desenho-do-estudos" class="level3">
-<h3 class="anchored" data-anchor-id="desenho-do-estudos">2.1 Desenho do Estudos</h3>
+<section id="desenho-do-estudo" class="level3">
+<h3 class="anchored" data-anchor-id="desenho-do-estudo">2.1 Desenho do Estudo</h3>
 <p>Este é um ensaio clínico randomizado, controlado, de grupos paralelos.</p>
 <p><strong>Características do desenho:</strong></p>
 <p>Este é um ensaio clínico randomizado, controlado, de grupos paralelos, destinado a avaliar a viabilidade e o efeito potencial de uma intervenção digital para autogestão da asma em cuidados de saúde primários. O estudo terá dois braços com randomização 1:1: intervenção (acesso à aplicação RespiRA) e controlo (cuidado habitual). Esta proporção garante comparabilidade e eficiência estatística numa amostra piloto reduzida. O período de intervenção terá 12 semanas, conduzido num único centro de saúde ou USF. A amostra total será de 30 participantes, 15 em cada grupo, tendo sido excluídos da amostra inicial 50 participantes (35 que não atendem aos critérios de participação, 10 que desistiram e 5 por outras razões). Após avaliação basal, os participantes serão randomizados e iniciarão o acompanhamento, permitindo avaliar aceitabilidade da aplicação, viabilidade do recrutamento e recolha de dados.</p>
@@ -482,8 +482,11 @@ window.Quarto = {
 <figcaption>Diagrama de Casos de Uso da App RespiRA</figcaption>
 </figure>
 </div>
-<p>Funcionalidades principais: 1. Monitorização integrada (ACT e Peak Flow) O que faz: A aplicação combina a autoavaliação semanal pelo Asthma Control Test (ACT) com o registo diário do peak flow, permitindo monitorização contínua do controlo da asma. Os dados são processados e apresentados em gráficos evolutivos. Como o participante interage: O participante responde ao ACT e insere valores de peak flow, recebendo interpretação imediata do controlo. Frequência de uso esperada:: Semanal (ACT) e diária ou conforme orientação clínica (peak flow). Para que a aplicação RespiRa forneça um feedback imediato ao utilizador, o valor do débito expiratório máximo (PEF) registado é comparado com o valor previsto para a sua idade e ealtura (PEF previsto), utilizando a seguinte equação:</p>
-<p><span class="math display">\[PEF previsto= (Altura *5.48)-(Idade*0.03)-1.58\]</span></p>
+<p>Funcionalidades principais: 1. Monitorização integrada (ACT e Peak Flow) O que faz: A aplicação combina a autoavaliação semanal pelo Asthma Control Test (ACT) com o registo diário do peak flow, permitindo monitorização contínua do controlo da asma. Os dados são processados e apresentados em gráficos evolutivos. Como o participante interage: O participante responde ao ACT e insere valores de peak flow, recebendo interpretação imediata do controlo. Frequência de uso esperada: Semanal (ACT) e diária ou conforme orientação clínica (peak flow). Para que a aplicação RespiRa forneça um feedback imediato ao utilizador, o valor do débito expiratório máximo (PEF) registado é comparado com o valor previsto para a sua idade e altura (PEF previsto), utilizando estas equações diferenciadas de acordo com o sexo do utilizador:</p>
+<p>Homem</p>
+<p><span class="math display">\[PEF_{previsto} = (Altura \times 5.48) - (Idade \times 0.03) + 1.58\]</span></p>
+<p>Mulher</p>
+<p><span class="math display">\[PEF_{previsto} = (Altura \times 3.72) - (Idade \times 0.03) + 2.24\]</span></p>
 <p>Com base nesta relação, a aplicação define automaticamente o plano de ação através de um sistema de cores: -Zona verde (Controlado): PEF registo &gt;80% do PEF previsto -Zona amarela (Necessária vigilância):50%&lt;= PEF registado &lt;=80% do PEF previsto -Zona Vermelha (Emergência): PEF registado&lt;50% do PEF previsto</p>
 <ol start="2" type="1">
 <li><p>Plano de ação e alertas O que faz: Algoritmos classificam o estado da asma e fornecem recomendações personalizadas e alertas em caso de agravamento. Como o participante interage: Feedback automático após inserção de dados ou valores anormais. Frequência de uso esperada: Conforme introdução de dados ou alterações clínicas.</p></li>
