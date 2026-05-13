@@ -49,39 +49,123 @@
     "text": "O estudo será conduzido em conformidade com a Declaração de Helsínquia e as normas de Boa Prática Clínica. O protocolo será previamente submetido e aprovado por uma Comissão de Ética para a Investigação em Saúde antes do início do recrutamento. Todos os participantes fornecerão consentimento informado por escrito após esclarecimento adequado sobre os objetivos, procedimentos, riscos e benefícios. Será garantido o direito de desistência a qualquer momento, sem prejuízo dos cuidados de saúde habituais. A proteção de dados será assegurada em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD). Os dados clínicos e digitais serão pseudonimizados e armazenados em sistemas seguros, com acesso restrito à equipa de investigação. Serão implementadas medidas técnicas e organizativas para prevenir acessos não autorizados ou perda de informação. Atendendo à natureza digital da intervenção, será garantida a segurança dos dados gerados pela aplicação, incluindo autenticação e encriptação. Eventos adversos serão monitorizados e reportados conforme os procedimentos definidos. Os resultados serão disseminados independentemente dos achados, através de publicações científicas e apresentações em congressos. Será promovida a partilha com participantes e instituições, contribuindo para a transparência científica e potencial integração futura da intervenção na prática clínica.\n\nVersão: 1.0\nData desta versão: 2026-04-30 Autores desta versão: Beatriz Martins, Clara Figueiras, Matilde Ascensão, Rita Torres."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Início",
+    "objectID": "resultados.html",
+    "href": "resultados.html",
+    "title": "Resultados",
     "section": "",
-    "text": "Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel RespiRA. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma ferramenta digital dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de mHealth consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações."
+    "text": "A presente secção detalha os resultados obtidos no ensaio clínico RespiRA. Antes da apresentação das tabelas comparativas, realizou-se um diagnóstico de normalidade para garantir a validade dos testes estatísticos aplicados.\nA normalidade das variáveis foi avaliada através do teste de Shapiro-Wilk e de métodos visuais (histogramas e Q-Q plots), fundamentando a escolha entre testes paramétricos ou não-paramétricos para cada indicador avaliado.\n\n\nA análise da distribuição da idade revela um desvio da normalidade, caracterizado por uma marcada assimetria positiva no histograma e um desvio sistemático dos quantis na diagonal do gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,010), cujo valor inferior a 0,05 impõe a rejeição da hipótese nula. Perante esta evidência de não-normalidade, a caraterização etária da amostra será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre grupos realizadas mediante o teste não-paramétrico de Wilcoxon (Mann-Whitney), dada a sua robustez perante assimetrias e valores extremos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do score ACT inicial revela uma forte aderência à normalidade. O histograma apresenta uma configuração visualmente simétrica, assemelhando-se à curva de Gauss, enquanto no gráfico Q-Q Plot os pontos alinham-se de forma consistente com a diagonal teórica de referência. Esta evidência visual é corroborada pelo teste de Shapiro-Wilk, que apresenta um valor de p = 0,841, claramente superior ao nível de significância de 0,05. Perante a validação deste pressuposto estatístico, a caraterização do nível de controlo da asma no momento inicial será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o teste paramétrico t de Student.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do score ACT final (semana 12) demonstra uma clara aderência à normalidade, evidenciada pela configuração visualmente simétrica do histograma e pelo alinhamento consistente dos quantis com a diagonal no gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,158), cujo valor superior ao limiar de significância de 0,05 permite a validação do pressuposto estatístico de normalidade. Perante esta evidência, a caraterização do nível de controlo da asma no final do seguimento será descrita através da média e do desvio padrão (SD), sendo as comparações de eficácia entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição da qualidade de vida (AQLQ) no final da intervenção revela uma forte aderência à normalidade. O histograma apresenta uma configuração unimodal e simétrica, com os valores concentrados em torno da média, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados com a diagonal de referência. Esta interpretação visual é sustentada pelo teste de Shapiro-Wilk (p = 0,564), cujo valor significativamente superior a 0,05 impossibilita a rejeição da hipótese nula de normalidade. Consequentemente, a caraterização da qualidade de vida será apresentada através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição da adesão terapêutica no final da intervenção revela uma aderência satisfatória à normalidade. O histograma apresenta uma configuração unimodal com uma distribuição concentrada nos valores superiores da escala, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados de forma consistente com a diagonal de referência, sem evidência de desvios sistemáticos significativos. Esta interpretação visual é validada pelo teste de Shapiro-Wilk (p = 0,296), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula de normalidade. Perante esta evidência, a caraterização da adesão será descrita através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição da função respiratória basal (Peak Flow) revela uma forte aderência à normalidade, caracterizada por um histograma unimodal e simétrico, com os dados distribuídos de forma equilibrada em torno da média. No gráfico Q-Q Plot, observa-se que os pontos da amostra acompanham rigorosamente a diagonal teórica de referência, sem desvios significativos. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,881), cujo valor superior ao limiar de 0,05 valida o pressuposto de normalidade. Perante esta evidência, a caraterização do Peak Flow inicial será descrita através da média e do desvio padrão, aplicando-se o teste paramétrico t de Student para as comparações estatísticas entre os grupos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do peak flow à semana 12 revela uma aderência satisfatória à normalidade, evidenciada pela configuração unimodal do histograma e pelo alinhamento dos pontos com a diagonal de referência no gráfico Q-Q Plot. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,201), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula. Perante a validação deste pressuposto, a caraterização da função respiratória no final do seguimento será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p &lt; 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados."
   },
   {
-    "objectID": "index.html#resumo-do-projeto",
-    "href": "index.html#resumo-do-projeto",
-    "title": "Início",
+    "objectID": "resultados.html#idade",
+    "href": "resultados.html#idade",
+    "title": "Resultados",
     "section": "",
-    "text": "Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel RespiRA. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma ferramenta digital dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de mHealth consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações."
+    "text": "A análise da distribuição da idade revela um desvio da normalidade, caracterizado por uma marcada assimetria positiva no histograma e um desvio sistemático dos quantis na diagonal do gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,010), cujo valor inferior a 0,05 impõe a rejeição da hipótese nula. Perante esta evidência de não-normalidade, a caraterização etária da amostra será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre grupos realizadas mediante o teste não-paramétrico de Wilcoxon (Mann-Whitney), dada a sua robustez perante assimetrias e valores extremos."
   },
   {
-    "objectID": "index.html#cenário-clínico",
-    "href": "index.html#cenário-clínico",
-    "title": "Início",
-    "section": "Cenário Clínico",
-    "text": "Cenário Clínico\nA asma afeta cerca de 700.000 adultos em Portugal. Apesar dos tratamentos existentes, mais de 50% dos doentes não têm a doença controlada.\nO modelo tradicional de consultas esporádicas falha na monitorização diária. A aplicação RespiRA surge para preencher esta lacuna, integrando:\n\nQuestionário ACT (Asthma Control Test).\nRegisto de Peak Flow (Débito Expiratório Máximo).\nPlanos de Ação Automáticos baseados em algoritmos clínicos."
+    "objectID": "resultados.html#score-act-baseline",
+    "href": "resultados.html#score-act-baseline",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição do score ACT inicial revela uma forte aderência à normalidade. O histograma apresenta uma configuração visualmente simétrica, assemelhando-se à curva de Gauss, enquanto no gráfico Q-Q Plot os pontos alinham-se de forma consistente com a diagonal teórica de referência. Esta evidência visual é corroborada pelo teste de Shapiro-Wilk, que apresenta um valor de p = 0,841, claramente superior ao nível de significância de 0,05. Perante a validação deste pressuposto estatístico, a caraterização do nível de controlo da asma no momento inicial será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o teste paramétrico t de Student."
   },
   {
-    "objectID": "index.html#objetivos-do-estudo",
-    "href": "index.html#objetivos-do-estudo",
-    "title": "Início",
-    "section": "Objetivos do Estudo",
-    "text": "Objetivos do Estudo\n\nObjetivo Primário\nAvaliar se a aplicação RespiRA melhora o controlo da asma (medido pelo score ACT) ao fim de 12 semanas, comparativamente ao tratamento padrão.\n\n\nObjetivos Secundários\n\nAnalisar o impacto da aplicação nos valores de débito expiratório máximo (peak flow).\nDeterminar se a intervenção digital está associada a uma redução no número de exacerbações de asma.\nAvaliar o efeito da RespiRA na adesão à medicação de controlo prescrita.\nAnalisar as alterações na qualidade de vida relacionada com a asma através do questionário AQLQ.\nPerceber a diferença entre grupos no número de episódios de recurso ao serviço de urgência e na satisfação dos participantes."
+    "objectID": "resultados.html#score-act-semana-12",
+    "href": "resultados.html#score-act-semana-12",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição do score ACT final (semana 12) demonstra uma clara aderência à normalidade, evidenciada pela configuração visualmente simétrica do histograma e pelo alinhamento consistente dos quantis com a diagonal no gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,158), cujo valor superior ao limiar de significância de 0,05 permite a validação do pressuposto estatístico de normalidade. Perante esta evidência, a caraterização do nível de controlo da asma no final do seguimento será descrita através da média e do desvio padrão (SD), sendo as comparações de eficácia entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student."
   },
   {
-    "objectID": "index.html#metodologia-em-resumo",
-    "href": "index.html#metodologia-em-resumo",
-    "title": "Início",
-    "section": "Metodologia em Resumo",
-    "text": "Metodologia em Resumo\nO estudo é um Ensaio Clínico Controlado e Aleatorizado (RCT) de fase piloto/pré-teste.\n\nPopulação: Adultos (18-65 anos) com asma moderada.\nDuração: 12 semanas de intervenção.\nGrupos:\n\nGrupo Intervenção: Acesso à App RespiRA + Cuidado habitual.\nGrupo Controlo: Cuidado habitual isolado.\n\n\nEstado do Projeto: Início previsto para 1 de setembro de 2026."
+    "objectID": "resultados.html#aqlq-semana-12",
+    "href": "resultados.html#aqlq-semana-12",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição da qualidade de vida (AQLQ) no final da intervenção revela uma forte aderência à normalidade. O histograma apresenta uma configuração unimodal e simétrica, com os valores concentrados em torno da média, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados com a diagonal de referência. Esta interpretação visual é sustentada pelo teste de Shapiro-Wilk (p = 0,564), cujo valor significativamente superior a 0,05 impossibilita a rejeição da hipótese nula de normalidade. Consequentemente, a caraterização da qualidade de vida será apresentada através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos."
+  },
+  {
+    "objectID": "resultados.html#adesão",
+    "href": "resultados.html#adesão",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição da adesão terapêutica no final da intervenção revela uma aderência satisfatória à normalidade. O histograma apresenta uma configuração unimodal com uma distribuição concentrada nos valores superiores da escala, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados de forma consistente com a diagonal de referência, sem evidência de desvios sistemáticos significativos. Esta interpretação visual é validada pelo teste de Shapiro-Wilk (p = 0,296), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula de normalidade. Perante esta evidência, a caraterização da adesão será descrita através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos."
+  },
+  {
+    "objectID": "resultados.html#peak-flow-baseline",
+    "href": "resultados.html#peak-flow-baseline",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição da função respiratória basal (Peak Flow) revela uma forte aderência à normalidade, caracterizada por um histograma unimodal e simétrico, com os dados distribuídos de forma equilibrada em torno da média. No gráfico Q-Q Plot, observa-se que os pontos da amostra acompanham rigorosamente a diagonal teórica de referência, sem desvios significativos. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,881), cujo valor superior ao limiar de 0,05 valida o pressuposto de normalidade. Perante esta evidência, a caraterização do Peak Flow inicial será descrita através da média e do desvio padrão, aplicando-se o teste paramétrico t de Student para as comparações estatísticas entre os grupos."
+  },
+  {
+    "objectID": "resultados.html#peak-flow-semana-12",
+    "href": "resultados.html#peak-flow-semana-12",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição do peak flow à semana 12 revela uma aderência satisfatória à normalidade, evidenciada pela configuração unimodal do histograma e pelo alinhamento dos pontos com a diagonal de referência no gráfico Q-Q Plot. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,201), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula. Perante a validação deste pressuposto, a caraterização da função respiratória no final do seguimento será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student."
+  },
+  {
+    "objectID": "resultados.html#exacerbações-semana-12",
+    "href": "resultados.html#exacerbações-semana-12",
+    "title": "Resultados",
+    "section": "",
+    "text": "A análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p &lt; 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados."
+  },
+  {
+    "objectID": "materiais.html",
+    "href": "materiais.html",
+    "title": "Materiais",
+    "section": "",
+    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
+  },
+  {
+    "objectID": "materiais.html#introdução-aos-materiais",
+    "href": "materiais.html#introdução-aos-materiais",
+    "title": "Materiais",
+    "section": "",
+    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
+  },
+  {
+    "objectID": "materiais.html#tratamento-de-monitorização-ecrf",
+    "href": "materiais.html#tratamento-de-monitorização-ecrf",
+    "title": "Materiais",
+    "section": "1. Tratamento de monitorização (eCRF)",
+    "text": "1. Tratamento de monitorização (eCRF)\nA recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.\n\nA. Informação geral e consentimento\nÉ o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.\n\n\nB. Dados demográficos\nRecolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.\n\n\nC. História Clínica e Comorbilidades\nAvaliação da caracterização antropométrica e estilo de vida, onde só aparece a carga tabágica se no estado tabágico for selecionada a opção ex-fumador ou fumador ativo, avaliação do histórico clinico e comorbilidades onde se questiona anos de diagnóstico, terapêutica atual e patologias associadas e caso seja uma mulher, aparecem questões relativas a uma possível gravidez que se estiver grávida aparece uma questão para escrever sobre a gravidez.\n\n\nD. Monitorização clínica RespiRA\nEste formulário é preenchido periodicamente e inclui indicadores de saúde: É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada.Existe ainda uma pontuação do questionário de qualidade e vida que o utilizador deve introduzir o seu valor, que deve variar entre 1 e 7.\n\n\nE. Dados de conclusão do estudo\nNeste questionário pretende-se entender o motivo pelo qual o paciente terminou ou desistiu do estudo e se há comentários globais a serem feitos por parte do utilizador."
+  },
+  {
+    "objectID": "materiais.html#fórmulas-de-suporte-técnico",
+    "href": "materiais.html#fórmulas-de-suporte-técnico",
+    "title": "Materiais",
+    "section": "2. Fórmulas de suporte técnico",
+    "text": "2. Fórmulas de suporte técnico\nPara garantir a precisão clínica, o sistema baseia-se nas seguintes equações matemáticas:\nCálculo do IMC: \\[IMC=\\frac{Peso}{Altura^2}\\]\nPredição do débito expiratório máximo (PEF previsto):\nHomens:\n\\[PEF_{previsto} = (Altura \\times 5.48) - (Idade \\times 0.03) + 1.58\\]\nMulheres:\n\\[PEF_{previsto} = (Altura \\times 3.72) - (Idade \\times 0.03) + 2.24\\]\nAvaliação de progresso(Variação do ACT): \\[\\Delta ACT = ACT_{t12}-ACT_{t0}\\]"
+  },
+  {
+    "objectID": "materiais.html#dicionário-de-dados-e-segurança",
+    "href": "materiais.html#dicionário-de-dados-e-segurança",
+    "title": "Materiais",
+    "section": "3. Dicionário de dados e segurança",
+    "text": "3. Dicionário de dados e segurança\nTodas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.\n\nResumo da estrutura de dados\n\n\n\n\n\n\n\n\nVariável\nDescrição\nRegras de Validação\n\n\n\n\n‘weight’\nPeso (kg)\nEntre 30 e 250\n\n\n‘pef_value’\nPico de fluxo expiratório\nEntre 50 e 900 L/min\n\n\n‘act_score’\nPontuação do teste ACT\nInteiro entre 5 e 25\n\n\n‘smoking_status’\nEstado tabágico\nEscolha múltipla\n\n\n‘pack_year’\nCarga tabágica\nVisível se fumador/ex-fumador"
+  },
+  {
+    "objectID": "questionario_eCRF.html",
+    "href": "questionario_eCRF.html",
+    "title": "Questionario_eCRF",
+    "section": "",
+    "text": "A recolha de dados clínicos e a monitorização dos participantes do projeto RespiRA foram centralizadas através da plataforma REDcap . Esta ferramenta foi selecionada como Electronic Case Report Form (eCRF) pela sua robustez na garantia da integridade dos dados, segurança da informação e conformidade com as normas internacionais de bioética e proteção de dados em saúde. Para uma consulta detalhada da estrutura de recolha de dados e do fluxo de perguntas apresentado aos participantes, os formulários podem ser acedidos através do link para o servidor REDcap disponibilizado em seguida:\nClique aqui para aceder ao questionário eCRF."
+  },
+  {
+    "objectID": "equipa.html",
+    "href": "equipa.html",
+    "title": "Equipa",
+    "section": "",
+    "text": "Autoras\nE-mail\n\n\n\n\nBeatriz da Silva Resende Correia Martins\nup202508337@up.pt\n\n\nClara Marcão Figueiras\nup202504460@up.pt\n\n\nMatilde Mendes de Ascensão\nup202505167@up.pt\n\n\nRita Santos Torres\nup202508173@up.pt"
+  },
+  {
+    "objectID": "prototipo.html",
+    "href": "prototipo.html",
+    "title": "Protótipo",
+    "section": "",
+    "text": "Clica aqui para abrir o protótipo no Figma"
   },
   {
     "objectID": "IA.html",
@@ -231,122 +315,45 @@
     "text": "7. Protótipo\n\nPrompt 1:\n“Estou a desenhar um formulário no Figma. Como posso simular manualmente um pop-up de erro para idades fora do intervalo (18-65 anos) e criar o efeito de que a “Carga Tabágica” só aparece se a opção “Fumador” for selecionada, sem usar variáveis complexas?”\nResposta da IA:\n“Para criares essa interatividade de forma totalmente manual e visual no Figma, deves utilizar o método de Frames Alternativos e Overlays. Aqui está o passo a passo:\n\nSimulação do Pop-up de Erro (Idade):\n\n\nCria um frame pequeno e independente (o pop-up) com a mensagem de erro.\nNo teu frame principal, seleciona o botão ‘Confirmar’. Nas configurações de prototipagem, cria uma interação On Click -&gt; Open Overlay e seleciona o frame do pop-up.\nDefine a posição como ‘Centered’ para que o erro apareça por cima do formulário, simulando a validação da idade.\n\n\nLógica de Branching (Tabaco):\n\n\nCria dois frames para a página de História Clínica: o Frame A (estado inicial, sem carga tabágica) e o Frame B(com o campo ‘Carga Tabágica’ visível).\nNo Frame A, seleciona a opção ‘Fumador’ e cria uma ligação On Click -&gt; Navigate To -&gt; Frame B.\nPara que a transição pareça natural, usa a animação ‘Instant’ ou ‘Smart Animate’. Isto simula que o campo apareceu dinamicamente em resposta à escolha do utilizador.”\n\nComo o output foi tratado:\nFoi utilizada a técnica de prototipagem manual por estados (Frames). Desenhei individualmente cada ecrã necessário para cobrir os diferentes cenários: um frame específico para o estado de erro e frames distintos para o fluxo de “Fumador” vs “Não Fumador”. As interações foram configuradas manualmente através de Overlays e navegação entre frames, garantindo o comportamento lógico pretendido sem recorrer a funções automatizadas de programação.\nNível da GAI Use Scale: 2.\n\n\nPrompt 2:\n“Escreve uma frase curta de incentivo que destaque a importância da utilização diária da app para um melhor controlo da asma.”\nResposta da IA:\n“Aqui tens uma frase curta para incentivar o uso diário, focada em criar um hábito positivo:  \n“Cada registo é um sopro de confiança. Vamos controlar a asma juntos!””\nComo o output foi tratado:\nA frase de incentivo sugerida pelo Gemini foi revista e aceite pelo grupo.\nNível da GAI Use Scale: 2"
   },
   {
-    "objectID": "prototipo.html",
-    "href": "prototipo.html",
-    "title": "Protótipo",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Início",
     "section": "",
-    "text": "Clica aqui para abrir o protótipo no Figma"
+    "text": "Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel RespiRA. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma ferramenta digital dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de mHealth consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações."
   },
   {
-    "objectID": "equipa.html",
-    "href": "equipa.html",
-    "title": "Equipa",
+    "objectID": "index.html#resumo-do-projeto",
+    "href": "index.html#resumo-do-projeto",
+    "title": "Início",
     "section": "",
-    "text": "Autoras\nE-mail\n\n\n\n\nBeatriz da Silva Resende Correia Martins\nup202508337@up.pt\n\n\nClara Marcão Figueiras\nup202504460@up.pt\n\n\nMatilde Mendes de Ascensão\nup202505167@up.pt\n\n\nRita Santos Torres\nup202508173@up.pt"
+    "text": "Este ensaio clínico, conduzido por investigadores da Faculdade de Medicina da Universidade do Porto, visa avaliar a eficácia da intervenção digital com a aplicação móvel RespiRA. O estudo foca-se na monitorização inteligente de adultos com asma moderada persistente, comparando o uso de uma ferramenta digital dedicada com o cuidado clínico habitual. A investigação pretende determinar se a integração de ferramentas de mHealth consegue converter dados de monitorização em resultados clínicos tangíveis, como a melhoria da qualidade de vida e a redução de exacerbações."
   },
   {
-    "objectID": "questionario_eCRF.html",
-    "href": "questionario_eCRF.html",
-    "title": "Questionario_eCRF",
+    "objectID": "index.html#cenário-clínico",
+    "href": "index.html#cenário-clínico",
+    "title": "Início",
+    "section": "Cenário Clínico",
+    "text": "Cenário Clínico\nA asma afeta cerca de 700.000 adultos em Portugal. Apesar dos tratamentos existentes, mais de 50% dos doentes não têm a doença controlada.\nO modelo tradicional de consultas esporádicas falha na monitorização diária. A aplicação RespiRA surge para preencher esta lacuna, integrando:\n\nQuestionário ACT (Asthma Control Test).\nRegisto de Peak Flow (Débito Expiratório Máximo).\nPlanos de Ação Automáticos baseados em algoritmos clínicos."
+  },
+  {
+    "objectID": "index.html#objetivos-do-estudo",
+    "href": "index.html#objetivos-do-estudo",
+    "title": "Início",
+    "section": "Objetivos do Estudo",
+    "text": "Objetivos do Estudo\n\nObjetivo Primário\nAvaliar se a aplicação RespiRA melhora o controlo da asma (medido pelo score ACT) ao fim de 12 semanas, comparativamente ao tratamento padrão.\n\n\nObjetivos Secundários\n\nAnalisar o impacto da aplicação nos valores de débito expiratório máximo (peak flow).\nDeterminar se a intervenção digital está associada a uma redução no número de exacerbações de asma.\nAvaliar o efeito da RespiRA na adesão à medicação de controlo prescrita.\nAnalisar as alterações na qualidade de vida relacionada com a asma através do questionário AQLQ.\nPerceber a diferença entre grupos no número de episódios de recurso ao serviço de urgência e na satisfação dos participantes."
+  },
+  {
+    "objectID": "index.html#metodologia-em-resumo",
+    "href": "index.html#metodologia-em-resumo",
+    "title": "Início",
+    "section": "Metodologia em Resumo",
+    "text": "Metodologia em Resumo\nO estudo é um Ensaio Clínico Controlado e Aleatorizado (RCT) de fase piloto/pré-teste.\n\nPopulação: Adultos (18-65 anos) com asma moderada.\nDuração: 12 semanas de intervenção.\nGrupos:\n\nGrupo Intervenção: Acesso à App RespiRA + Cuidado habitual.\nGrupo Controlo: Cuidado habitual isolado.\n\n\nEstado do Projeto: Início previsto para 1 de setembro de 2026."
+  },
+  {
+    "objectID": "dicionario.html",
+    "href": "dicionario.html",
+    "title": "dicionario",
     "section": "",
-    "text": "A recolha de dados clínicos e a monitorização dos participantes do projeto RespiRA foram centralizadas através da plataforma REDcap . Esta ferramenta foi selecionada como Electronic Case Report Form (eCRF) pela sua robustez na garantia da integridade dos dados, segurança da informação e conformidade com as normas internacionais de bioética e proteção de dados em saúde. Para uma consulta detalhada da estrutura de recolha de dados e do fluxo de perguntas apresentado aos participantes, os formulários podem ser acedidos através do link para o servidor REDcap disponibilizado em seguida:\nClique aqui para aceder ao questionário eCRF."
-  },
-  {
-    "objectID": "materiais.html",
-    "href": "materiais.html",
-    "title": "Materiais",
-    "section": "",
-    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
-  },
-  {
-    "objectID": "materiais.html#introdução-aos-materiais",
-    "href": "materiais.html#introdução-aos-materiais",
-    "title": "Materiais",
-    "section": "",
-    "text": "O sucesso do projeto RespiRA assenta na digitalizaçao de instrumentos válidos e na implementação de regras de segurança rigorosas (eCRF). Utilizamos o software REDcap, de forma a garantir que cada dado inserido pelo paciente ou pelo investigador é fidedigno e útil para o controlo da asma."
-  },
-  {
-    "objectID": "materiais.html#tratamento-de-monitorização-ecrf",
-    "href": "materiais.html#tratamento-de-monitorização-ecrf",
-    "title": "Materiais",
-    "section": "1. Tratamento de monitorização (eCRF)",
-    "text": "1. Tratamento de monitorização (eCRF)\nA recolha de dados está dividida em 5 formulários principais, cada um com objetivos e validações especificas.\n\nA. Informação geral e consentimento\nÉ o ponto de entrada no estudo. Inclui a atribuição do ID do participante e a verificação do grupo (controlo ou intervenção). O sistema utiliza um mecanismo em que, se o utilizador não autorizar o consentimento informado, o processo de recolha de dados não é executado.\n\n\nB. Dados demográficos\nRecolha de perfil básico, nomeadmaente, nome, sexo e morada. Implementámos uma validação automática para a data de nascimento. O sistema apenas permite a inclusão de adultos entre os 18 e os 65 anos, emitindo um alerta de erro caso o participante esteja fora deste intervalo de idades.\n\n\nC. História Clínica e Comorbilidades\nAvaliação da caracterização antropométrica e estilo de vida, onde só aparece a carga tabágica se no estado tabágico for selecionada a opção ex-fumador ou fumador ativo, avaliação do histórico clinico e comorbilidades onde se questiona anos de diagnóstico, terapêutica atual e patologias associadas e caso seja uma mulher, aparecem questões relativas a uma possível gravidez que se estiver grávida aparece uma questão para escrever sobre a gravidez.\n\n\nD. Monitorização clínica RespiRA\nEste formulário é preenchido periodicamente e inclui indicadores de saúde: É registado o peso (que pode variar entre 30 e 250kg) e o peak flow (que pode variar entre 50 e 900L/min). Existem cálculos automáticos em tempo real para o IMC e para o PEF previsto, criando alertas visuais se os valores forem preocupantes. *Inclui um questionário de 5 a 25 pontos para o Score ACT onde, caso o resultado seja inferior a 20, a app emite um alerta de asma não controlada.Existe ainda uma pontuação do questionário de qualidade e vida que o utilizador deve introduzir o seu valor, que deve variar entre 1 e 7.\n\n\nE. Dados de conclusão do estudo\nNeste questionário pretende-se entender o motivo pelo qual o paciente terminou ou desistiu do estudo e se há comentários globais a serem feitos por parte do utilizador."
-  },
-  {
-    "objectID": "materiais.html#fórmulas-de-suporte-técnico",
-    "href": "materiais.html#fórmulas-de-suporte-técnico",
-    "title": "Materiais",
-    "section": "2. Fórmulas de suporte técnico",
-    "text": "2. Fórmulas de suporte técnico\nPara garantir a precisão clínica, o sistema baseia-se nas seguintes equações matemáticas:\nCálculo do IMC: \\[IMC=\\frac{Peso}{Altura^2}\\]\nPredição do débito expiratório máximo (PEF previsto):\nHomens:\n\\[PEF_{previsto} = (Altura \\times 5.48) - (Idade \\times 0.03) + 1.58\\]\nMulheres:\n\\[PEF_{previsto} = (Altura \\times 3.72) - (Idade \\times 0.03) + 2.24\\]\nAvaliação de progresso(Variação do ACT): \\[\\Delta ACT = ACT_{t12}-ACT_{t0}\\]"
-  },
-  {
-    "objectID": "materiais.html#dicionário-de-dados-e-segurança",
-    "href": "materiais.html#dicionário-de-dados-e-segurança",
-    "title": "Materiais",
-    "section": "3. Dicionário de dados e segurança",
-    "text": "3. Dicionário de dados e segurança\nTodas as variáveis críticas relativas à saúde, como sintomas e medicação, têm preenchimento obrigatório para evitar dados em falta. Para além disso, foram configurados alertas automáticos para valores extremos, incentivando o paciente a contactar o médico.\n\nResumo da estrutura de dados\n\n\n\n\n\n\n\n\nVariável\nDescrição\nRegras de Validação\n\n\n\n\n‘weight’\nPeso (kg)\nEntre 30 e 250\n\n\n‘pef_value’\nPico de fluxo expiratório\nEntre 50 e 900 L/min\n\n\n‘act_score’\nPontuação do teste ACT\nInteiro entre 5 e 25\n\n\n‘smoking_status’\nEstado tabágico\nEscolha múltipla\n\n\n‘pack_year’\nCarga tabágica\nVisível se fumador/ex-fumador"
-  },
-  {
-    "objectID": "resultados.html",
-    "href": "resultados.html",
-    "title": "Resultados",
-    "section": "",
-    "text": "A presente secção detalha os resultados obtidos no ensaio clínico RespiRA. Antes da apresentação das tabelas comparativas, realizou-se um diagnóstico de normalidade para garantir a validade dos testes estatísticos aplicados.\nA normalidade das variáveis foi avaliada através do teste de Shapiro-Wilk e de métodos visuais (histogramas e Q-Q plots), fundamentando a escolha entre testes paramétricos ou não-paramétricos para cada indicador avaliado.\n\n\nA análise da distribuição da idade revela um desvio da normalidade, caracterizado por uma marcada assimetria positiva no histograma e um desvio sistemático dos quantis na diagonal do gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,010), cujo valor inferior a 0,05 impõe a rejeição da hipótese nula. Perante esta evidência de não-normalidade, a caraterização etária da amostra será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre grupos realizadas mediante o teste não-paramétrico de Wilcoxon (Mann-Whitney), dada a sua robustez perante assimetrias e valores extremos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do score ACT inicial revela uma forte aderência à normalidade. O histograma apresenta uma configuração visualmente simétrica, assemelhando-se à curva de Gauss, enquanto no gráfico Q-Q Plot os pontos alinham-se de forma consistente com a diagonal teórica de referência. Esta evidência visual é corroborada pelo teste de Shapiro-Wilk, que apresenta um valor de p = 0,841, claramente superior ao nível de significância de 0,05. Perante a validação deste pressuposto estatístico, a caraterização do nível de controlo da asma no momento inicial será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o teste paramétrico t de Student.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do score ACT final (semana 12) demonstra uma clara aderência à normalidade, evidenciada pela configuração visualmente simétrica do histograma e pelo alinhamento consistente dos quantis com a diagonal no gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,158), cujo valor superior ao limiar de significância de 0,05 permite a validação do pressuposto estatístico de normalidade. Perante esta evidência, a caraterização do nível de controlo da asma no final do seguimento será descrita através da média e do desvio padrão (SD), sendo as comparações de eficácia entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição da qualidade de vida (AQLQ) no final da intervenção revela uma forte aderência à normalidade. O histograma apresenta uma configuração unimodal e simétrica, com os valores concentrados em torno da média, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados com a diagonal de referência. Esta interpretação visual é sustentada pelo teste de Shapiro-Wilk (p = 0,564), cujo valor significativamente superior a 0,05 impossibilita a rejeição da hipótese nula de normalidade. Consequentemente, a caraterização da qualidade de vida será apresentada através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição da adesão terapêutica no final da intervenção revela uma aderência satisfatória à normalidade. O histograma apresenta uma configuração unimodal com uma distribuição concentrada nos valores superiores da escala, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados de forma consistente com a diagonal de referência, sem evidência de desvios sistemáticos significativos. Esta interpretação visual é validada pelo teste de Shapiro-Wilk (p = 0,296), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula de normalidade. Perante esta evidência, a caraterização da adesão será descrita através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição da função respiratória basal (Peak Flow) revela uma forte aderência à normalidade, caracterizada por um histograma unimodal e simétrico, com os dados distribuídos de forma equilibrada em torno da média. No gráfico Q-Q Plot, observa-se que os pontos da amostra acompanham rigorosamente a diagonal teórica de referência, sem desvios significativos. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,881), cujo valor superior ao limiar de 0,05 valida o pressuposto de normalidade. Perante esta evidência, a caraterização do Peak Flow inicial será descrita através da média e do desvio padrão, aplicando-se o teste paramétrico t de Student para as comparações estatísticas entre os grupos.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do peak flow à semana 12 revela uma aderência satisfatória à normalidade, evidenciada pela configuração unimodal do histograma e pelo alinhamento dos pontos com a diagonal de referência no gráfico Q-Q Plot. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,201), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula. Perante a validação deste pressuposto, a caraterização da função respiratória no final do seguimento será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student.\n\n\n\n\n\n\n\n\n\n\n\n\nA análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p &lt; 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados."
-  },
-  {
-    "objectID": "resultados.html#idade",
-    "href": "resultados.html#idade",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição da idade revela um desvio da normalidade, caracterizado por uma marcada assimetria positiva no histograma e um desvio sistemático dos quantis na diagonal do gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,010), cujo valor inferior a 0,05 impõe a rejeição da hipótese nula. Perante esta evidência de não-normalidade, a caraterização etária da amostra será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre grupos realizadas mediante o teste não-paramétrico de Wilcoxon (Mann-Whitney), dada a sua robustez perante assimetrias e valores extremos."
-  },
-  {
-    "objectID": "resultados.html#score-act-baseline",
-    "href": "resultados.html#score-act-baseline",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição do score ACT inicial revela uma forte aderência à normalidade. O histograma apresenta uma configuração visualmente simétrica, assemelhando-se à curva de Gauss, enquanto no gráfico Q-Q Plot os pontos alinham-se de forma consistente com a diagonal teórica de referência. Esta evidência visual é corroborada pelo teste de Shapiro-Wilk, que apresenta um valor de p = 0,841, claramente superior ao nível de significância de 0,05. Perante a validação deste pressuposto estatístico, a caraterização do nível de controlo da asma no momento inicial será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o teste paramétrico t de Student."
-  },
-  {
-    "objectID": "resultados.html#score-act-semana-12",
-    "href": "resultados.html#score-act-semana-12",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição do score ACT final (semana 12) demonstra uma clara aderência à normalidade, evidenciada pela configuração visualmente simétrica do histograma e pelo alinhamento consistente dos quantis com a diagonal no gráfico Q-Q Plot. Esta observação visual é corroborada pelo teste de Shapiro-Wilk (p = 0,158), cujo valor superior ao limiar de significância de 0,05 permite a validação do pressuposto estatístico de normalidade. Perante esta evidência, a caraterização do nível de controlo da asma no final do seguimento será descrita através da média e do desvio padrão (SD), sendo as comparações de eficácia entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student."
-  },
-  {
-    "objectID": "resultados.html#aqlq-semana-12",
-    "href": "resultados.html#aqlq-semana-12",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição da qualidade de vida (AQLQ) no final da intervenção revela uma forte aderência à normalidade. O histograma apresenta uma configuração unimodal e simétrica, com os valores concentrados em torno da média, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados com a diagonal de referência. Esta interpretação visual é sustentada pelo teste de Shapiro-Wilk (p = 0,564), cujo valor significativamente superior a 0,05 impossibilita a rejeição da hipótese nula de normalidade. Consequentemente, a caraterização da qualidade de vida será apresentada através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos."
-  },
-  {
-    "objectID": "resultados.html#adesão",
-    "href": "resultados.html#adesão",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição da adesão terapêutica no final da intervenção revela uma aderência satisfatória à normalidade. O histograma apresenta uma configuração unimodal com uma distribuição concentrada nos valores superiores da escala, enquanto o gráfico Q-Q Plot exibe os quantis da amostra alinhados de forma consistente com a diagonal de referência, sem evidência de desvios sistemáticos significativos. Esta interpretação visual é validada pelo teste de Shapiro-Wilk (p = 0,296), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula de normalidade. Perante esta evidência, a caraterização da adesão será descrita através da média e do desvio padrão, utilizando-se o teste paramétrico t de Student para a avaliação da eficácia comparativa entre os grupos."
-  },
-  {
-    "objectID": "resultados.html#peak-flow-baseline",
-    "href": "resultados.html#peak-flow-baseline",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição da função respiratória basal (Peak Flow) revela uma forte aderência à normalidade, caracterizada por um histograma unimodal e simétrico, com os dados distribuídos de forma equilibrada em torno da média. No gráfico Q-Q Plot, observa-se que os pontos da amostra acompanham rigorosamente a diagonal teórica de referência, sem desvios significativos. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,881), cujo valor superior ao limiar de 0,05 valida o pressuposto de normalidade. Perante esta evidência, a caraterização do Peak Flow inicial será descrita através da média e do desvio padrão, aplicando-se o teste paramétrico t de Student para as comparações estatísticas entre os grupos."
-  },
-  {
-    "objectID": "resultados.html#peak-flow-semana-12",
-    "href": "resultados.html#peak-flow-semana-12",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição do peak flow à semana 12 revela uma aderência satisfatória à normalidade, evidenciada pela configuração unimodal do histograma e pelo alinhamento dos pontos com a diagonal de referência no gráfico Q-Q Plot. Esta interpretação visual é confirmada pelo teste de Shapiro-Wilk (p = 0,201), cujo valor superior ao limiar de significância de 0,05 impossibilita a rejeição da hipótese nula. Perante a validação deste pressuposto, a caraterização da função respiratória no final do seguimento será descrita através da média e do desvio padrão, sendo as comparações entre os braços do estudo realizadas mediante o recurso ao teste paramétrico t de Student."
-  },
-  {
-    "objectID": "resultados.html#exacerbações-semana-12",
-    "href": "resultados.html#exacerbações-semana-12",
-    "title": "Resultados",
-    "section": "",
-    "text": "A análise da distribuição do número de exacerbações às 12 semanas revela um desvio acentuado da normalidade, caracterizado por uma forte assimetria positiva no histograma, típica de variáveis de contagem com elevada frequência de eventos nulos. Esta observação visual é confirmada pelo gráfico Q-Q Plot, onde os pontos da amostra se desviam significativamente da diagonal teórica, apresentando um padrão em patamares devido à natureza discreta dos dados. Este comportamento é corroborado pelo teste de Shapiro-Wilk (p &lt; 0,001), cujo valor impõe a rejeição inequívoca da hipótese nula. Perante esta evidência de não-normalidade, a caraterização das exacerbações será descrita através da mediana e do intervalo interquartílico (IQR), sendo as comparações entre os braços do estudo realizadas mediante o teste não-paramétrico de Wilcoxon, dada a sua robustez perante dados fortemente enviesados."
+    "text": "Clique aqui para descarregar o Dicionário de Dados (CSV)."
   }
 ]
