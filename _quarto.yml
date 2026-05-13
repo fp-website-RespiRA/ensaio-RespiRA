@@ -20,6 +20,8 @@ website:
         text: Declaração de uso de IA
       - href: equipa.qmd
         text: Equipa
+      - href: dicionario.qmd
+        text: Dicionário de Dados 
       - href: prototipo.qmd
         text: Protótipo
       

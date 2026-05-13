@@ -1,0 +1,6 @@
+---
+title: "dicionario"
+format: html
+---
+
+Clique aqui para [descarregar o Dicionário de Dados (CSV)](docs/dicionario_dados.csv).
