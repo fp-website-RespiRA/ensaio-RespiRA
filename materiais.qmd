@@ -39,7 +39,15 @@ Para garantir a precisão clínica, o sistema baseia-se nas seguintes equações
 
 **Cálculo do IMC:** $$IMC=\frac{Peso}{Altura^2}$$
 
-**Predição do débito expiratório máximo (PEF previsto):** $$PEF_{previsto}=(Altura\times 5.48) - (Idade\times 0.03)-1.58$$
+**Predição do débito expiratório máximo (PEF previsto):**
+
+Homens:
+
+$$PEF_{previsto} = (Altura \times 5.48) - (Idade \times 0.03) + 1.58$$
+
+Mulheres:
+
+$$PEF_{previsto} = (Altura \times 3.72) - (Idade \times 0.03) + 2.24$$
 
 **Avaliação de progresso(Variação do ACT):** $$\Delta ACT = ACT_{t12}-ACT_{t0}$$
 
