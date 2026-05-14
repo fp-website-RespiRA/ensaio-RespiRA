@@ -7,7 +7,7 @@ format: html
 
 ## Introdução
 
-Em conformidade com as normas de integridade académica, declara-se que a elaboração do protocolo clínico "RespiRA" contou com o apoio pontual do Gemini (Nível 2 da GAI Use Scale). A IA foi utilizada para validar a conformidade do protocolo com normas internacionais de reporte (SPIRIT) e para auxiliar na redação técnica de cláusulas éticas e de segurança de dados. Toda a interpretação clínica, desenho do estudo e decisões sobre a segurança dos participantes foram realizados integralmente pelo grupo, utilizando a IA apenas para verificação de omissões e refinamento de texto.
+Em conformidade com as normas de integridade académica, declara-se que a elaboração do protocolo clínico “RespiRA” contou com o apoio pontual do Gemini (Nível 2 da GAI Use Scale, exceto na redação do rascunho de uma secção do protocolo que tem Nível 4). A IA foi utilizada para validar a conformidade do protocolo com normas internacionais de reporte (SPIRIT) e para auxiliar na redação técnica de cláusulas éticas e de segurança de dados. Toda a interpretação clínica, desenho do estudo e decisões sobre a segurança dos participantes foram realizados integralmente pelo grupo, utilizando a IA apenas para verificação de omissões e refinamento de texto.
 
 ## Prompt 1:
 
@@ -41,6 +41,122 @@ As respostas de IA foram aceites.
 
 **Nível da GAI Use Scale:** 2
 
+## Prompt 3:
+
+“Ajuda-me a escrever as secções de um protocolo de investigação científica para o estudo clínico RespiRA, utilizando a informação sobre o cenário que anexo abaixo. Toda a redação deve ser feita em português de Portugal, com um tom formal, académico e rigoroso, seguindo as recomendações SPIRIT.”
+
+**Resposta da IA:**
+
+**“1.2 Objetivos**
+
+**Objetivo Primário**
+
+O objetivo primário deste estudo é avaliar se a utilização da aplicação móvel RespiRA, como complemento ao cuidado habitual em cuidados de saúde primários, melhora o controlo da asma em adultos com asma moderada persistente, medido através da variação do **Asthma Control Test (ACT)** ao fim de 12 semanas de acompanhamento.
+
+**Objetivos Secundários**
+
+Os objetivos secundários deste estudo são:
+
+1.  Avaliar o impacto da utilização da aplicação RespiRA nos valores de débito expiratório máximo (peak flow) ao longo do período de acompanhamento.
+
+2.  Determinar se a intervenção está associada a uma redução no número de exacerbações de asma durante as 12 semanas de estudo.
+
+3.  Avaliar o efeito da aplicação na adesão à medicação de controlo da asma prescrita.
+
+4.  Analisar alterações na qualidade de vida relacionada com a asma, medida através do Asthma Quality of Life Questionnaire (AQLQ).
+
+5.  Avaliar diferenças entre grupos no número de episódios de recurso ao serviço de urgência por agravamento de sintomas respiratórios e na satisfação dos participantes com os cuidados recebidos.
+
+**2. Métodos**
+
+**2.1 Desenho do Estudo**
+
+Este é um ensaio clínico randomizado, controlado, de grupos paralelos, concebido para avaliar a viabilidade e o potencial efeito clínico de uma intervenção digital de apoio à autogestão da asma em contexto de cuidados de saúde primários.
+
+O estudo utilizará um desenho de dois braços com randomização numa proporção de 1:1 entre grupo de intervenção e grupo controlo. Os participantes randomizados para o braço de intervenção terão acesso à aplicação móvel RespiRA, enquanto os participantes do grupo controlo receberão apenas o cuidado habitual disponibilizado no centro de saúde. A escolha de uma razão de randomização 1:1 visa garantir comparabilidade entre grupos e maximizar a eficiência estatística numa amostra piloto de pequena dimensão.
+
+A duração total do período de intervenção será de 12 semanas. O estudo será conduzido num único centro de saúde ou Unidade de Saúde Familiar, configurando um estudo piloto ou pré-teste destinado a avaliar a aceitabilidade da intervenção, a viabilidade do recrutamento e os procedimentos de recolha de dados.
+
+O tamanho total da amostra será de 30 participantes, com 15 participantes alocados a cada braço do estudo. Após avaliação inicial e recolha de dados de baseline, os participantes serão randomizados e iniciarão o período de acompanhamento.
+
+**Timeline:**
+
+|  |  |  |
+|------------------------|------------------------|------------------------|
+| **Fase** | **Duração** | **Descrição** |
+| Recrutamento | 4–6 semanas | Identificação e seleção de participantes elegíveis em consultas de cuidados de saúde primários |
+| Baseline | 1–3 dias | Avaliação inicial, recolha de dados clínicos e randomização |
+| Intervenção | 12 semanas | Utilização da aplicação RespiRA ou manutenção de cuidado habitual |
+| Follow-up | 12 semanas | Avaliações de outcomes às 4, 8 e 12 semanas |
+
+Ao longo do período de acompanhamento serão realizadas avaliações intermédias às 4 e 8 semanas, bem como uma avaliação final às 12 semanas, permitindo monitorizar a evolução do controlo da asma e outros outcomes clínicos ao longo do tempo.
+
+**2.2 População do Estudo**
+
+**2.2.1 Critérios de Inclusão**
+
+Serão elegíveis para participação neste estudo indivíduos que cumpram todos os seguintes critérios. Os participantes deverão ter idade compreendida entre 18 e 65 anos no momento da inclusão. Deverão apresentar diagnóstico clínico de asma moderada persistente estabelecido por médico assistente, de acordo com critérios clínicos compatíveis com recomendações internacionais de manejo da asma. Os participantes deverão encontrar-se em seguimento regular em cuidados de saúde primários no centro de saúde participante, com prescrição ativa de terapêutica de controlo para asma.
+
+Adicionalmente, os participantes deverão possuir um smartphone compatível com sistemas operativos Android ou iOS e demonstrar capacidade básica para instalar e utilizar aplicações móveis. Será também necessário apresentar literacia suficiente para compreender instruções escritas em língua portuguesa e responder a questionários clínicos utilizados no estudo. Os indivíduos deverão ser capazes de realizar medições de débito expiratório máximo com dispositivo de peak flow meter fornecido ou recomendado pelo estudo. Finalmente, os participantes deverão demonstrar disponibilidade para participar durante todo o período de acompanhamento de 12 semanas e fornecer consentimento informado por escrito antes de qualquer procedimento relacionado com o estudo.
+
+**2.2.2 Critérios de Exclusão**
+
+Serão excluídos do estudo indivíduos que apresentem qualquer condição clínica que possa interferir significativamente com a avaliação do controlo da asma, incluindo diagnóstico concomitante de doença pulmonar crónica relevante, como doença pulmonar obstrutiva crónica moderada a grave ou outras doenças respiratórias estruturais. Serão também excluídos indivíduos que tenham apresentado exacerbação grave de asma necessitando de hospitalização ou tratamento sistémico intensivo nas quatro semanas anteriores ao recrutamento.
+
+Participantes atualmente envolvidos em outro ensaio clínico intervencional serão excluídos para evitar interferência entre intervenções. Indivíduos com incapacidade física ou cognitiva que impossibilite a utilização da aplicação móvel ou a realização regular das medições de peak flow não serão elegíveis. A ausência de acesso regular à internet móvel ou Wi-Fi será considerada critério de exclusão devido à necessidade de sincronização da aplicação.
+
+Serão ainda excluídos indivíduos com perturbações psiquiátricas graves não controladas ou outras condições médicas que, na opinião do investigador responsável, possam comprometer a segurança do participante ou a adesão aos procedimentos do protocolo.
+
+**2.2.3 Processo de Recrutamento**
+
+Os participantes serão identificados através das listas de utentes com diagnóstico registado de asma no sistema clínico eletrónico do centro de saúde participante. Médicos de família e outros profissionais de saúde envolvidos nas consultas de seguimento de asma poderão sinalizar potenciais participantes elegíveis durante consultas de rotina. Os indivíduos identificados serão convidados a participar no estudo e receberão informação detalhada sobre os objetivos, procedimentos e duração do ensaio.
+
+Após esclarecimento de dúvidas e confirmação dos critérios de elegibilidade, os participantes interessados serão convidados a assinar o consentimento informado. Seguidamente será realizada a avaliação de baseline e os participantes serão randomizados para um dos dois braços do estudo.
+
+**2.3 Intervenções**
+
+**2.3.1 Grupo de Intervenção**
+
+Os participantes randomizados para o grupo de intervenção terão acesso à aplicação móvel RespiRA, desenvolvida como ferramenta de apoio à autogestão da asma. A aplicação foi concebida para integrar monitorização de sintomas, suporte à adesão terapêutica e educação em saúde, com o objetivo de melhorar o controlo da doença entre consultas médicas.
+
+A aplicação inclui um módulo de monitorização regular de sintomas através do preenchimento periódico do Asthma Control Test. Os participantes serão convidados a completar avaliações regulares na aplicação, permitindo acompanhar a evolução do controlo da asma ao longo do estudo. A aplicação inclui ainda um sistema de lembretes automáticos para a toma de medicação prescrita, configurados de acordo com o regime terapêutico habitual do participante.
+
+Outro componente central da intervenção consiste no registo do débito expiratório máximo. Os participantes serão incentivados a realizar medições regulares de peak flow utilizando um medidor portátil e a introduzir os valores na aplicação. Estes dados são apresentados em formato gráfico para facilitar a monitorização da evolução dos sintomas respiratórios.
+
+A aplicação disponibiliza também um plano de ação personalizado baseado em sintomas e valores de peak flow. Quando determinados limiares são ultrapassados ou quando se verifica agravamento dos sintomas, a aplicação pode gerar alertas recomendando medidas apropriadas, como reforço da medicação de alívio ou contacto com profissionais de saúde.
+
+Adicionalmente, a aplicação inclui conteúdos educativos sobre fisiopatologia da asma, identificação de fatores desencadeantes e estratégias de autogestão da doença. Os participantes receberão instruções para instalação da aplicação durante a visita de baseline e um breve processo de onboarding para familiarização com as funcionalidades. Será disponibilizado suporte técnico remoto para resolução de eventuais dificuldades na utilização.
+
+Durante todo o período do estudo, os participantes do grupo de intervenção continuarão a receber o seu cuidado médico habitual no centro de saúde.
+
+**2.3.2 Grupo Controlo**
+
+Os participantes randomizados para o grupo controlo receberão exclusivamente o cuidado habitual disponibilizado no contexto dos cuidados de saúde primários. Este inclui consultas médicas programadas de seguimento da asma, acesso à medicação prescrita pelo médico assistente e material educativo standard fornecido pelos profissionais de saúde.
+
+O cuidado habitual pode incluir aconselhamento sobre uso correto de inaladores, identificação de fatores desencadeantes e orientações gerais para gestão de sintomas. No entanto, os participantes deste grupo não terão acesso à aplicação RespiRA nem a qualquer ferramenta digital adicional fornecida no âmbito do estudo.
+
+A utilização de cuidado habitual como comparador permite avaliar o valor acrescentado da intervenção digital relativamente à prática clínica corrente, refletindo condições reais de prestação de cuidados em cuidados de saúde primários.
+
+**2.3.3 Critérios de Descontinuação**
+
+Os participantes poderão ser retirados do estudo em caso de retirada voluntária do consentimento informado em qualquer momento. A descontinuação poderá também ocorrer caso surja uma condição médica que torne a continuação no estudo potencialmente insegura ou caso o participante apresente incapacidade persistente para cumprir procedimentos essenciais do protocolo. Violações graves do protocolo ou perda de seguimento prolongada poderão igualmente justificar a retirada do estudo.
+
+**3. Avaliações e Outcomes**
+
+**3.1 Outcome Primário**
+
+O outcome primário deste estudo será o nível de controlo da asma medido através do Asthma Control Test (ACT). Este instrumento consiste num questionário validado composto por cinco itens que avaliam sintomas, limitação de atividades e uso de medicação de alívio nas últimas semanas. A pontuação total varia entre 5 e 25, sendo valores mais elevados indicativos de melhor controlo da doença.
+
+O ACT será administrado no momento de baseline e repetido na avaliação final às 12 semanas. A melhoria no controlo da asma será avaliada através da variação da pontuação entre baseline e o final do período de intervenção.
+
+**3.2 Outcomes Secundários**
+
+Os outcomes secundários incluirão valores de débito expiratório máximo registados ao longo do estudo, número de exacerbações de asma, taxa de adesão à medicação prescrita, qualidade de vida relacionada com a asma medida através do Asthma Quality of Life Questionnaire e número de episódios de recurso ao serviço de urgência por agravamento de sintomas respiratórios. Será ainda avaliada a satisfação dos participantes com os cuidados recebidos durante o período do estudo.”
+
+**Como o output foi tratado:** Para o protocolo final, aceitamos a estrutura metodológica e os objetivos propostos pela ferramenta de IA, mas refinamos o conteúdo para garantir rigor clínico e técnico. Mantivemos o Asthma Control Test (ACT) como indicador primário e os parâmetros de peak flow, exacerbações e qualidade de vida como secundários, mas tratamos a resposta ao definir as fórmulas matemáticas exatas para o cálculo do score ACT e os algoritmos de apoio à decisão e alerta da aplicação. Reestruturamos a apresentação dos critérios de inclusão, de exclusão e de descontinuação, bem como a secção dos outcomes primários e secundários, substituindo o texto corrido por listas numeradas de forma a garantir maior clareza e rigor na leitura. Na secção do protocolo relativa ao grupo de intervenção, reestruturamos a apresentação da informação, que passou a estar organizada em quatro segmentos distintos.
+
+**Nível da GAI Use Scale:** 4
+
 # Entrega 2
 
 ## Introdução
@@ -53,13 +169,13 @@ Em conformidade com as normas de integridade académica, declara-se que as fases
 
 **Resposta da IA:**
 
-Para garantir a segurança e a conformidade ética no REDCap, existem três abordagens principais:
+"Para garantir a segurança e a conformidade ética no REDCap, existem três abordagens principais:
 
 Form Display Logic (Lógica ao nível do Instrumento): O REDCap avalia a resposta e "tranca" ou esconde todos os instrumentos seguintes. Ideal para estudos longitudinais realizados por investigadores.
 
 Stop Actions (Lógica ao nível do Fluxo de Inquérito): Utilizada quando o doente preenche o consentimento via link. A opção "Não" dispara uma interrupção imediata da sessão.
 
-Branching Logic de Campo (Lógica de Ramificação): Abordagem granular dentro de cada formulário, ocultando campos ou secções específicas.
+Branching Logic de Campo (Lógica de Ramificação): Abordagem granular dentro de cada formulário, ocultando campos ou secções específicas."
 
 **Como o output foi tratado:**
 
@@ -73,7 +189,7 @@ Decidimos aplicar a Branching Logic para esconder campos e a funcionalidade de S
 
 **Resposta da IA:**
 
-Os limites estão muito bem definidos. Eles cobrem desde casos de desnutrição ou baixa estatura severa até obesidade mórbida, garantindo que não se percam dados raros enquanto bloqueia erros óbvios. O intervalo do ACT (5-25) está perfeito, pois respeita a pontuação da escala original.
+"Os limites estão muito bem definidos. Eles cobrem desde casos de desnutrição ou baixa estatura severa até obesidade mórbida, garantindo que não se percam dados raros enquanto bloqueia erros óbvios. O intervalo do ACT (5-25) está perfeito, pois respeita a pontuação da escala original."
 
 **Como o output foi tratado:**
 
@@ -87,7 +203,7 @@ A IA considerou os intervalos adequados. Como medida complementar, verificamos a
 
 **Resposta da IA:**
 
-Filtragem por Relevância Biológica: O campo de gravidez só aparece se o campo sexo for igual a "Feminino".
+"Filtragem por Relevância Biológica: O campo de gravidez só aparece se o campo sexo for igual a "Feminino".
 
 Técnica de "Cascata" para Detalhes: Criar uma pergunta de triagem ("O doente recorreu às urgências?"). Se "Sim", ramificam-se os campos detalhados.
 
@@ -95,7 +211,7 @@ Hierarquia de Respostas (Checkboxes): Ativar campos de texto livre apenas para o
 
 **Como o output foi tratado:**
 
-Aplicamos esta lógica como medida de controlo de qualidade, para impedir dados incongruentes na base de dados final e reduzir a fadiga de preenchimento.
+Aplicamos esta lógica como medida de controlo de qualidade, para impedir dados incongruentes na base de dados final e reduzir a fadiga de preenchimento."
 
 **Nível da GAI Use Scale:** 2
 
@@ -105,9 +221,9 @@ Aplicamos esta lógica como medida de controlo de qualidade, para impedir dados 
 
 **Resposta da IA:**
 
-Field Notes: Servem para a Padronização da Recolha (especificar unidades como "kg"), Minimização do Erro (formatos de data) e Validação de Escalas (relembrar períodos de tempo).
+"Field Notes: Servem para a Padronização da Recolha (especificar unidades como "kg"), Minimização do Erro (formatos de data) e Validação de Escalas (relembrar períodos de tempo).
 
-Identifiers: Embora sejam dados sensíveis, isoladamente (peso/altura) não identificam diretamente uma pessoa. Recomendou-se marcar como "No".
+Identifiers: Embora sejam dados sensíveis, isoladamente (peso/altura) não identificam diretamente uma pessoa. Recomendou-se marcar como "No"."
 
 **Como o output foi tratado:**
 
@@ -153,7 +269,7 @@ Decidimos aplicar o vermelho apenas no alerta de "Asma Não Controlada" para man
 
 **Resposta da IA:**
 
-O modelo Classic é ideal para estudos transversais. O modelo Longitudinal permite definir Eventos, preenchido repetidamente em cada visita, facilitando análises de medidas repetidas.
+"O modelo Classic é ideal para estudos transversais. O modelo Longitudinal permite definir Eventos, preenchido repetidamente em cada visita, facilitando análises de medidas repetidas."
 
 **Como o output foi tratado:**
 
@@ -167,11 +283,11 @@ Com base nesta distinção, decidimos converter o projeto RespiRA para Longitudi
 
 **Resposta da IA:**
 
-Campo dob (Data de Nascimento): Erro na tag @MINDATE='2026-04-16'.
+"Campo dob (Data de Nascimento): Erro na tag @MINDATE='2026-04-16'.
 
 Campo sex: Inconsistência de idioma (inglês).
 
-Campo app_satisfaction: Falta de legendas no slider.
+Campo app_satisfaction: Falta de legendas no slider."
 
 **Como o output foi tratado:**
 
@@ -228,7 +344,7 @@ Aqui estão sugestões para reduzir a repetição das palavras "Aplicação", "A
 Sinónimos Sugeridos
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | **Palavra Repetida** | **Alternativas de Substituição** |
 | **Aplicação / App** | Ferramenta digital, plataforma móvel, solução tecnológica, ecossistema *RespiRA*. |
 | **Avaliar / Determinar** | Analisar, mensurar, aferir, examinar, escrutinar, validar. |
